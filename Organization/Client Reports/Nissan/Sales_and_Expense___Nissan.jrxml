@@ -1,0 +1,2548 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.1.0.final using JasperReports Library version 6.1.0  -->
+<!-- 2016-12-20T13:46:55 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Sales and Expense - Nissan" language="groovy" pageWidth="792" pageHeight="612" orientation="Landscape" whenNoDataType="NoDataSection" columnWidth="752" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" isSummaryNewPage="true" isSummaryWithPageHeaderAndFooter="true" isFloatColumnFooter="true" uuid="2568c1c1-3a65-44b4-a6ab-901e3a3d5126">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="ODS QA 2"/>
+	<property name="ireport.jasperserver.url" value="https://jaspersoft.dev.manheim.com/jasperserver-pro/"/>
+	<property name="ireport.jasperserver.user" value="jasperadmin"/>
+	<property name="ireport.jasperserver.report.resource" value="/Client_Reports/Nissan/Sales_and_Expense___Nissan_files/main_jrxml"/>
+	<property name="ireport.jasperserver.reportUnit" value="/Client_Reports/Nissan/Sales_and_Expense___Nissan"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<property name="net.sf.jasperreports.export.html.exclude.origin.band.pageFooter" value="pageFooter"/>
+	<property name="net.sf.jasperreports.export.html.exclude.key.excludecsvxlshtml"/>
+	<property name="net.sf.jasperreports.export.csv.exclude.origin.band.pageHeader" value="pageHeader"/>
+	<property name="net.sf.jasperreports.export.csv.exclude.origin.band.pageFooter" value="pageFooter"/>
+	<property name="net.sf.jasperreports.export.csv.exclude.key.excludecsvxls"/>
+	<property name="net.sf.jasperreports.export.csv.exclude.key.excludecsvxlshtml"/>
+	<property name="net.sf.jasperreports.export.xls.exclude.origin.band.pageHeader" value="pageHeader"/>
+	<property name="net.sf.jasperreports.export.xls.exclude.origin.band.pageFooter" value="pageFooter"/>
+	<property name="net.sf.jasperreports.export.xls.exclude.key.excludecsvxlshtml"/>
+	<property name="net.sf.jasperreports.export.xls.exclude.key.excludecsvxls"/>
+	<property name="net.sf.jasperreports.export.xlsx.exclude.key.excludecsvxlshtml"/>
+	<property name="net.sf.jasperreports.export.xlsx.exclude.key.excludecsvxls"/>
+	<property name="net.sf.jasperreports.export.html.remove.empty.space.between.rows" value="true"/>
+	<property name="net.sf.jasperreports.export.html.exclude.key.excludehtml"/>
+	<property name="net.sf.jasperreports.export.csv.exclude.key.excludecsv"/>
+	<style name="Table_CH" mode="Opaque" backcolor="#DDDDDD" hTextAlign="Center" vTextAlign="Middle" fontName="SansSerif" fontSize="9" isBold="true">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#DDDDDD"/>
+			<leftPen lineWidth="0.5" lineColor="#DDDDDD"/>
+			<bottomPen lineWidth="0.5" lineColor="#DDDDDD"/>
+			<rightPen lineWidth="0.5" lineColor="#DDDDDD"/>
+		</box>
+	</style>
+	<style name="Table_TD" mode="Opaque" backcolor="#FFFFFF" vTextAlign="Middle" fontName="SansSerif" fontSize="9">
+		<pen lineColor="#DDDDDD"/>
+		<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0">
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+			<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+			<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+			<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+		</box>
+	</style>
+	<style name="Table_CF" mode="Opaque" backcolor="#F3F3F3" vTextAlign="Middle" fontName="SansSerif" fontSize="9" isBold="true">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.1" lineStyle="Solid" lineColor="#DDDDDD"/>
+			<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#DDDDDD"/>
+			<bottomPen lineWidth="0.1" lineStyle="Solid" lineColor="#DDDDDD"/>
+			<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#DDDDDD"/>
+		</box>
+	</style>
+	<style name="Table_TF" mode="Opaque" backcolor="#E0EFFF" vTextAlign="Middle" fontName="SansSerif" fontSize="9" isBold="true">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+			<leftPen lineWidth="0.0"/>
+			<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+			<rightPen lineWidth="0.0"/>
+		</box>
+	</style>
+	<parameter name="Start_Date" class="java.sql.Date">
+		<parameterDescription><![CDATA[]]></parameterDescription>
+		<defaultValueExpression><![CDATA[new Date(System.currentTimeMillis() - 5 * 3600 * 1000)]]></defaultValueExpression>
+	</parameter>
+	<parameter name="End_Date" class="java.sql.Date">
+		<parameterDescription><![CDATA[]]></parameterDescription>
+		<defaultValueExpression><![CDATA[new Date(System.currentTimeMillis() - 5 * 3600 * 1000)]]></defaultValueExpression>
+	</parameter>
+	<parameter name="Market" class="java.util.Collection" nestedType="java.lang.String"/>
+	<parameter name="LoggedInUserAttribute_ha" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="Location" class="java.util.Collection">
+		<parameterDescription><![CDATA[]]></parameterDescription>
+		<defaultValueExpression><![CDATA[$P{LoggedInUserAttribute_ha}=="mii" ?  null : Arrays.asList($P{LoggedInUserAttribute_ha})]]></defaultValueExpression>
+	</parameter>
+	<parameter name="LoggedInUsername" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="Pending_Arbitrations" class="java.lang.String">
+		<parameterDescription><![CDATA[]]></parameterDescription>
+		<defaultValueExpression><![CDATA["Include_Pending_Arbitrations"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="Pending_Arbitrations_Filter" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA[($P{Pending_Arbitrations}=="Exclude_Pending_Arbitrations" ? " AND NVL(O.STATUS_REASON_DESCRIPTION, 'OK') <> 'OAIN'" : "")]]></defaultValueExpression>
+	</parameter>
+	<parameter name="Pending_Arbitrations_display" class="java.lang.String">
+		<parameterDescription><![CDATA[]]></parameterDescription>
+	</parameter>
+	<parameter name="Group_Code_Nissan" class="java.util.Collection">
+		<parameterDescription><![CDATA[]]></parameterDescription>
+	</parameter>
+	<parameter name="Account_Number_Nissan" class="java.util.Collection">
+		<parameterDescription><![CDATA[]]></parameterDescription>
+	</parameter>
+	<parameter name="LoggedInUserAttribute_Type" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="LoggedInUserAttribute_100M" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="Market_display" class="java.lang.String"/>
+	<parameter name="Location_display" class="java.lang.String"/>
+	<parameter name="Group_Code_Nissan_display" class="java.lang.String"/>
+	<parameter name="Account_Number_Nissan_display" class="java.lang.String"/>
+	<parameter name="Exclude_Lane_s_" class="java.util.Collection" isForPrompting="false"/>
+	<parameter name="Include_Lane_s_" class="java.util.Collection" isForPrompting="false"/>
+	<parameter name="Title_Status" class="java.util.Collection">
+		<defaultValueExpression><![CDATA[Arrays.asList("Validated","No Title Required")]]></defaultValueExpression>
+	</parameter>
+	<parameter name="Title_Status_display" class="java.lang.String">
+		<parameterDescription><![CDATA[]]></parameterDescription>
+	</parameter>
+	<parameter name="Report_Format_Nissan" class="java.lang.String">
+		<parameterDescription><![CDATA[]]></parameterDescription>
+		<defaultValueExpression><![CDATA["S"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="Report_Format_Nissan_display" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[/***** Sales and Expense - Nissan - ODS *****/
+SELECT 
+  II.VIN AS VIN, 
+  LPAD(O.LEGACY_SALE_LANE,2,0)||'-'||LPAD(O.LEGACY_SALE_RUN,4,0) AS ENTRY_NUM,
+  TRUNC(O.END_DATE) AS TRANSACTION_DATE,
+  MAX(SL_I.SALE_PRICE_AMOUNT) AS FINAL_PURCHASE_PRICE, 
+  SUM(CASE WHEN INVD.LEG_LCODE_TYPE_KEY_VALUE = 'A' THEN INVD.DETAIL_AMOUNT ELSE 0 END) AS APPEAR, 
+  SUM(CASE WHEN INVD.LEG_LCODE_TYPE_KEY_VALUE = 'C' THEN INVD.DETAIL_AMOUNT ELSE 0 END) AS CERT, 
+  SUM(CASE WHEN INVD.LEG_LCODE_TYPE_KEY_VALUE = 'B' THEN INVD.DETAIL_AMOUNT ELSE 0 END) AS EXIT, 
+  SUM(CASE WHEN INVD.LEG_LCODE_TYPE_KEY_VALUE = '0' THEN INVD.DETAIL_AMOUNT ELSE 0 END) AS GLASS, 
+  -- INBND_TRNS -- 
+  SUM(CASE WHEN INVD.LEG_LCODE_TYPE_KEY_VALUE = 'E' THEN INVD.DETAIL_AMOUNT ELSE 0 END) AS INBND_TRNS, 
+  SUM(CASE WHEN INVD.LEG_LCODE_TYPE_KEY_VALUE = 'R' THEN INVD.DETAIL_AMOUNT ELSE 0 END) AS TRANSFER,
+  SUM(CASE WHEN INVD.LEG_LCODE_TYPE_KEY_VALUE = 'U' THEN INVD.DETAIL_AMOUNT ELSE 0 END) AS SUBLET,
+  SUM(CASE WHEN INVD.LEG_LCODE_TYPE_KEY_VALUE = 'Y' THEN INVD.DETAIL_AMOUNT ELSE 0 END) AS MSS_EXP, 
+  SUM(CASE WHEN INVD.LEG_LCODE_TYPE_KEY_VALUE IN ('E','R','U','Y') THEN INVD.DETAIL_AMOUNT ELSE 0 END) AS INBND_TRNS_SUM,
+  -- END INBD_TRNS --
+  SUM(CASE WHEN INVD.LEG_LCODE_TYPE_KEY_VALUE = 'J' THEN INVD.DETAIL_AMOUNT ELSE 0 END) AS MARSHALL, 
+  -- MISC -- 
+  SUM(CASE WHEN INVD.LEG_LCODE_TYPE_KEY_VALUE = 'D' THEN INVD.DETAIL_AMOUNT ELSE 0 END) AS DMV, 
+  SUM(CASE WHEN INVD.LEG_LCODE_TYPE_KEY_VALUE IN ('M','?') THEN INVD.DETAIL_AMOUNT ELSE 0 END) AS MISC, 
+  SUM(CASE WHEN INVD.LEG_LCODE_TYPE_KEY_VALUE IN ('D','M','?') THEN INVD.DETAIL_AMOUNT ELSE 0 END)AS MISC_SUM, 
+  -- END MISC --   
+  SUM(CASE WHEN INVD.LEG_LCODE_TYPE_KEY_VALUE = 'F' THEN INVD.DETAIL_AMOUNT ELSE 0 END) AS OPEN, 
+  -- REPAIRS -- 
+  SUM(CASE WHEN INVD.LEG_LCODE_TYPE_KEY_VALUE = '2' THEN INVD.DETAIL_AMOUNT ELSE 0 END) AS TIRES, 
+  SUM(CASE WHEN INVD.LEG_LCODE_TYPE_KEY_VALUE = '3' THEN INVD.DETAIL_AMOUNT ELSE 0 END) AS BATTERY, 
+  SUM(CASE WHEN INVD.LEG_LCODE_TYPE_KEY_VALUE = '4' THEN INVD.DETAIL_AMOUNT ELSE 0 END) AS BODY_PAINT, 
+  SUM(CASE WHEN INVD.LEG_LCODE_TYPE_KEY_VALUE = '5' THEN INVD.DETAIL_AMOUNT ELSE 0 END) AS WHEELS, 
+  SUM(CASE WHEN INVD.LEG_LCODE_TYPE_KEY_VALUE = '6' THEN INVD.DETAIL_AMOUNT ELSE 0 END) AS MINOR, 
+  SUM(CASE WHEN INVD.LEG_LCODE_TYPE_KEY_VALUE = '7' THEN INVD.DETAIL_AMOUNT ELSE 0 END) AS FRAME, 
+  SUM(CASE WHEN INVD.LEG_LCODE_TYPE_KEY_VALUE = '8' THEN INVD.DETAIL_AMOUNT ELSE 0 END) AS DIAG, 
+  SUM(CASE WHEN INVD.LEG_LCODE_TYPE_KEY_VALUE = '9' THEN INVD.DETAIL_AMOUNT ELSE 0 END) AS KEYS, 
+  SUM(CASE WHEN INVD.LEG_LCODE_TYPE_KEY_VALUE IN ('2','3','4','5','6','7','8','9') THEN INVD.DETAIL_AMOUNT ELSE 0 END) AS REPAIRS_SUM, 
+  -- END REPAIRS --    
+  SUM(CASE WHEN INVD.LEG_GL_TYPE_KEY_VALUE IN ('SSELFE', 'SSUCCES') THEN INVD.DETAIL_AMOUNT ELSE 0 END) AS SALE_FEE,
+  SUM(CASE WHEN INVD.LEG_LCODE_TYPE_KEY_VALUE = 'T' THEN INVD.DETAIL_AMOUNT ELSE 0 END) AS TRNS_AST, 
+  MAX(NVL(SL_I.SALE_PRICE_AMOUNT,0)-SL_I.TOTAL_NET_AMOUNT) AS TOTAL_SELLER_EXPENSES, 
+  MAX(SL_I.TOTAL_NET_AMOUNT) AS NET_SELLER_AMOUNT
+FROM ODSADM.CUSTOMER CUST
+  JOIN ODSADM.SELLER_OFFERING O
+    ON CUST.CUSTOMER_ID = O.AUCTION_SELLER_ID
+    AND O.SELLER_OFFERING_STATUS_CODE = 'OSL'
+  JOIN ODSADM.SERVICE_ORDER SL
+    ON O.SERVICE_ORDER_ID = SL.SERVICE_ORDER_ID
+    AND SL.SERVICE_ORDER_STATUS_CODE IN ('AC', 'CM', 'PAU')
+  JOIN ODSADM.SERVICE_PROVIDER SP
+    ON O.SERVICE_PROVIDER_ID = SP.SERVICE_PROVIDER_ID
+    AND TRUNC(SP.EBIZ_CONVERTED_DATE) <= TRUNC(O.END_DATE)
+  JOIN INVENTORY_ITEM II
+    ON SL.INVENTORY_ITEM_ID = II.INVENTORY_ITEM_ID
+    AND NVL(II.SOURCE_SYSTEM_NAME,'OK') <> 'TRA'
+  JOIN ODSADM.TITLE T
+    ON SL.SERVICE_ORDER_ID = T.SERVICE_ORDER_ID 
+  JOIN ODSADM.SERVICE_TYPE_STATUS STS
+    ON T.TITLE_STATUS_CODE = STS.SERVICE_TYPE_STATUS_CODE
+    AND STS.SERVICE_TYPE_CODE = 'T'
+  JOIN ODSADM.INVOICE SL_I
+    ON SL.SERVICE_ORDER_ID = SL_I.SERVICE_ORDER_ID
+  JOIN ODSADM.V_INVOICE_DETAIL INVD
+    ON SL_I.INVOICE_ID = INVD.INVOICE_ID
+    AND INVD.LEG_GL_TYPE_KEY_VALUE <> '89'
+    AND INVD.DETAIL_STATUS_CODE <> 'INACTIVE'
+  JOIN XODSADM.DIM_AUCTION AUC -- NEEDED FOR THE MARKET FILTER
+    ON O.SERVICE_PROVIDER_ID = AUC.ODS_SERVICE_PROVIDER_ID 
+WHERE 
+  TRUNC(O.END_DATE) BETWEEN $P{Start_Date} AND $P{End_Date}
+  AND $X{IN, CUST.GROUP_CODE, Group_Code_Nissan}
+  AND $X{IN, CUST.DEALER_NUMBER, Account_Number_Nissan}
+  AND $X{IN, AUC.CUR_OPS_MKT_ID, Market}
+  AND $X{IN, SP.SERVICE_PROVIDER_CODE, Location}
+  AND $X{IN, O.LEGACY_SALE_LANE, Include_Lane_s_}
+  AND $X{NOTIN, O.LEGACY_SALE_LANE, Exclude_Lane_s_}
+  AND $X{IN, STS.SELLER_DISPLAY_VALUE, Title_Status}
+  $P!{Pending_Arbitrations_Filter} -- WHEN PENDING ARBS ARE EXCLUDED AND NVL(O.STATUS_REASON_DESCRIPTION, 'OK') <> 'OAIN' 
+GROUP BY II.VIN, LPAD(O.LEGACY_SALE_LANE,2,0)||'-'||LPAD(O.LEGACY_SALE_RUN,4,0), TRUNC(O.END_DATE)
+ORDER BY TRANSACTION_DATE, ENTRY_NUM]]>
+	</queryString>
+	<field name="VIN" class="java.lang.String"/>
+	<field name="ENTRY_NUM" class="java.lang.String"/>
+	<field name="TRANSACTION_DATE" class="java.sql.Timestamp"/>
+	<field name="FINAL_PURCHASE_PRICE" class="java.math.BigDecimal"/>
+	<field name="APPEAR" class="java.math.BigDecimal"/>
+	<field name="CERT" class="java.math.BigDecimal"/>
+	<field name="EXIT" class="java.math.BigDecimal"/>
+	<field name="GLASS" class="java.math.BigDecimal"/>
+	<field name="INBND_TRNS" class="java.math.BigDecimal"/>
+	<field name="TRANSFER" class="java.math.BigDecimal"/>
+	<field name="SUBLET" class="java.math.BigDecimal"/>
+	<field name="MSS_EXP" class="java.math.BigDecimal"/>
+	<field name="INBND_TRNS_SUM" class="java.math.BigDecimal"/>
+	<field name="MARSHALL" class="java.math.BigDecimal"/>
+	<field name="DMV" class="java.math.BigDecimal"/>
+	<field name="MISC" class="java.math.BigDecimal"/>
+	<field name="MISC_SUM" class="java.math.BigDecimal"/>
+	<field name="OPEN" class="java.math.BigDecimal"/>
+	<field name="TIRES" class="java.math.BigDecimal"/>
+	<field name="BATTERY" class="java.math.BigDecimal"/>
+	<field name="BODY_PAINT" class="java.math.BigDecimal"/>
+	<field name="WHEELS" class="java.math.BigDecimal"/>
+	<field name="MINOR" class="java.math.BigDecimal"/>
+	<field name="FRAME" class="java.math.BigDecimal"/>
+	<field name="DIAG" class="java.math.BigDecimal"/>
+	<field name="KEYS" class="java.math.BigDecimal"/>
+	<field name="REPAIRS_SUM" class="java.math.BigDecimal"/>
+	<field name="SALE_FEE" class="java.math.BigDecimal"/>
+	<field name="TRNS_AST" class="java.math.BigDecimal"/>
+	<field name="TOTAL_SELLER_EXPENSES" class="java.math.BigDecimal"/>
+	<field name="NET_SELLER_AMOUNT" class="java.math.BigDecimal"/>
+	<variable name="V_VIN_COUNT_PAGE_1" class="java.lang.Integer" resetType="Page" calculation="Count">
+		<variableExpression><![CDATA[$F{VIN}]]></variableExpression>
+	</variable>
+	<variable name="V_VIN_COUNT_REPORT_1" class="java.lang.Integer" calculation="Count">
+		<variableExpression><![CDATA[$F{VIN}]]></variableExpression>
+	</variable>
+	<variable name="Repairs_or_BodyPaint" class="java.lang.String">
+		<variableExpression><![CDATA[$P{Report_Format_Nissan} == "S" ? "Repairs" : "Body/Paint"]]></variableExpression>
+	</variable>
+	<variable name="V_PURCH_PR_SUM_PAGE_1" class="java.math.BigDecimal" resetType="Page" calculation="Sum">
+		<variableExpression><![CDATA[$F{FINAL_PURCHASE_PRICE}]]></variableExpression>
+	</variable>
+	<variable name="V_PURCH_PR_SUM_REPORT_1" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{FINAL_PURCHASE_PRICE}]]></variableExpression>
+	</variable>
+	<variable name="V_SALE_SUM_PAGE_1" class="java.math.BigDecimal" resetType="Page" calculation="Sum">
+		<variableExpression><![CDATA[$F{SALE_FEE}]]></variableExpression>
+	</variable>
+	<variable name="V_SALE_SUM_REPORT_1" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{SALE_FEE}]]></variableExpression>
+	</variable>
+	<variable name="V_TIRES_SUM_REPORT_2" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{TIRES}]]></variableExpression>
+	</variable>
+	<variable name="V_TIRES_SUM_PAGE_2" class="java.math.BigDecimal" resetType="Page" calculation="Sum">
+		<variableExpression><![CDATA[$F{TIRES}]]></variableExpression>
+	</variable>
+	<variable name="V_OPEN_SUM_PAGE_1" class="java.math.BigDecimal" resetType="Page" calculation="Sum">
+		<variableExpression><![CDATA[$F{OPEN}]]></variableExpression>
+	</variable>
+	<variable name="V_OPEN_SUM_REPORT_1" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{OPEN}]]></variableExpression>
+	</variable>
+	<variable name="V_BATTERY_SUM_REPORT_2" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{BATTERY}]]></variableExpression>
+	</variable>
+	<variable name="V_BATTERY_SUM_PAGE_2" class="java.math.BigDecimal" resetType="Page" calculation="Sum">
+		<variableExpression><![CDATA[$F{BATTERY}]]></variableExpression>
+	</variable>
+	<variable name="V_APPEARANCE_SUM_PAGE_1" class="java.math.BigDecimal" resetType="Page" calculation="Sum">
+		<variableExpression><![CDATA[$F{APPEAR}]]></variableExpression>
+	</variable>
+	<variable name="V_APPEARANCE_SUM_REPORT_1" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{APPEAR}]]></variableExpression>
+	</variable>
+	<variable name="V_WHEELS_SUM_REPORT_2" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{WHEELS}]]></variableExpression>
+	</variable>
+	<variable name="V_WHEELS_SUM_PAGE_2" class="java.math.BigDecimal" resetType="Page" calculation="Sum">
+		<variableExpression><![CDATA[$F{WHEELS}]]></variableExpression>
+	</variable>
+	<variable name="V_REPAIRS_BODY_PAINT_SUM_PAGE_1" class="java.math.BigDecimal" resetType="Page" calculation="Sum">
+		<variableExpression><![CDATA[$P{Report_Format_Nissan} == "S" ? $F{REPAIRS_SUM} : $F{BODY_PAINT}]]></variableExpression>
+	</variable>
+	<variable name="V_REPAIRS_BODY_PAINT_SUM_REPORT_1" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$P{Report_Format_Nissan} == "S" ? $F{REPAIRS_SUM} : $F{BODY_PAINT}]]></variableExpression>
+	</variable>
+	<variable name="V_MINOR_SUM_REPORT_2" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{MINOR}]]></variableExpression>
+	</variable>
+	<variable name="V_MINOR_SUM_PAGE_2" class="java.math.BigDecimal" resetType="Page" calculation="Sum">
+		<variableExpression><![CDATA[$F{MINOR}]]></variableExpression>
+	</variable>
+	<variable name="V_GLASS_SUM_PAGE_1" class="java.math.BigDecimal" resetType="Page" calculation="Sum">
+		<variableExpression><![CDATA[$F{GLASS}]]></variableExpression>
+	</variable>
+	<variable name="V_GLASS_SUM_REPORT_1" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{GLASS}]]></variableExpression>
+	</variable>
+	<variable name="V_FRAME_SUM_REPORT_2" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{FRAME}]]></variableExpression>
+	</variable>
+	<variable name="V_FRAME_SUM_PAGE_2" class="java.math.BigDecimal" resetType="Page" calculation="Sum">
+		<variableExpression><![CDATA[$F{FRAME}]]></variableExpression>
+	</variable>
+	<variable name="V_CERT_SUM_PAGE_1" class="java.math.BigDecimal" resetType="Page" calculation="Sum">
+		<variableExpression><![CDATA[$F{CERT}]]></variableExpression>
+	</variable>
+	<variable name="V_CERT_SUM_REPORT_1" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{CERT}]]></variableExpression>
+	</variable>
+	<variable name="V_DIAG_SUM_REPORT_2" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{DIAG}]]></variableExpression>
+	</variable>
+	<variable name="V_DIAG_SUM_PAGE_2" class="java.math.BigDecimal" resetType="Page" calculation="Sum">
+		<variableExpression><![CDATA[$F{DIAG}]]></variableExpression>
+	</variable>
+	<variable name="V_TRNS_AST_SUM_PAGE_1" class="java.math.BigDecimal" resetType="Page" calculation="Sum">
+		<variableExpression><![CDATA[$F{TRNS_AST}]]></variableExpression>
+	</variable>
+	<variable name="V_TRNS_AST_SUM_REPORT_1" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{TRNS_AST}]]></variableExpression>
+	</variable>
+	<variable name="V_KEYS_SUM_REPORT_2" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{KEYS}]]></variableExpression>
+	</variable>
+	<variable name="V_KEYS_SUM_PAGE_2" class="java.math.BigDecimal" resetType="Page" calculation="Sum">
+		<variableExpression><![CDATA[$F{KEYS}]]></variableExpression>
+	</variable>
+	<variable name="V_INBND_SUM_PAGE_1" class="java.math.BigDecimal" resetType="Page" calculation="Sum">
+		<variableExpression><![CDATA[$P{Report_Format_Nissan} == "S" ? $F{INBND_TRNS_SUM} : $F{INBND_TRNS}]]></variableExpression>
+	</variable>
+	<variable name="V_INBND_SUM_REPORT_1" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$P{Report_Format_Nissan} == "S" ? $F{INBND_TRNS_SUM} : $F{INBND_TRNS}]]></variableExpression>
+	</variable>
+	<variable name="V_MSS_SUM_REPORT_2" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{MSS_EXP}]]></variableExpression>
+	</variable>
+	<variable name="V_MSS_SUM_PAGE_2" class="java.math.BigDecimal" resetType="Page" calculation="Sum">
+		<variableExpression><![CDATA[$F{MSS_EXP}]]></variableExpression>
+	</variable>
+	<variable name="V_EXIT_SUM_PAGE_1" class="java.math.BigDecimal" resetType="Page" calculation="Sum">
+		<variableExpression><![CDATA[$F{EXIT}]]></variableExpression>
+	</variable>
+	<variable name="V_EXIT_SUM_REPORT_1" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{EXIT}]]></variableExpression>
+	</variable>
+	<variable name="V_TRANS_SUM_REPORT_2" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{TRANSFER}]]></variableExpression>
+	</variable>
+	<variable name="V_TRANS_SUM_PAGE_2" class="java.math.BigDecimal" resetType="Page" calculation="Sum">
+		<variableExpression><![CDATA[$F{TRANSFER}]]></variableExpression>
+	</variable>
+	<variable name="V_MARSHALL_SUM_PAGE_1" class="java.math.BigDecimal" resetType="Page" calculation="Sum">
+		<variableExpression><![CDATA[$F{MARSHALL}]]></variableExpression>
+	</variable>
+	<variable name="V_MARSHALL_SUM_REPORT_1" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{MARSHALL}]]></variableExpression>
+	</variable>
+	<variable name="V_SUBLET_SUM_REPORT_2" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{SUBLET}]]></variableExpression>
+	</variable>
+	<variable name="V_SUBLET_SUM_PAGE_2" class="java.math.BigDecimal" resetType="Page" calculation="Sum">
+		<variableExpression><![CDATA[$F{SUBLET}]]></variableExpression>
+	</variable>
+	<variable name="V_MISC_SUM_PAGE_1" class="java.math.BigDecimal" resetType="Page" calculation="Sum">
+		<variableExpression><![CDATA[$F{MISC}]]></variableExpression>
+	</variable>
+	<variable name="V_MISC_SUM_REPORT_1" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{MISC}]]></variableExpression>
+	</variable>
+	<variable name="V_DMV_SUM_REPORT_2" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{DMV}]]></variableExpression>
+	</variable>
+	<variable name="V_DMV_SUM_PAGE_2" class="java.math.BigDecimal" resetType="Page" calculation="Sum">
+		<variableExpression><![CDATA[$F{DMV}]]></variableExpression>
+	</variable>
+	<variable name="V_SELLER_EXP_SUM_PAGE_1" class="java.math.BigDecimal" resetType="Page" calculation="Sum">
+		<variableExpression><![CDATA[$F{TOTAL_SELLER_EXPENSES}]]></variableExpression>
+	</variable>
+	<variable name="V_SELLER_EXP_SUM_REPORT_1" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{TOTAL_SELLER_EXPENSES}]]></variableExpression>
+	</variable>
+	<variable name="V_SELLER_AMOUNT_SUM_PAGE_1" class="java.math.BigDecimal" resetType="Page" calculation="Sum">
+		<variableExpression><![CDATA[$F{NET_SELLER_AMOUNT}]]></variableExpression>
+	</variable>
+	<variable name="V_SELLER_AMOUNT_SUM_REPORT_1" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{NET_SELLER_AMOUNT}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="60" splitType="Stretch">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<textField>
+				<reportElement key="excludecsv" x="0" y="-20" width="800" height="80" forecolor="#FFFFFF" uuid="90b5e640-7aa8-45d2-9ee5-65fa82894ba0">
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<textFieldExpression><![CDATA["!STPH!"]]></textFieldExpression>
+			</textField>
+			<frame>
+				<reportElement key="excludehtml" x="0" y="0" width="752" height="60" uuid="d82f412c-f057-4f42-9f4a-f12726d1bd25">
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textField>
+					<reportElement positionType="FixRelativeToBottom" x="0" y="30" width="315" height="30" forecolor="#000000" uuid="65c035aa-c71a-4d45-92ff-72dbf9c8ec80">
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					</reportElement>
+					<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="12" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{JASPER_REPORT}.getName()]]></textFieldExpression>
+				</textField>
+				<textField pattern="EEEEE dd, MMMMM yyyy">
+					<reportElement key="" mode="Transparent" x="315" y="30" width="437" height="30" forecolor="#000000" uuid="6c62c42b-7ec9-46d4-abc2-f3c0c36afaab"/>
+					<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+						<font fontName="SansSerif" size="8" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{LoggedInUsername} + "  |  " + DATEFORMAT(TODAY(),"EEEEE dd, MMMM yyyy")]]></textFieldExpression>
+				</textField>
+				<image>
+					<reportElement x="0" y="0" width="315" height="30" uuid="53bdf7d4-4e26-4c36-bdf7-8e0bf8a2b6cc">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					</reportElement>
+					<imageExpression><![CDATA["repo:/Images/header_printable_bg.jpg"]]></imageExpression>
+				</image>
+			</frame>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="30" splitType="Stretch">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Table_CH" x="315" y="0" width="40" height="15" backcolor="#DDDDDD" uuid="73fab8c3-8456-4ba9-ad81-18799420d0ee">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<printWhenExpression><![CDATA[$P{Report_Format_Nissan} == "S"]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+				</box>
+				<textElement>
+					<font fontName="SansSerif" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Repairs"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Table_CH" mode="Opaque" x="697" y="0" width="55" height="15" backcolor="#DDDDDD" uuid="aa84e870-1099-461d-a191-da9f8314f818">
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+				</reportElement>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+				</box>
+				<textElement>
+					<font fontName="SansSerif" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Net Amt"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Table_CH" mode="Opaque" x="642" y="0" width="55" height="15" backcolor="#DDDDDD" uuid="d1900294-47f7-401b-8b7c-57688b1cc87b">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+				</box>
+				<textElement>
+					<font fontName="SansSerif" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Tot Exp"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Table_CH" mode="Opaque" x="602" y="15" width="40" height="15" backcolor="#DDDDDD" uuid="35441f17-48fe-47e2-86a7-2eae013e1a28">
+					<printWhenExpression><![CDATA[$P{Report_Format_Nissan} == "D"]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+				</box>
+				<textElement>
+					<font fontName="SansSerif" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["DMV"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Table_CH" mode="Opaque" x="562" y="15" width="40" height="15" backcolor="#DDDDDD" uuid="9ee278f6-3b3b-436b-9d38-b1c69bbb3fed">
+					<printWhenExpression><![CDATA[$P{Report_Format_Nissan} == "D"]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+				</box>
+				<textElement>
+					<font fontName="SansSerif" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Sublet"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Table_CH" mode="Opaque" x="562" y="0" width="40" height="15" backcolor="#DDDDDD" uuid="de22a63b-acb2-422b-a873-14b398626b98"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+				</box>
+				<textElement>
+					<font fontName="SansSerif" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Marshall"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Table_CH" mode="Opaque" x="522" y="0" width="40" height="15" backcolor="#DDDDDD" uuid="ba9c4e2c-84f9-413f-a1e2-60806fece812"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+				</box>
+				<textElement>
+					<font fontName="SansSerif" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Exit"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Table_CH" mode="Opaque" x="522" y="15" width="40" height="15" backcolor="#DDDDDD" uuid="e11677e1-fccf-455f-b18a-3eafbba338dc">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<printWhenExpression><![CDATA[$P{Report_Format_Nissan} == "D"]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+				</box>
+				<textElement>
+					<font fontName="SansSerif" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Transfer"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Table_CH" mode="Opaque" x="475" y="15" width="47" height="15" backcolor="#DDDDDD" uuid="33df07dd-d7a5-431e-be10-257710a54d0a">
+					<printWhenExpression><![CDATA[$P{Report_Format_Nissan} == "D"]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+				</box>
+				<textElement>
+					<font fontName="SansSerif" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["MSS Exp"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Table_CH" mode="Opaque" x="475" y="0" width="47" height="15" backcolor="#DDDDDD" uuid="e001caa3-aca4-41cb-aa3c-2e2e7c5f1020">
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+				</reportElement>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0">
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+				</box>
+				<textElement>
+					<font fontName="SansSerif" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Inbnd Trns"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Table_CH" mode="Opaque" x="435" y="0" width="40" height="15" backcolor="#DDDDDD" uuid="dd169336-614f-420d-a3d2-b3f4ab43bba4"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+				</box>
+				<textElement>
+					<font fontName="SansSerif" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Trns Ast"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Table_CH" mode="Opaque" x="435" y="15" width="40" height="15" backcolor="#DDDDDD" uuid="04766d27-0870-4399-9767-455b3f13158b">
+					<printWhenExpression><![CDATA[$P{Report_Format_Nissan} == "D"]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+				</box>
+				<textElement>
+					<font fontName="SansSerif" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Keys"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Table_CH" mode="Opaque" x="395" y="15" width="40" height="15" backcolor="#DDDDDD" uuid="c7e2bed6-664b-4a7d-9b9a-c3c75ccbd47c">
+					<printWhenExpression><![CDATA[$P{Report_Format_Nissan} == "D"]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+				</box>
+				<textElement>
+					<font fontName="SansSerif" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Diag"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Table_CH" mode="Opaque" x="395" y="0" width="40" height="15" backcolor="#DDDDDD" uuid="7a930f1b-e6c8-41a4-8642-ac34c4f95e79">
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+				</reportElement>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+				</box>
+				<textElement>
+					<font fontName="SansSerif" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Cert"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Table_CH" mode="Opaque" x="355" y="0" width="40" height="15" backcolor="#DDDDDD" uuid="c02b505a-f76d-43df-ac91-cf30cf55aafb"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+				</box>
+				<textElement>
+					<font fontName="SansSerif" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Glass"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Table_CH" mode="Opaque" x="355" y="15" width="40" height="15" backcolor="#DDDDDD" uuid="93e3d2cf-68b3-45da-82c8-41152182bcd8">
+					<printWhenExpression><![CDATA[$P{Report_Format_Nissan} == "D"]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+				</box>
+				<textElement>
+					<font fontName="SansSerif" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Frame"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Table_CH" mode="Opaque" x="315" y="15" width="40" height="15" backcolor="#DDDDDD" uuid="f77a732d-188c-4405-a2c0-fdc0a72ecb12">
+					<printWhenExpression><![CDATA[$P{Report_Format_Nissan} == "D"]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+				</box>
+				<textElement>
+					<font fontName="SansSerif" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Minor"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Table_CH" mode="Opaque" x="275" y="15" width="40" height="15" backcolor="#DDDDDD" uuid="ec814f29-436b-48f0-bfc3-b328c7725c4b">
+					<printWhenExpression><![CDATA[$P{Report_Format_Nissan} == "D"]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+				</box>
+				<textElement>
+					<font fontName="SansSerif" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Wheels"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Table_CH" mode="Opaque" x="275" y="0" width="40" height="15" backcolor="#DDDDDD" uuid="829ecb9a-e60d-4057-9325-6b8b140a6cf5">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+				</box>
+				<textElement>
+					<font fontName="SansSerif" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Appear"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Table_CH" mode="Opaque" x="45" y="0" width="95" height="15" backcolor="#DDDDDD" uuid="ca46b441-6d39-4836-969a-0e748cb8e066">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+				</reportElement>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+				</box>
+				<textElement>
+					<font fontName="SansSerif" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["VIN"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Table_CH" mode="Opaque" x="0" y="0" width="45" height="15" backcolor="#DDDDDD" uuid="093f0a0c-c46a-456a-a0ff-ce75e18ea5aa">
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+				</box>
+				<textElement>
+					<font fontName="SansSerif" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Entry #"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Table_CH" mode="Opaque" x="140" y="0" width="45" height="15" backcolor="#DDDDDD" uuid="6d9bc9c6-396f-4804-97c6-413c63894981">
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+				</box>
+				<textElement>
+					<font fontName="SansSerif" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Purch Pr"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Table_CH" mode="Opaque" x="185" y="0" width="50" height="15" backcolor="#DDDDDD" uuid="1bcbc8ab-77a6-4991-9e24-7174c51aeb11">
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+				</box>
+				<textElement>
+					<font fontName="SansSerif" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Sale Fees"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Table_CH" mode="Opaque" x="185" y="15" width="50" height="15" backcolor="#DDDDDD" uuid="ffe825cc-e1bb-4828-b3cb-cebff6df1207">
+					<printWhenExpression><![CDATA[$P{Report_Format_Nissan} == "D"]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+				</box>
+				<textElement>
+					<font fontName="SansSerif" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Tires"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Table_CH" mode="Opaque" x="235" y="0" width="40" height="15" backcolor="#DDDDDD" uuid="b7302206-4a4a-4bf2-9ce9-65251ae8806c">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+				</box>
+				<textElement>
+					<font fontName="SansSerif" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Open"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement key="" style="Table_CH" mode="Opaque" x="235" y="15" width="40" height="15" backcolor="#DDDDDD" uuid="0aa19e64-dcdf-4157-beef-76544dbe72f2">
+					<printWhenExpression><![CDATA[$P{Report_Format_Nissan} == "D"]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+				</box>
+				<textElement>
+					<font fontName="SansSerif" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Battery"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Table_CH" x="602" y="0" width="40" height="15" uuid="a6822c16-d154-4a12-ba58-f1799605e5df">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<topPen lineWidth="0.5" lineColor="#DDDDDD"/>
+					<leftPen lineWidth="0.5" lineColor="#DDDDDD"/>
+					<bottomPen lineWidth="0.5" lineColor="#DDDDDD"/>
+					<rightPen lineWidth="0.5" lineColor="#DDDDDD"/>
+				</box>
+				<textElement>
+					<font fontName="SansSerif" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Misc"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Table_CH" mode="Opaque" x="642" y="15" width="110" height="15" backcolor="#DDDDDD" uuid="a4c1e7ce-5d3f-480e-ba09-940376ab2b3e">
+					<printWhenExpression><![CDATA[$P{Report_Format_Nissan} == "D"]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+				</box>
+				<textElement>
+					<font fontName="SansSerif" size="8" isBold="true"/>
+				</textElement>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Table_CH" mode="Opaque" x="0" y="15" width="185" height="15" backcolor="#DDDDDD" uuid="2f7b4c77-7a1f-4ff2-8e7e-25f48defee14">
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<printWhenExpression><![CDATA[$P{Report_Format_Nissan} == "D"]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+				</box>
+				<textElement>
+					<font fontName="SansSerif" size="8" isBold="true"/>
+				</textElement>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Table_CH" x="315" y="0" width="40" height="15" backcolor="#DDDDDD" uuid="1f919511-25fa-4a30-b930-4e03175031e8">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<printWhenExpression><![CDATA[$P{Report_Format_Nissan} == "D"]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0">
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+				</box>
+				<textElement>
+					<font fontName="SansSerif" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Body/Paint"]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="15" splitType="Stretch">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Table_TD" x="45" y="0" width="95" height="15" uuid="b6f7a7f4-b291-4106-95b3-0ee9c9a08e79">
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{VIN}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+				<reportElement style="Table_TD" x="185" y="0" width="50" height="15" uuid="6b5710ce-5a3a-4ee5-b636-28e005709bfa"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{SALE_FEE}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+				<reportElement style="Table_TD" x="235" y="0" width="40" height="15" uuid="77f6def6-0b39-4a69-83e7-9f819609083b"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{OPEN}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+				<reportElement style="Table_TD" x="275" y="0" width="40" height="15" uuid="3759cab1-d2b1-4cd8-8730-dd8e3c6e4438"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{APPEAR}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+				<reportElement style="Table_TD" x="315" y="0" width="40" height="15" uuid="53e0da4d-8748-4eac-a88a-c10e70d96490"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Report_Format_Nissan} == "S" ? $F{REPAIRS_SUM} : $F{BODY_PAINT}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+				<reportElement style="Table_TD" x="355" y="0" width="40" height="15" uuid="73720342-73f8-4884-b069-37766cc6a1c1"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{GLASS}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+				<reportElement style="Table_TD" x="395" y="0" width="40" height="15" uuid="e48eb613-ec97-42ce-8454-ada27837ac5f"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CERT}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+				<reportElement style="Table_TD" x="435" y="0" width="40" height="15" uuid="ec47eee6-fef1-4bcf-833b-14a654989533"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{TRNS_AST}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+				<reportElement style="Table_TD" x="475" y="0" width="47" height="15" uuid="e293b7b9-a2c7-4206-8ba6-7aac6b31cdd0"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Report_Format_Nissan} == "S" ? $F{INBND_TRNS_SUM} : $F{INBND_TRNS}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+				<reportElement style="Table_TD" x="522" y="0" width="40" height="15" uuid="55deeb90-eff4-448a-a845-8aef19431870"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{EXIT}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+				<reportElement style="Table_TD" x="562" y="0" width="40" height="15" uuid="a52348f6-9b30-4ae5-8376-fc1db1a9b9d4"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{MARSHALL}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+				<reportElement style="Table_TD" x="602" y="0" width="40" height="15" uuid="6e4dca69-ee14-4b07-9d11-ed38f7ed7fb1">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{MISC}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+				<reportElement style="Table_TD" x="642" y="0" width="55" height="15" uuid="aa2ef75b-bae1-4cb5-8776-2cb9cac6ddfe">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{TOTAL_SELLER_EXPENSES}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+				<reportElement style="Table_TD" x="697" y="0" width="55" height="15" uuid="95a9ee92-7663-4e33-820d-eb9d2ac06249">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NET_SELLER_AMOUNT}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Table_TD" x="0" y="0" width="45" height="15" uuid="f5bd2e62-6207-4078-8035-7d730fd52fde"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ENTRY_NUM}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="$#,##0;$(#,##0)" isBlankWhenNull="true">
+				<reportElement style="Table_TD" x="140" y="0" width="45" height="15" uuid="63027b33-1a06-4259-86df-d2c7c927dc1d">
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+				</reportElement>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{FINAL_PURCHASE_PRICE}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="15">
+			<printWhenExpression><![CDATA[$P{Report_Format_Nissan} == "D"]]></printWhenExpression>
+			<textField isStretchWithOverflow="true" pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+				<reportElement style="Table_TD" x="522" y="0" width="40" height="15" uuid="3338891c-27ff-413f-bf0d-8027f15048f8">
+					<printWhenExpression><![CDATA[$P{Report_Format_Nissan} == "D"]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{TRANSFER}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+				<reportElement style="Table_TD" x="235" y="0" width="40" height="15" uuid="1849f22f-afa3-43df-8895-a39129c52c10">
+					<printWhenExpression><![CDATA[$P{Report_Format_Nissan} == "D"]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{BATTERY}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+				<reportElement style="Table_TD" x="275" y="0" width="40" height="15" uuid="960ee44f-ac99-4a4b-b063-2b867aa152d8">
+					<printWhenExpression><![CDATA[$P{Report_Format_Nissan} == "D"]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{WHEELS}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+				<reportElement style="Table_TD" x="562" y="0" width="40" height="15" uuid="be13f90b-65f6-4f59-9588-8efe1879396b">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<printWhenExpression><![CDATA[$P{Report_Format_Nissan} == "D"]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{SUBLET}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+				<reportElement style="Table_TD" x="355" y="0" width="40" height="15" uuid="68d65eaa-1bd9-448b-9dfb-f147502d1906">
+					<printWhenExpression><![CDATA[$P{Report_Format_Nissan} == "D"]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{FRAME}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+				<reportElement style="Table_TD" x="475" y="0" width="47" height="15" uuid="c7a6016f-5926-4da7-8d1a-14eb40f2ab1c">
+					<printWhenExpression><![CDATA[$P{Report_Format_Nissan} == "D"]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{MSS_EXP}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+				<reportElement style="Table_TD" x="395" y="0" width="40" height="15" uuid="611164b3-821c-49e2-9074-bfce9859bbed">
+					<printWhenExpression><![CDATA[$P{Report_Format_Nissan} == "D"]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{DIAG}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+				<reportElement style="Table_TD" x="185" y="0" width="50" height="15" uuid="726f9f21-b522-4a11-b4bb-d3bb4a859f85">
+					<printWhenExpression><![CDATA[$P{Report_Format_Nissan} == "D"]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{TIRES}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+				<reportElement style="Table_TD" x="315" y="0" width="40" height="15" uuid="866a467a-0e45-4c7b-8957-d11d004c996c">
+					<printWhenExpression><![CDATA[$P{Report_Format_Nissan} == "D"]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{MINOR}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+				<reportElement style="Table_TD" x="602" y="0" width="40" height="15" uuid="72d3a67e-b8fc-451c-bc0b-fc65cfe0bd31">
+					<printWhenExpression><![CDATA[$P{Report_Format_Nissan} == "D"]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{DMV}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+				<reportElement style="Table_TD" x="435" y="0" width="40" height="15" uuid="9e5fc930-6966-4ecc-81f2-3816e0976cce">
+					<printWhenExpression><![CDATA[$P{Report_Format_Nissan} == "D"]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{KEYS}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+				<reportElement style="Table_TD" x="642" y="0" width="55" height="15" uuid="11cf0615-109f-4292-b2d0-77bc750d08d0">
+					<printWhenExpression><![CDATA[$P{Report_Format_Nissan} == "D"]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+				<reportElement style="Table_TD" x="697" y="0" width="55" height="15" uuid="896a8242-4d4b-46e1-8585-4088fb557bdf">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<printWhenExpression><![CDATA[$P{Report_Format_Nissan} == "D"]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+				<reportElement style="Table_TD" x="0" y="0" width="185" height="15" uuid="28653c37-0cb2-4aaa-919a-af6693b974cc">
+					<printWhenExpression><![CDATA[$P{Report_Format_Nissan} == "D"]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="30">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Table_TF" mode="Opaque" x="0" y="0" width="45" height="15" backcolor="#E0EFFF" uuid="dd7d318e-554c-4fc2-92ab-5719a97a253f">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0">
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page Total"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="$#,##0;$(#,##0)" isBlankWhenNull="true">
+				<reportElement style="Table_TF" x="140" y="0" width="45" height="15" uuid="633dad5d-b27b-45e2-9f3b-f7291e7c52fd">
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+				</reportElement>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{V_PURCH_PR_SUM_PAGE_1}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+				<reportElement style="Table_TF" x="185" y="0" width="50" height="15" uuid="fbbb87a3-7c4b-4ec0-a48c-d1aefff7948a">
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+				</reportElement>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{V_SALE_SUM_PAGE_1}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+				<reportElement style="Table_TF" x="235" y="0" width="40" height="15" uuid="de39e706-22ea-4af1-922c-407f836cceb4">
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+				</reportElement>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{V_OPEN_SUM_PAGE_1}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+				<reportElement style="Table_TF" x="275" y="0" width="40" height="15" uuid="48b85de8-f501-4235-b8dd-e0b8dde694df">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+				</reportElement>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{V_APPEARANCE_SUM_PAGE_1}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+				<reportElement style="Table_TF" x="315" y="0" width="40" height="15" uuid="3ac026f9-968f-43e2-b4f8-d149bc6a9792">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{V_REPAIRS_BODY_PAINT_SUM_PAGE_1}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+				<reportElement style="Table_TF" x="355" y="0" width="40" height="15" uuid="be6f484b-028e-4cce-8cdf-baefe9b9572e">
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+				</reportElement>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{V_GLASS_SUM_PAGE_1}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+				<reportElement style="Table_TF" x="395" y="0" width="40" height="15" uuid="a4476ea9-03c2-4a8e-abe6-dbd4c3597957">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{V_CERT_SUM_PAGE_1}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+				<reportElement style="Table_TF" x="435" y="0" width="40" height="15" uuid="17373561-b0c6-4971-b0ea-e241e6c3dbc4">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{V_TRNS_AST_SUM_PAGE_1}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+				<reportElement style="Table_TF" x="475" y="0" width="47" height="15" uuid="cfd8115c-e1f3-426b-9fa5-8d816e04e1ab">
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+				</reportElement>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{V_INBND_SUM_PAGE_1}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+				<reportElement style="Table_TF" x="522" y="0" width="40" height="15" uuid="249038c8-6e8c-4252-93b8-c34965678bce">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{V_EXIT_SUM_PAGE_1}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+				<reportElement style="Table_TF" x="562" y="0" width="40" height="15" uuid="3867fe78-07f5-43f4-a5a3-c9bd5c83cdff">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{V_MARSHALL_SUM_PAGE_1}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+				<reportElement style="Table_TF" x="602" y="0" width="40" height="15" uuid="dc2ff6e8-0c79-4baf-a4a3-a8082b9eaae7">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{V_MISC_SUM_PAGE_1}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+				<reportElement style="Table_TF" x="642" y="0" width="55" height="15" uuid="2ef5a291-4696-48c7-8870-87c33673681e">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{V_SELLER_EXP_SUM_PAGE_1}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+				<reportElement style="Table_TF" x="697" y="0" width="55" height="15" uuid="110d15ea-d924-43a1-96c7-ac8a42dbd548"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{V_SELLER_AMOUNT_SUM_PAGE_1}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Table_TF" mode="Opaque" x="45" y="0" width="95" height="15" backcolor="#E0EFFF" uuid="c9c3d815-0a27-470e-8863-d720e2061b1f">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{V_VIN_COUNT_PAGE_1}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+				<reportElement style="Table_TF" x="185" y="15" width="50" height="15" uuid="f3464d28-0ebd-482d-9e8a-d9cfdb066704">
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<printWhenExpression><![CDATA[$P{Report_Format_Nissan} == "D"]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{V_TIRES_SUM_PAGE_2}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+				<reportElement style="Table_TF" x="235" y="15" width="40" height="15" uuid="e83ec722-bfda-41b6-86f4-a58642504140">
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<printWhenExpression><![CDATA[$P{Report_Format_Nissan} == "D"]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{V_BATTERY_SUM_PAGE_2}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+				<reportElement style="Table_TF" x="275" y="15" width="40" height="15" uuid="5baa5da6-3399-4808-8e5b-32b10a956d2d">
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<printWhenExpression><![CDATA[$P{Report_Format_Nissan} == "D"]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{V_WHEELS_SUM_PAGE_2}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+				<reportElement style="Table_TF" x="315" y="15" width="40" height="15" uuid="0fee0366-d7b1-42e2-919d-95f760b20253">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<printWhenExpression><![CDATA[$P{Report_Format_Nissan} == "D"]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{V_MINOR_SUM_PAGE_2}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+				<reportElement style="Table_TF" x="355" y="15" width="40" height="15" uuid="146a3a9c-01a8-4498-959a-d208ce531062">
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<printWhenExpression><![CDATA[$P{Report_Format_Nissan} == "D"]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{V_FRAME_SUM_PAGE_2}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+				<reportElement style="Table_TF" x="395" y="15" width="40" height="15" uuid="388d5bc1-cea1-4b0d-a625-7e955bd2953a">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<printWhenExpression><![CDATA[$P{Report_Format_Nissan} == "D"]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{V_DIAG_SUM_PAGE_2}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+				<reportElement style="Table_TF" x="435" y="15" width="40" height="15" uuid="f5aff997-beba-4e41-8f76-ce8a76441110">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<printWhenExpression><![CDATA[$P{Report_Format_Nissan} == "D"]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{V_KEYS_SUM_PAGE_2}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+				<reportElement style="Table_TF" x="475" y="15" width="47" height="15" uuid="12c7f509-9470-4764-80a6-8535e99954ed">
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<printWhenExpression><![CDATA[$P{Report_Format_Nissan} == "D"]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{V_MSS_SUM_PAGE_2}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+				<reportElement style="Table_TF" x="522" y="15" width="40" height="15" uuid="1e93a652-d6a8-4e80-979a-4df1779258c1">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<printWhenExpression><![CDATA[$P{Report_Format_Nissan} == "D"]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{V_TRANS_SUM_PAGE_2}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+				<reportElement style="Table_TF" x="562" y="15" width="40" height="15" uuid="eba2e9a9-7f4b-4a20-872b-07c8273fbecd">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<printWhenExpression><![CDATA[$P{Report_Format_Nissan} == "D"]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{V_SUBLET_SUM_PAGE_2}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+				<reportElement style="Table_TF" x="602" y="15" width="40" height="15" uuid="c1011508-029e-432f-aa86-a08cf7dc84e4">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<printWhenExpression><![CDATA[$P{Report_Format_Nissan} == "D"]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{V_DMV_SUM_PAGE_2}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+				<reportElement style="Table_TF" x="642" y="15" width="55" height="15" uuid="3533ff6f-dd1d-4a80-8c7b-52ae656bc1e6">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<printWhenExpression><![CDATA[$P{Report_Format_Nissan} == "D"]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+				<reportElement style="Table_TF" x="697" y="15" width="55" height="15" uuid="69369240-9ff9-43a5-92b5-4b257f7f61e8">
+					<printWhenExpression><![CDATA[$P{Report_Format_Nissan} == "D"]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Table_TF" mode="Opaque" x="0" y="15" width="45" height="15" backcolor="#E0EFFF" uuid="a119e94f-3b27-4e8e-881d-11ec6e10719a">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<printWhenExpression><![CDATA[$P{Report_Format_Nissan} == "D"]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0">
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Table_TF" mode="Opaque" x="45" y="15" width="95" height="15" backcolor="#E0EFFF" uuid="d7b71a17-89de-4b77-bd86-8151b24ff2ae">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<printWhenExpression><![CDATA[$P{Report_Format_Nissan} == "D"]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="$#,##0;$(#,##0)" isBlankWhenNull="true">
+				<reportElement style="Table_TF" x="140" y="15" width="45" height="15" uuid="fa0b30f8-6ecc-46ed-af99-1355f167b3f3">
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<printWhenExpression><![CDATA[$P{Report_Format_Nissan} == "D"]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+			</textField>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="15" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="315" height="15" uuid="aff4813c-94e6-4544-a062-dfe1a919fdbd">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA["© Manheim. All rights reserved."]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="315" y="0" width="437" height="15" uuid="1be1c8fb-c345-4953-be82-58cd8483b0c8">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page " + $V{PAGE_NUMBER} + " of " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="255">
+			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.HorizontalRowLayout"/>
+			<frame>
+				<reportElement x="0" y="0" width="752" height="255" isRemoveLineWhenBlank="true" uuid="0623e3ed-1a44-40aa-849e-cc0c79c681ff">
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<frame>
+					<reportElement x="0" y="0" width="752" height="30" isRemoveLineWhenBlank="true" uuid="66623feb-6f2a-4cd7-801a-9343a62dfec6">
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					</reportElement>
+					<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+						<reportElement style="Table_TF" mode="Opaque" x="0" y="0" width="45" height="30" backcolor="#E0EFFF" uuid="1e616cbf-38d2-4506-aaa6-73c42b4129fd">
+							<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+							<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+							<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+						</reportElement>
+						<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+							<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textElement textAlignment="Center">
+							<font fontName="SansSerif" size="8"/>
+						</textElement>
+						<textFieldExpression><![CDATA["Grand Total"]]></textFieldExpression>
+					</textField>
+					<textField isStretchWithOverflow="true" pattern="$#,##0;$(#,##0)" isBlankWhenNull="true">
+						<reportElement style="Table_TF" x="140" y="0" width="45" height="30" uuid="882ce4b3-02fa-486e-bb5a-0728b142f36d"/>
+						<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+							<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textElement textAlignment="Right">
+							<font fontName="SansSerif" size="8"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$V{V_PURCH_PR_SUM_REPORT_1}]]></textFieldExpression>
+					</textField>
+					<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+						<reportElement style="Table_TF" mode="Opaque" x="45" y="0" width="95" height="30" backcolor="#E0EFFF" uuid="e961791e-01d7-4eb6-a051-1591f130a5ac">
+							<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+							<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+							<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+						</reportElement>
+						<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+							<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textElement textAlignment="Center">
+							<font fontName="SansSerif" size="8"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$V{V_VIN_COUNT_REPORT_1}]]></textFieldExpression>
+					</textField>
+					<textField isStretchWithOverflow="true" pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+						<reportElement style="Table_TF" x="185" y="0" width="50" height="30" uuid="5b7e71ef-d5ee-4c00-bbd3-487bce117b27"/>
+						<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+							<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textElement textAlignment="Right">
+							<font fontName="SansSerif" size="8"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$V{V_SALE_SUM_REPORT_1}]]></textFieldExpression>
+					</textField>
+					<textField isStretchWithOverflow="true" pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+						<reportElement style="Table_TF" x="235" y="0" width="40" height="30" uuid="d1b61e0c-329e-4196-aee6-7c70ed74d6fc">
+							<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+							<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+						</reportElement>
+						<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+							<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textElement textAlignment="Right">
+							<font fontName="SansSerif" size="8"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$V{V_OPEN_SUM_REPORT_1}]]></textFieldExpression>
+					</textField>
+					<textField isStretchWithOverflow="true" pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+						<reportElement style="Table_TF" x="275" y="0" width="40" height="30" uuid="ef89ed78-d657-413e-8c01-9c41f827e76a">
+							<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						</reportElement>
+						<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+							<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textElement textAlignment="Right">
+							<font fontName="SansSerif" size="8"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$V{V_APPEARANCE_SUM_REPORT_1}]]></textFieldExpression>
+					</textField>
+					<textField isStretchWithOverflow="true" pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+						<reportElement style="Table_TF" x="315" y="0" width="40" height="30" uuid="4a2586f8-2823-418c-9495-a0e0293c3c24">
+							<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+						</reportElement>
+						<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+							<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textElement textAlignment="Right">
+							<font fontName="SansSerif" size="8"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$V{V_REPAIRS_BODY_PAINT_SUM_REPORT_1}]]></textFieldExpression>
+					</textField>
+					<textField isStretchWithOverflow="true" pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+						<reportElement style="Table_TF" x="355" y="0" width="40" height="30" uuid="e36e3d77-41fe-40b5-a616-fdc481c9bd66">
+							<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+							<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+						</reportElement>
+						<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+							<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textElement textAlignment="Right">
+							<font fontName="SansSerif" size="8"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$V{V_GLASS_SUM_REPORT_1}]]></textFieldExpression>
+					</textField>
+					<textField isStretchWithOverflow="true" pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+						<reportElement style="Table_TF" x="395" y="0" width="40" height="30" uuid="e90b4526-2be6-472a-b595-1d93fedf6e6e">
+							<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+						</reportElement>
+						<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+							<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textElement textAlignment="Right">
+							<font fontName="SansSerif" size="8"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$V{V_CERT_SUM_REPORT_1}]]></textFieldExpression>
+					</textField>
+					<textField isStretchWithOverflow="true" pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+						<reportElement style="Table_TF" x="435" y="0" width="40" height="30" uuid="9130242b-8f23-4434-87f6-0e22a656bc78">
+							<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+						</reportElement>
+						<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+							<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textElement textAlignment="Right">
+							<font fontName="SansSerif" size="8"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$V{V_TRNS_AST_SUM_REPORT_1}]]></textFieldExpression>
+					</textField>
+					<textField isStretchWithOverflow="true" pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+						<reportElement style="Table_TF" x="475" y="0" width="47" height="30" uuid="4b0afccd-e4c2-43f4-94b6-5710a1df020d">
+							<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+							<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						</reportElement>
+						<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+							<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textElement textAlignment="Right">
+							<font fontName="SansSerif" size="8"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$V{V_INBND_SUM_REPORT_1}]]></textFieldExpression>
+					</textField>
+					<textField isStretchWithOverflow="true" pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+						<reportElement style="Table_TF" x="522" y="0" width="40" height="30" uuid="84d244c9-7eca-41fd-9285-298e92d309e7"/>
+						<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+							<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textElement textAlignment="Right">
+							<font fontName="SansSerif" size="8"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$V{V_EXIT_SUM_REPORT_1}]]></textFieldExpression>
+					</textField>
+					<textField isStretchWithOverflow="true" pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+						<reportElement style="Table_TF" x="562" y="0" width="40" height="30" uuid="4d13903d-3b2f-4e38-bfd3-9276ab01210d">
+							<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						</reportElement>
+						<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+							<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textElement textAlignment="Right">
+							<font fontName="SansSerif" size="8"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$V{V_MARSHALL_SUM_REPORT_1}]]></textFieldExpression>
+					</textField>
+					<textField isStretchWithOverflow="true" pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+						<reportElement style="Table_TF" x="697" y="0" width="55" height="30" uuid="8351b754-6c35-4ea7-9dc2-a9e763ac6b87">
+							<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+							<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+						</reportElement>
+						<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+							<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textElement textAlignment="Right">
+							<font fontName="SansSerif" size="8"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$V{V_SELLER_AMOUNT_SUM_REPORT_1}]]></textFieldExpression>
+					</textField>
+					<textField isStretchWithOverflow="true" pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+						<reportElement style="Table_TF" x="642" y="0" width="55" height="30" uuid="adb2ce6a-01d0-4eec-ae17-244d89c99d26">
+							<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+						</reportElement>
+						<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+							<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textElement textAlignment="Right">
+							<font fontName="SansSerif" size="8"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$V{V_SELLER_EXP_SUM_REPORT_1}]]></textFieldExpression>
+					</textField>
+					<textField isStretchWithOverflow="true" pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+						<reportElement style="Table_TF" x="602" y="0" width="40" height="30" uuid="8b6dddd3-1224-45c7-9d1f-5762a99687a3">
+							<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+							<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+						</reportElement>
+						<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+							<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textElement textAlignment="Right">
+							<font fontName="SansSerif" size="8"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$V{V_MISC_SUM_REPORT_1}]]></textFieldExpression>
+					</textField>
+				</frame>
+				<frame>
+					<reportElement x="0" y="60" width="752" height="195" isRemoveLineWhenBlank="true" uuid="68cba921-4a17-4b1b-852c-4bc7444180e8">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					</reportElement>
+					<textField>
+						<reportElement key="excludecsvxlshtml" x="0" y="0" width="752" height="30" uuid="522e7398-9ce4-45d9-a0a3-9372c9581589">
+							<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+							<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+						</reportElement>
+						<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+						<textElement textAlignment="Center" verticalAlignment="Middle">
+							<font fontName="SansSerif" size="10" isBold="true"/>
+						</textElement>
+						<textFieldExpression><![CDATA["Report Filters"]]></textFieldExpression>
+					</textField>
+					<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+						<reportElement key="excludecsvxlshtml" positionType="Float" x="0" y="30" width="752" height="15" isRemoveLineWhenBlank="true" uuid="a656b34c-3e4f-40e3-b87e-4c36fa8960b5">
+							<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+						</reportElement>
+						<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+						<textElement>
+							<font fontName="SansSerif" size="8"/>
+						</textElement>
+						<textFieldExpression><![CDATA["Start Date:  " + $P{Start_Date}.toString().replace("[", "").toString().replace("]","") + "	End Date:  " + $P{End_Date}.toString().replace("[", "").toString().replace("]","")]]></textFieldExpression>
+					</textField>
+					<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+						<reportElement key="excludecsvxlshtml" positionType="Float" x="0" y="45" width="752" height="15" isRemoveLineWhenBlank="true" uuid="841dae41-ee86-47ac-afac-ad2e0bf5a2b6">
+							<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+							<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+							<printWhenExpression><![CDATA[!$P{Market}.isEmpty()]]></printWhenExpression>
+						</reportElement>
+						<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+						<textElement>
+							<font fontName="SansSerif" size="8"/>
+						</textElement>
+						<textFieldExpression><![CDATA["Market: " + $P{Market_display}.replace("[", "").replace("]","")]]></textFieldExpression>
+					</textField>
+					<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+						<reportElement key="excludecsvxlshtml" positionType="Float" x="0" y="60" width="752" height="15" isRemoveLineWhenBlank="true" uuid="10922f99-1e78-4245-aaa2-9d9b3fd8d94b">
+							<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+							<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+							<printWhenExpression><![CDATA[!$P{Location}.isEmpty()]]></printWhenExpression>
+						</reportElement>
+						<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+						<textElement>
+							<font fontName="SansSerif" size="8"/>
+						</textElement>
+						<textFieldExpression><![CDATA["Location: " + $P{Location_display}.replace("[", "").replace("]","")]]></textFieldExpression>
+					</textField>
+					<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+						<reportElement key="excludecsvxlshtml" positionType="Float" x="0" y="75" width="752" height="15" isRemoveLineWhenBlank="true" uuid="7a562a9c-1148-48c0-aea8-274ec6ae261c">
+							<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+							<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+							<printWhenExpression><![CDATA[!$P{Include_Lane_s_}.isEmpty()]]></printWhenExpression>
+						</reportElement>
+						<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+						<textElement>
+							<font fontName="SansSerif" size="8"/>
+						</textElement>
+						<textFieldExpression><![CDATA["Include Lane(s): " + $P{Include_Lane_s_}.toString().replace("[", "").toString().replace("]","")]]></textFieldExpression>
+					</textField>
+					<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+						<reportElement key="excludecsvxlshtml" positionType="Float" x="0" y="90" width="752" height="15" isRemoveLineWhenBlank="true" uuid="f3214fbf-0e25-4af1-9aaf-28558de1a4c5">
+							<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+							<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+							<printWhenExpression><![CDATA[!$P{Exclude_Lane_s_}.isEmpty()]]></printWhenExpression>
+						</reportElement>
+						<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+						<textElement>
+							<font fontName="SansSerif" size="8"/>
+						</textElement>
+						<textFieldExpression><![CDATA["Exclude Lane(s): " + $P{Exclude_Lane_s_}.toString().replace("[", "").toString().replace("]","")]]></textFieldExpression>
+					</textField>
+					<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+						<reportElement key="excludecsvxlshtml" positionType="Float" x="0" y="105" width="752" height="15" isRemoveLineWhenBlank="true" uuid="8feaba5c-d286-49ab-84a8-7aa026380837">
+							<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+							<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+							<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+							<printWhenExpression><![CDATA[!$P{Group_Code_Nissan}.isEmpty()]]></printWhenExpression>
+						</reportElement>
+						<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+						<textElement>
+							<font fontName="SansSerif" size="8"/>
+						</textElement>
+						<textFieldExpression><![CDATA["Group Code: " + $P{Group_Code_Nissan_display}.replace("[", "").replace("]","")]]></textFieldExpression>
+					</textField>
+					<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+						<reportElement key="excludecsvxlshtml" positionType="Float" x="0" y="120" width="752" height="15" isRemoveLineWhenBlank="true" uuid="3f32b4c9-13b3-4a4f-b61d-66252d308e52">
+							<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+							<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+							<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+							<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+							<printWhenExpression><![CDATA[!$P{Account_Number_Nissan}.isEmpty()]]></printWhenExpression>
+						</reportElement>
+						<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+						<textElement>
+							<font fontName="SansSerif" size="8"/>
+						</textElement>
+						<textFieldExpression><![CDATA["Account Number: " + $P{Account_Number_Nissan_display}.replace("[", "").replace("]","")]]></textFieldExpression>
+					</textField>
+					<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+						<reportElement key="excludecsvxlshtml" positionType="Float" x="0" y="135" width="752" height="15" isRemoveLineWhenBlank="true" uuid="f4aaba81-359e-4813-994d-925c85655388">
+							<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+							<printWhenExpression><![CDATA[!$P{Title_Status}.isEmpty()]]></printWhenExpression>
+						</reportElement>
+						<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+						<textElement>
+							<font fontName="SansSerif" size="8"/>
+						</textElement>
+						<textFieldExpression><![CDATA["Title Status: " + $P{Title_Status_display}.replace("[", "").replace("]","")]]></textFieldExpression>
+					</textField>
+					<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+						<reportElement key="excludecsvxlshtml" positionType="Float" x="0" y="150" width="752" height="15" isRemoveLineWhenBlank="true" uuid="edfc0219-b76c-4766-8de2-75695f3d110b">
+							<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+							<printWhenExpression><![CDATA[!$P{Pending_Arbitrations}.isEmpty()]]></printWhenExpression>
+						</reportElement>
+						<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+						<textElement>
+							<font fontName="SansSerif" size="8"/>
+						</textElement>
+						<textFieldExpression><![CDATA["Pending Arbitrations: " + $P{Pending_Arbitrations_display}.replace("[", "").replace("]","")]]></textFieldExpression>
+					</textField>
+					<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+						<reportElement key="excludecsvxlshtml" positionType="Float" x="0" y="165" width="752" height="15" isRemoveLineWhenBlank="true" uuid="38149f23-21f1-4544-b1da-89f7f5b3e17f">
+							<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+							<printWhenExpression><![CDATA[!$P{Report_Format_Nissan}.isEmpty()]]></printWhenExpression>
+						</reportElement>
+						<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+						<textElement>
+							<font fontName="SansSerif" size="8"/>
+						</textElement>
+						<textFieldExpression><![CDATA["Report Layout: " + $P{Report_Format_Nissan_display}.replace("[", "").replace("]","")]]></textFieldExpression>
+					</textField>
+					<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+						<reportElement key="" positionType="Float" x="0" y="180" width="752" height="15" isRemoveLineWhenBlank="true" uuid="20621ac3-9784-42d3-b40e-f3ec70a4e94c">
+							<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+							<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+						</reportElement>
+						<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+						<textElement>
+							<font fontName="SansSerif" size="8"/>
+						</textElement>
+						<textFieldExpression><![CDATA["Report Path: " + $P{JASPER_REPORT}.getProperty("ireport.jasperserver.report.resource").substring(1,$P{JASPER_REPORT}.getProperty("ireport.jasperserver.report.resource").length()).replace("_files/main_jrxml","").replace("___"," - ").replace("_"," ")]]></textFieldExpression>
+					</textField>
+				</frame>
+				<textField isStretchWithOverflow="true" pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+					<reportElement style="Table_TF" x="185" y="30" width="50" height="30" uuid="28b2761d-a4e8-40b5-9f05-6e002400d752">
+						<printWhenExpression><![CDATA[$P{Report_Format_Nissan} == "D"]]></printWhenExpression>
+					</reportElement>
+					<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Right">
+						<font fontName="SansSerif" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{V_TIRES_SUM_REPORT_2}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+					<reportElement style="Table_TF" x="235" y="30" width="40" height="30" uuid="e93962fe-6cd8-4e0b-bcc8-d071b22da14e">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+						<printWhenExpression><![CDATA[$P{Report_Format_Nissan} == "D"]]></printWhenExpression>
+					</reportElement>
+					<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Right">
+						<font fontName="SansSerif" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{V_BATTERY_SUM_REPORT_2}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+					<reportElement style="Table_TF" x="275" y="30" width="40" height="30" uuid="6c1299bf-593d-4bcb-9d2d-65df02aa6925">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<printWhenExpression><![CDATA[$P{Report_Format_Nissan} == "D"]]></printWhenExpression>
+					</reportElement>
+					<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Right">
+						<font fontName="SansSerif" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{V_WHEELS_SUM_REPORT_2}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+					<reportElement style="Table_TF" x="315" y="30" width="40" height="30" uuid="4aacca71-59f5-4774-a489-bb87437ecaa6">
+						<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+						<printWhenExpression><![CDATA[$P{Report_Format_Nissan} == "D"]]></printWhenExpression>
+					</reportElement>
+					<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Right">
+						<font fontName="SansSerif" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{V_MINOR_SUM_REPORT_2}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+					<reportElement style="Table_TF" x="355" y="30" width="40" height="30" uuid="c24c7add-cb79-445d-ae8d-bab8057a11f6">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+						<printWhenExpression><![CDATA[$P{Report_Format_Nissan} == "D"]]></printWhenExpression>
+					</reportElement>
+					<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Right">
+						<font fontName="SansSerif" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{V_FRAME_SUM_REPORT_2}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+					<reportElement style="Table_TF" x="395" y="30" width="40" height="30" uuid="645fb9f5-88fc-4729-b9f0-c8a39ed46505">
+						<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+						<printWhenExpression><![CDATA[$P{Report_Format_Nissan} == "D"]]></printWhenExpression>
+					</reportElement>
+					<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Right">
+						<font fontName="SansSerif" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{V_DIAG_SUM_REPORT_2}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+					<reportElement style="Table_TF" x="435" y="30" width="40" height="30" uuid="4f140f87-0698-47a2-899d-a34de49986be">
+						<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+						<printWhenExpression><![CDATA[$P{Report_Format_Nissan} == "D"]]></printWhenExpression>
+					</reportElement>
+					<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Right">
+						<font fontName="SansSerif" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{V_KEYS_SUM_REPORT_2}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+					<reportElement style="Table_TF" x="475" y="30" width="47" height="30" uuid="23768308-89e6-41ec-9966-359294bc7daa">
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<printWhenExpression><![CDATA[$P{Report_Format_Nissan} == "D"]]></printWhenExpression>
+					</reportElement>
+					<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Right">
+						<font fontName="SansSerif" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{V_MSS_SUM_REPORT_2}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+					<reportElement style="Table_TF" x="522" y="30" width="40" height="30" uuid="414e874b-b797-4eb5-b2d5-16aeab54c0f3">
+						<printWhenExpression><![CDATA[$P{Report_Format_Nissan} == "D"]]></printWhenExpression>
+					</reportElement>
+					<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Right">
+						<font fontName="SansSerif" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{V_TRANS_SUM_REPORT_2}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+					<reportElement style="Table_TF" x="562" y="30" width="40" height="30" uuid="e43d021b-04c0-4032-b376-01783cc56380">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<printWhenExpression><![CDATA[$P{Report_Format_Nissan} == "D"]]></printWhenExpression>
+					</reportElement>
+					<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Right">
+						<font fontName="SansSerif" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{V_SUBLET_SUM_REPORT_2}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+					<reportElement style="Table_TF" x="602" y="30" width="40" height="30" uuid="21fbdfc2-3d78-4bad-98a3-53b33296d7c8">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+						<printWhenExpression><![CDATA[$P{Report_Format_Nissan} == "D"]]></printWhenExpression>
+					</reportElement>
+					<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Right">
+						<font fontName="SansSerif" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{V_DMV_SUM_REPORT_2}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+					<reportElement style="Table_TF" x="642" y="30" width="55" height="30" uuid="b68ccbdc-a6c9-4b81-ad91-0e6f4c8085d1">
+						<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+						<printWhenExpression><![CDATA[$P{Report_Format_Nissan} == "D"]]></printWhenExpression>
+					</reportElement>
+					<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Right">
+						<font fontName="SansSerif" size="8"/>
+					</textElement>
+				</textField>
+				<textField isStretchWithOverflow="true" pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+					<reportElement style="Table_TF" x="697" y="30" width="55" height="30" uuid="2fe59b15-8020-4ca0-944f-d6eae08fb3b2">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+						<printWhenExpression><![CDATA[$P{Report_Format_Nissan} == "D"]]></printWhenExpression>
+					</reportElement>
+					<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Right">
+						<font fontName="SansSerif" size="8"/>
+					</textElement>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="Table_TF" mode="Opaque" x="0" y="30" width="45" height="30" backcolor="#E0EFFF" uuid="fe3c3ea9-c851-42cc-a894-c679e0c671d9">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+						<printWhenExpression><![CDATA[$P{Report_Format_Nissan} == "D"]]></printWhenExpression>
+					</reportElement>
+					<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Center">
+						<font fontName="SansSerif" size="8"/>
+					</textElement>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="Table_TF" mode="Opaque" x="45" y="30" width="95" height="30" backcolor="#E0EFFF" uuid="701dc85d-6090-4d02-9d8c-20d3268f002f">
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+						<printWhenExpression><![CDATA[$P{Report_Format_Nissan} == "D"]]></printWhenExpression>
+					</reportElement>
+					<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Center">
+						<font fontName="SansSerif" size="8"/>
+					</textElement>
+				</textField>
+				<textField isStretchWithOverflow="true" pattern="$#,##0;$(#,##0)" isBlankWhenNull="true">
+					<reportElement style="Table_TF" x="140" y="30" width="45" height="30" uuid="cbe2e1df-d1d4-4526-87da-68de2c2a7a20">
+						<printWhenExpression><![CDATA[$P{Report_Format_Nissan} == "D"]]></printWhenExpression>
+					</reportElement>
+					<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Right">
+						<font fontName="SansSerif" size="8"/>
+					</textElement>
+				</textField>
+			</frame>
+		</band>
+	</summary>
+	<noData>
+		<band height="30">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<staticText>
+				<reportElement x="350" y="0" width="100" height="30" isRemoveLineWhenBlank="true" uuid="59ead02e-9beb-4410-acd4-2ceea24a3441"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="12"/>
+				</textElement>
+				<text><![CDATA["!TRCND!"]]></text>
+			</staticText>
+		</band>
+	</noData>
+</jasperReport>

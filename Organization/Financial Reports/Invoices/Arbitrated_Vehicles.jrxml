@@ -1,0 +1,975 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.1.0.final using JasperReports Library version 6.1.0  -->
+<!-- 2016-12-20T15:11:51 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Arbitrated Vehicles" language="groovy" pageWidth="1340" pageHeight="600" orientation="Landscape" whenNoDataType="NoDataSection" columnWidth="1300" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" isSummaryWithPageHeaderAndFooter="true" uuid="44a72d3d-078e-4076-9a7b-c0418b7b0482">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="silo 5"/>
+	<property name="ireport.jasperserver.url" value="https://jaspersoft.dev.manheim.com/jasperserver-pro/"/>
+	<property name="ireport.jasperserver.user" value="jasperadmin"/>
+	<property name="ireport.jasperserver.reportUnit" value="/Financial/Invoices/Arbitrated_Vehicles"/>
+	<property name="net.sf.jasperreports.export.html.exclude.origin.band.1" value="summary"/>
+	<property name="net.sf.jasperreports.export.html.exclude.origin.band.3" value="pageFooter"/>
+	<property name="net.sf.jasperreports.export.csv.exclude.origin.band.pageHeader" value="pageHeader"/>
+	<property name="net.sf.jasperreports.export.csv.exclude.origin.band.pageFooter" value="pageFooter"/>
+	<property name="net.sf.jasperreports.export.csv.exclude.origin.band.Summary" value="summary"/>
+	<property name="net.sf.jasperreports.export.xls.exclude.origin.band.pageHeader" value="pageHeader"/>
+	<property name="net.sf.jasperreports.export.xls.exclude.origin.band.pageFooter" value="pageFooter"/>
+	<property name="net.sf.jasperreports.export.xls.exclude.origin.band.summary" value="summary"/>
+	<property name="net.sf.jasperreports.export.html.exclude.key.excludehtml"/>
+	<property name="net.sf.jasperreports.export.csv.exclude.key.excludecsv"/>
+	<property name="ireport.jasperserver.report.resource" value="/Financial/Invoices/Arbitrated_Vehicles_files/Main_Jrxml"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<style name="Table_CH" mode="Opaque" backcolor="#DDDDDD" hTextAlign="Center" vTextAlign="Middle" fontName="SansSerif" fontSize="9" isBold="true">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#DDDDDD"/>
+			<leftPen lineWidth="0.5" lineColor="#DDDDDD"/>
+			<bottomPen lineWidth="0.5" lineColor="#DDDDDD"/>
+			<rightPen lineWidth="0.5" lineColor="#DDDDDD"/>
+		</box>
+	</style>
+	<style name="Table_TD" mode="Opaque" backcolor="#FFFFFF" vTextAlign="Middle" fontName="SansSerif" fontSize="9">
+		<pen lineColor="#DDDDDD"/>
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+			<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+			<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+			<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{ARBITRATION_TRANSACTION_NUMBER}==null || $F{ADJ_ORIGINAL_AMOUNT}==null || $F{ADJ_REMAINING_AMOUNT}==null]]></conditionExpression>
+			<style backcolor="#FFD966"/>
+		</conditionalStyle>
+	</style>
+	<style name="Table_CF" mode="Opaque" backcolor="#F3F3F3" vTextAlign="Middle" fontName="SansSerif" fontSize="9" isBold="true">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.1" lineStyle="Solid" lineColor="#DDDDDD"/>
+			<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#DDDDDD"/>
+			<bottomPen lineWidth="0.1" lineStyle="Solid" lineColor="#DDDDDD"/>
+			<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#DDDDDD"/>
+		</box>
+	</style>
+	<style name="Table_TF" mode="Opaque" backcolor="#E0EFFF" vTextAlign="Middle" fontName="SansSerif" fontSize="9" isBold="true">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+			<leftPen lineWidth="0.0"/>
+			<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+			<rightPen lineWidth="0.0"/>
+		</box>
+	</style>
+	<style name="pg_header_report_name" hTextAlign="Left" vTextAlign="Middle" isBlankWhenNull="true" fontSize="12" isBold="true">
+		<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+	</style>
+	<style name="pg_header_user_name" hTextAlign="Right" vTextAlign="Middle" isBlankWhenNull="true" fontSize="10">
+		<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+	</style>
+	<style name="pg_footer_rights_reserved" hTextAlign="Left" vTextAlign="Middle" isBlankWhenNull="true" fontSize="8" isBold="false">
+		<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+	</style>
+	<style name="pg_footer_page_num" hTextAlign="Right" vTextAlign="Middle" isBlankWhenNull="true" fontSize="8" isBold="false">
+		<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+	</style>
+	<style name="summary_filter_header" hTextAlign="Center" vTextAlign="Middle" isBlankWhenNull="true" fontSize="10" isBold="true">
+		<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+	</style>
+	<style name="summary_filter" hTextAlign="Left" vTextAlign="Middle" isBlankWhenNull="true" fontSize="8" isBold="false">
+		<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+	</style>
+	<style name="no_data" hTextAlign="Center" vTextAlign="Middle" isBlankWhenNull="true" fontSize="10"/>
+	<style name="Table_CH_header" hTextAlign="Center" vTextAlign="Middle" isBlankWhenNull="true" fontSize="8" isBold="true">
+		<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+	</style>
+	<style name="Table_DH_text" hTextAlign="Center" vTextAlign="Middle" isBlankWhenNull="true" fontSize="8" isBold="false">
+		<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+	</style>
+	<style name="Table_DH_num" hTextAlign="Right" vTextAlign="Middle" isBlankWhenNull="true" fontSize="8" isBold="false">
+		<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+	</style>
+	<style name="Table_CH_num" hTextAlign="Right" vTextAlign="Middle" isBlankWhenNull="true" fontSize="8" isBold="true">
+		<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+	</style>
+	<style name="Table_CH_header_left" hTextAlign="Left" vTextAlign="Middle" isBlankWhenNull="true" fontSize="8" isBold="true">
+		<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+	</style>
+	<subDataset name="Arbitration" uuid="3a6892bb-9441-4f70-8229-e082e9e33805">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="EBIZ-silo5"/>
+		<parameter name="Arbitration_Start_Date" class="java.sql.Date" isForPrompting="false"/>
+		<parameter name="Arbitration_End_Date" class="java.sql.Date" isForPrompting="false"/>
+		<parameter name="Account_Number_MSQ" class="java.util.Collection" nestedType="java.lang.String" isForPrompting="false">
+			<parameterDescription><![CDATA[]]></parameterDescription>
+		</parameter>
+		<parameter name="Location" class="java.util.Collection" isForPrompting="false"/>
+		<parameter name="Arbitration_Adjustment_Type" class="java.util.Collection" isForPrompting="false"/>
+		<parameter name="Arbitration_Disposition" class="java.util.Collection" isForPrompting="false"/>
+		<queryString>
+			<![CDATA[--CR279 Arbitrated Vehicles
+select * from(
+select distinct
+rre.RESOURCE_NAME as location
+, case when length(moc.SALE_TIMESTAMP)=20 then to_date(moc.SALE_TIMESTAMP, 'DD-MON-YYYY HH24:MI:SS') 
+       when (length(moc.SALE_TIMESTAMP)=19 or length(moc.SALE_TIMESTAMP)=24) then to_date(cta.trx_date , 'DD-MON-YYYY HH24:MI:SS') 
+       else to_date(nvl(moc.SALE_TIMESTAMP,cta.trx_date), 'DD-MON-YYYY HH24:MI:SS') 
+  end as sale_date
+, case when length (moc.ARBITRATION_STATUS_TIMESTAMP)=9
+      then to_date( TO_CHAR(TO_DATE(moc.ARBITRATION_STATUS_TIMESTAMP, 'DD-MON-YY'), 'DD-MON-YYYY'),'DD-MON-YYYY HH24:MI:SS')
+      when length (moc.ARBITRATION_STATUS_TIMESTAMP)=11 
+      then to_date( moc.ARBITRATION_STATUS_TIMESTAMP,'DD-MON-YYYY HH24:MI:SS')
+      else null
+  end as arb_date 
+, ca.ACCOUNT_NUMBER
+, ca.ACCOUNT_NAME
+, moc.vin
+, case when lower(COALESCE(ctar.CT_REFERENCE, ctar.attribute1 ,ctaa.CT_REFERENCE, ctaa.attribute1 )) like '%arb%' 
+then COALESCE(ctar.CT_REFERENCE, ctar.attribute1 ,ctaa.CT_REFERENCE, ctaa.attribute1 ) else null end as arbitration_case_num
+, upper(moc.arbitration_status_code) as Arb_Disposition
+, moc.ARBITRATION_ADJUSTMENT_TYPE as Arb_Adj_Type
+, recon.recon_charges
+, fab.ATTRIBUTE_CATEGORY_CODE as Resposible_party
+, cta.TRX_NUMBER as invoice_number
+, ctta.name as original_transaction_type
+, psa.amount_due_original + coalesce(psa.amount_adjusted,0) as Original_Amount
+, psa.amount_due_remaining as Remaining_Amount
+, case when psa.amount_due_original = psa.amount_due_remaining then 'Unpaid'
+when raa.application_ref_type = 'AP_REFUND_REQUEST' then 'Paid by AP Check'
+
+when COALESCE(raa.application_type, raacr.application_type) = 'CASH' and wf.consignment_id is not null and ctta.attribute10 = 'Buyer'
+    then 'Paid by Floorplan'
+when COALESCE(raa.application_type, raacr.application_type) = 'CASH' and wf.consignment_id is null
+    then 'Paid by Buyer'  
+when COALESCE(raa.application_type, raacr.application_type) = 'CM' then 'Offset by CM/DM'
+else coalesce(rm.name,'Other') end as Orig_inv_payment_status
+, moc.consignment_id
+, case when ctta.attribute10 = 'Buyer' and moc.arbitration_buyer_complete = 'NO' THEN 'Arbitration not Complete'
+when ctta.attribute10 = 'Seller' and moc.arbitration_seller_complete = 'NO' THEN 'Arbitration not Complete'
+else COALESCE(ctaa.TRX_NUMBER,ctar.trx_number)end as Arbitration_transaction_number
+, COALESCE(cttaa.name,ctar.name) as Arbitration_transaction_type
+, COALESCE(psaa.amount_due_original, ctar.amount_due_original) + coalesce(psaa.amount_adjusted, 0) as adj_Original_Amount
+, COALESCE(psaa.amount_due_remaining, ctar.amount_due_remaining) as adj_Remaining_Amount
+, COALESCE(csu.attribute8, 'No preference') as Payment_preference
+, ctta.attribute10 as buyer_seller
+, moc.TITLE_STATUS_CODE as title_status
+,ctar.name as arb
+from MANAR.man_om_consignments moc
+JOIN AR.RA_CUSTOMER_TRX_ALL cta ON MOC.CONSIGNMENT_ID = TO_NUMBER(REGEXP_REPLACE(cta.ATTRIBUTE2, '[^0-9]+', '')) 
+join AR.RA_CUST_TRX_TYPES_ALL ctta on ctta.CUST_TRX_TYPE_ID = cta.CUST_TRX_TYPE_ID and ctta.ORG_ID = cta.ORG_ID and ctta.name not like '%ARB%'
+join AR.AR_PAYMENT_SCHEDULES_ALL psa on cta.CUSTOMER_TRX_ID = psa.CUSTOMER_TRX_ID
+join AR.HZ_CUST_ACCOUNTS ca on cta.BILL_TO_CUSTOMER_ID = ca.CUST_ACCOUNT_ID 
+left join AR_RECEIVABLE_APPLICATIONS_ALL RAa on RAa.CUSTOMER_TRX_ID = cta.CUSTOMER_TRX_ID and raa.display = 'Y'
+left join AR_RECEIVABLE_APPLICATIONS_ALL RAacr on RAacr.applied_CUSTOMER_TRX_ID = cta.CUSTOMER_TRX_ID and raacr.display = 'Y'
+left join ar.ra_customer_trx_all ctaa on COALESCE(raa.applied_customer_Trx_id,raacr.customer_trx_id) = ctaa.customer_trx_id 
+left join AR.AR_PAYMENT_SCHEDULES_ALL psaa on ctaa.CUSTOMER_TRX_ID = psaa.CUSTOMER_TRX_ID
+left join (select ctar.bill_to_customer_id, ctar.attribute1, ctar.ct_reference, ctar.trx_number, ctar.customer_trx_id, cttar.name, ps.amount_due_original, ps.amount_due_remaining, ctar.attribute2
+          from ar.ra_customer_trx_all ctar
+          join AR.RA_CUST_TRX_TYPES_ALL cttar on cttar.CUST_TRX_TYPE_ID = ctar.CUST_TRX_TYPE_ID and cttar.ORG_ID = ctar.ORG_ID and cttar.name like '%ARB%'
+          join ar.ar_payment_schedules_all ps on ps.customer_trx_id = ctar.customer_trx_id) ctar on TO_NUMBER(REGEXP_REPLACE(ctar.attribute2, '[^0-9]+', ''))= moc.consignment_id  and cta.bill_to_customer_id = ctar.bill_to_customer_id and ctaa.customer_trx_id is null
+join JTF.jtf_rs_salesreps jrs on cta.PRIMARY_SALESREP_ID = jrs.SALESREP_ID
+join JTF.JTF_RS_RESOURCE_EXTNS_tl rre on rre.RESOURCE_ID = jrs.RESOURCE_ID and rre.LANGUAGE = 'US' 
+left join AR.RA_CUST_TRX_TYPES_ALL cttaa on cttaa.CUST_TRX_TYPE_ID = ctaa.CUST_TRX_TYPE_ID and cttaa.ORG_ID = ctaa.ORG_ID
+left join ar.hz_cust_acct_sites_all CAS on CAS.cust_account_id= CA.cust_account_id and CAS.STATUS = 'A' and CAS.BILL_TO_FLAG = 'P'
+left join ar.HZ_CUST_SITE_USES_ALL CSU on CSU.cust_acct_site_id= CAS.cust_acct_site_id and csu.status = 'A' and  Csu.Primary_Flag = 'Y' AND CSU.SITE_USE_CODE= 'BILL_TO'
+left join AR.AR_CASH_RECEIPTS_ALL acra on ACRA.CASH_RECEIPT_ID = raacr.cash_receipt_id
+left join AR.AR_RECEIPT_METHODS rm on acra.receipt_method_id = rm.receipt_method_id
+    
+left join MANAR.MAN_AR_FLRPLN_WF wf  on WF.consignment_id  = moc.consignment_id and wf.status='A'
+left join FA.FA_ADDITIONS_B fab on TO_NUMBER(REGEXP_REPLACE(fab.TAG_NUMBER, '[^0-9]+', '')) = moc.consignment_id 
+
+-- recon charges
+left join ( select  sum(ctlas.REVENUE_AMOUNT ) as recon_charges , ctlas.CUSTOMER_TRX_ID
+        from ar.ra_customer_trx_lines_all ctlas 
+        join inv.mtl_system_items_b msi on ctlas.INVENTORY_ITEM_ID = msi.INVENTORY_ITEM_ID 
+        join inv.mtl_item_categories mic on mic.inventory_item_id = ctlas.inventory_item_id and mic.organization_id = msi.organization_id and MSI.organization_id=107 
+        join inv.MTL_CATEGORY_SETS_tl mcs on mic.CATEGORY_SET_ID= mcs.CATEGORY_SET_ID and mcs.language = 'US' and mcs.category_set_name = 'Revenue Bucket Category Set'
+        join inv.MTL_CATEGORIES_B cb on mic.CATEGORY_ID = cb.CATEGORY_ID
+        where  ctlas.line_type='LINE' and msi.item_type='RECON_SERVICES' 
+        and cb.segment3 not in ('VEHICLE PRICE','Fees Revenue') 
+        group by ctlas.CUSTOMER_TRX_ID) recon on recon.CUSTOMER_TRX_ID = cta.CUSTOMER_TRX_ID
+
+where 1=1 and moc.ARBITRATION_STATUS_CODE is not null
+
+and ctta.name not like 'US ASSURANCE%'
+and ((ctta.attribute10 = 'Seller' and moc.ARBITRATION_ADJUSTMENT_TYPe <> 'AUCTION INHERIT')or ctta.attribute10 <>'Seller')
+
+and $X{IN,ca.ACCOUNT_NUMBER,Account_Number_MSQ}
+and $X{IN,   rre.RESOURCE_NAME,Location}
+and $X{IN, moc.ARBITRATION_ADJUSTMENT_TYPE,Arbitration_Adjustment_Type}
+and $X{IN, upper(moc.ARBITRATION_STATUS_CODE ),Arbitration_Disposition}
+) 
+where 1=1 
+and trunc(arb_date) >= nvl($P{Arbitration_Start_Date}, trunc(arb_date))
+and trunc(arb_date) <= nvl($P{Arbitration_End_Date}, trunc(arb_date))
+order by arb_date ,vin, buyer_seller]]>
+		</queryString>
+		<field name="LOCATION" class="java.lang.String"/>
+		<field name="SALE_DATE" class="java.sql.Timestamp"/>
+		<field name="ARB_DATE" class="java.sql.Timestamp"/>
+		<field name="ACCOUNT_NUMBER" class="java.lang.String"/>
+		<field name="ACCOUNT_NAME" class="java.lang.String"/>
+		<field name="VIN" class="java.lang.String"/>
+		<field name="ARBITRATION_CASE_NUM" class="java.lang.String"/>
+		<field name="ARB_DISPOSITION" class="java.lang.String"/>
+		<field name="ARB_ADJ_TYPE" class="java.lang.String"/>
+		<field name="RESPOSIBLE_PARTY" class="java.lang.String"/>
+		<field name="INVOICE_NUMBER" class="java.lang.String"/>
+		<field name="ORIGINAL_TRANSACTION_TYPE" class="java.lang.String"/>
+		<field name="ORIGINAL_AMOUNT" class="java.math.BigDecimal"/>
+		<field name="REMAINING_AMOUNT" class="java.math.BigDecimal"/>
+		<field name="ORIG_INV_PAYMENT_STATUS" class="java.lang.String"/>
+		<field name="CONSIGNMENT_ID" class="java.math.BigDecimal"/>
+		<field name="ARBITRATION_TRANSACTION_NUMBER" class="java.lang.String"/>
+		<field name="ARBITRATION_TRANSACTION_TYPE" class="java.lang.String"/>
+		<field name="ADJ_ORIGINAL_AMOUNT" class="java.math.BigDecimal"/>
+		<field name="ADJ_REMAINING_AMOUNT" class="java.math.BigDecimal"/>
+		<field name="PAYMENT_PREFERENCE" class="java.lang.String"/>
+		<field name="BUYER_SELLER" class="java.lang.String"/>
+		<field name="TITLE_STATUS" class="java.lang.String"/>
+		<field name="RECON_CHARGES" class="java.math.BigDecimal"/>
+		<variable name="Total_original_Amount" class="java.math.BigDecimal" calculation="Sum">
+			<variableExpression><![CDATA[$F{ORIGINAL_AMOUNT}]]></variableExpression>
+		</variable>
+		<variable name="Total_remaining_Amount" class="java.math.BigDecimal" calculation="Sum">
+			<variableExpression><![CDATA[$F{REMAINING_AMOUNT}]]></variableExpression>
+		</variable>
+		<variable name="Total_adj_orig_Amount" class="java.math.BigDecimal" calculation="Sum">
+			<variableExpression><![CDATA[$F{ADJ_ORIGINAL_AMOUNT}]]></variableExpression>
+		</variable>
+		<variable name="Total_adj_remai_Amount" class="java.math.BigDecimal" calculation="Sum">
+			<variableExpression><![CDATA[$F{ADJ_REMAINING_AMOUNT}]]></variableExpression>
+		</variable>
+		<variable name="vin_count" class="java.math.BigDecimal" calculation="Count">
+			<variableExpression><![CDATA[$F{VIN}]]></variableExpression>
+		</variable>
+		<variable name="Total_recon_charges" class="java.math.BigDecimal" calculation="Sum">
+			<variableExpression><![CDATA[$F{RECON_CHARGES}]]></variableExpression>
+		</variable>
+	</subDataset>
+	<parameter name="LoggedInUsername" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="Arbitration_Start_Date" class="java.sql.Date" isForPrompting="false"/>
+	<parameter name="Arbitration_End_Date" class="java.sql.Date" isForPrompting="false"/>
+	<parameter name="Account_Number_MSQ" class="java.util.Collection" nestedType="java.lang.String" isForPrompting="false">
+		<parameterDescription><![CDATA[]]></parameterDescription>
+	</parameter>
+	<parameter name="Account_Number_MSQ_display" class="java.lang.String"/>
+	<parameter name="Location" class="java.util.Collection" isForPrompting="false"/>
+	<parameter name="Arbitration_Adjustment_Type" class="java.util.Collection" isForPrompting="false"/>
+	<parameter name="Arbitration_Disposition" class="java.util.Collection" isForPrompting="false"/>
+	<queryString language="SQL">
+		<![CDATA[select 1
+from dual]]>
+	</queryString>
+	<field name="1" class="java.math.BigDecimal"/>
+	<variable name="no_data_variable" class="java.math.BigDecimal"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="60" splitType="Stretch">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<textField pattern="">
+				<reportElement key="excludecsv" positionType="FixRelativeToBottom" x="0" y="-20" width="1300" height="80" forecolor="#FFFFFF" uuid="27feadfd-56ac-4806-ac51-6bb55ea17495">
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<textFieldExpression><![CDATA["!STPH!"]]></textFieldExpression>
+			</textField>
+			<frame>
+				<reportElement key="excludehtml" x="0" y="0" width="1300" height="60" uuid="a1c001ce-5272-4cee-b611-6ecd6f2c05c7">
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<textField>
+					<reportElement style="pg_header_report_name" positionType="FixRelativeToBottom" x="0" y="30" width="430" height="30" forecolor="#000000" uuid="65c035aa-c71a-4d45-92ff-72dbf9c8ec80">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<textFieldExpression><![CDATA[$P{JASPER_REPORT}.getName()]]></textFieldExpression>
+				</textField>
+				<image>
+					<reportElement x="0" y="0" width="1300" height="30" uuid="53bdf7d4-4e26-4c36-bdf7-8e0bf8a2b6cc">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<imageExpression><![CDATA["repo:/Images/header_printable_bg.jpg"]]></imageExpression>
+				</image>
+				<textField pattern="EEEEE dd, MMMMM yyyy">
+					<reportElement key="" style="pg_header_user_name" mode="Transparent" x="840" y="30" width="460" height="30" forecolor="#000000" uuid="6c62c42b-7ec9-46d4-abc2-f3c0c36afaab"/>
+					<textFieldExpression><![CDATA[$P{LoggedInUsername} + "  |  " + DATEFORMAT(TODAY(),"EEEEE dd, MMMM yyyy h:mm a z")]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="45" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<componentElement>
+				<reportElement x="0" y="0" width="1300" height="45" uuid="28d89158-4003-492f-a8ab-8a1c42019cef">
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" whenNoDataType="AllSectionsNoDetail">
+					<datasetRun subDataset="Arbitration" uuid="580989d5-870c-41dc-86a6-f44bf80085b6">
+						<datasetParameter name="Location">
+							<datasetParameterExpression><![CDATA[$P{Location}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="Arbitration_Start_Date">
+							<datasetParameterExpression><![CDATA[$P{Arbitration_Start_Date}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="Arbitration_End_Date">
+							<datasetParameterExpression><![CDATA[$P{Arbitration_End_Date}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="Account_Number_MSQ">
+							<datasetParameterExpression><![CDATA[$P{Account_Number_MSQ}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="Arbitration_Adjustment_Type">
+							<datasetParameterExpression><![CDATA[$P{Arbitration_Adjustment_Type}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="Arbitration_Disposition">
+							<datasetParameterExpression><![CDATA[$P{Arbitration_Disposition}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+						<returnValue fromVariable="vin_count" toVariable="no_data_variable"/>
+					</datasetRun>
+					<jr:column width="60" uuid="f0a89fb5-f1c9-4e7f-a0fa-b55b0bf7c375">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+						<jr:tableFooter style="Table_TF" height="15">
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						</jr:tableFooter>
+						<jr:columnHeader style="Table_CH" height="15">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement style="Table_CH_header" x="0" y="0" width="60" height="15" uuid="74b2cab8-8d12-45d2-bc9f-80c50c9cd7f5">
+									<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+								</reportElement>
+								<textFieldExpression><![CDATA["Location"]]></textFieldExpression>
+							</textField>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="15">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement style="Table_DH_text" x="0" y="0" width="60" height="15" uuid="b3c6db8a-273b-4cf3-bf59-2381d9a12425">
+									<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+								</reportElement>
+								<textFieldExpression><![CDATA[$F{LOCATION}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="40" uuid="0087b2b8-5a84-422d-9a0e-97c984ed4ed3">
+						<jr:tableFooter style="Table_TF" height="15">
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						</jr:tableFooter>
+						<jr:columnHeader style="Table_CH" height="15">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement style="Table_CH_header" x="0" y="0" width="40" height="15" uuid="a6ead75d-3a3a-4aaa-95eb-a0763b1e9bfd"/>
+								<textFieldExpression><![CDATA["Sale Date"]]></textFieldExpression>
+							</textField>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="15">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<textField isStretchWithOverflow="true" pattern="M/d/yy" isBlankWhenNull="true">
+								<reportElement style="Table_DH_text" x="0" y="0" width="40" height="15" uuid="3ac6f0a5-7407-455f-9ddd-f5193e172631"/>
+								<textFieldExpression><![CDATA[$F{SALE_DATE}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="40" uuid="f3b8554a-e729-4acc-b2ac-dd745c6041ee">
+						<jr:tableFooter style="Table_TF" height="15"/>
+						<jr:columnHeader style="Table_CH" height="15">
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement style="Table_CH_header" x="0" y="0" width="40" height="15" uuid="b0bd7f84-4154-4531-ae2a-393910580bb2">
+									<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+								</reportElement>
+								<textFieldExpression><![CDATA["Arbitration Date"]]></textFieldExpression>
+							</textField>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="15">
+							<textField isStretchWithOverflow="true" pattern="M/d/yy" isBlankWhenNull="true">
+								<reportElement style="Table_DH_text" x="0" y="0" width="40" height="15" uuid="16953126-df93-4ae6-af3c-c8a3511506b3"/>
+								<textFieldExpression><![CDATA[$F{ARB_DATE}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="50" uuid="5bcc9538-8717-441d-935a-88a3178d6f26">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<jr:tableFooter style="Table_TF" height="15">
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						</jr:tableFooter>
+						<jr:columnHeader style="Table_CH" height="15">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement style="Table_CH_header" x="0" y="0" width="50" height="15" uuid="e08959c0-0b4b-476c-b797-ba55317f9b3e">
+									<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+								</reportElement>
+								<textFieldExpression><![CDATA["Account Number"]]></textFieldExpression>
+							</textField>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="15">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<textField isStretchWithOverflow="true" pattern="$#,##0.00;($#,##0.00) " isBlankWhenNull="true">
+								<reportElement style="Table_DH_text" x="0" y="0" width="50" height="15" uuid="2dc265c7-ec0a-4c69-b852-d6ad62000633"/>
+								<textFieldExpression><![CDATA[$F{ACCOUNT_NUMBER}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="70" uuid="2d1efb8f-75fb-4ae3-b21c-29a1c64820f2">
+						<jr:tableFooter style="Table_TF" height="15">
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						</jr:tableFooter>
+						<jr:columnHeader style="Table_CH" height="15">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement style="Table_CH_header" x="0" y="0" width="70" height="15" uuid="c20879de-0f5e-41e5-9fc2-4f81d29db4a1">
+									<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+								</reportElement>
+								<textFieldExpression><![CDATA["Account Name"]]></textFieldExpression>
+							</textField>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="15">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<textField isStretchWithOverflow="true" pattern="$#,##0.00;($#,##0.00) " isBlankWhenNull="true">
+								<reportElement style="Table_DH_text" x="0" y="0" width="70" height="15" uuid="16f6fd3c-6893-4529-adcb-2e35f41d550a"/>
+								<textFieldExpression><![CDATA[$F{ACCOUNT_NAME}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="70" uuid="526955e3-f4ef-413a-bcfd-e9957cdc08ed">
+						<jr:tableFooter style="Table_TF" height="15"/>
+						<jr:columnHeader style="Table_CH" height="15">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement style="Table_CH_header" x="0" y="0" width="70" height="15" uuid="df269f74-9f98-4079-829e-42412c0455f5"/>
+								<textFieldExpression><![CDATA["VIN"]]></textFieldExpression>
+							</textField>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="15">
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement style="Table_DH_text" x="0" y="0" width="70" height="15" uuid="655802e2-74d7-41fd-81da-46d64d525c13"/>
+								<textFieldExpression><![CDATA[$F{VIN}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="40" uuid="387a3452-5da9-414d-902d-f2938e280412">
+						<jr:tableFooter style="Table_TF" height="15"/>
+						<jr:columnHeader style="Table_CH" height="15">
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement style="Table_CH_header" x="0" y="0" width="40" height="15" uuid="f1d156dc-9e79-415e-b9a0-9680031e41d4"/>
+								<textFieldExpression><![CDATA["Arbitration Case#"]]></textFieldExpression>
+							</textField>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="15">
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement style="Table_DH_text" x="0" y="0" width="40" height="15" uuid="141f95e3-0f7c-4a52-b15b-4b5f3a17bc5c"/>
+								<textFieldExpression><![CDATA[$F{ARBITRATION_CASE_NUM}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="60" uuid="4c74edd5-6e8b-47bf-b3bf-ab0bc29e7e73">
+						<jr:tableFooter style="Table_TF" height="15">
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						</jr:tableFooter>
+						<jr:columnHeader style="Table_CH" height="15">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement style="Table_CH_header" x="0" y="0" width="60" height="15" uuid="2c5a33ac-fc8e-4b96-89d9-aff5ce7a0a5f"/>
+								<textFieldExpression><![CDATA["Arbitration Disposition"]]></textFieldExpression>
+							</textField>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="15">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<textField isStretchWithOverflow="true" pattern="" isBlankWhenNull="true">
+								<reportElement style="Table_DH_text" x="0" y="0" width="60" height="15" uuid="5b13eec9-cd26-4598-8724-548574e354cb"/>
+								<textFieldExpression><![CDATA[$F{ARB_DISPOSITION}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="60" uuid="47232310-91fa-4e10-bb2b-95d15ff93361">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<jr:tableFooter style="Table_TF" height="15">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement style="Table_CH_header_left" x="0" y="0" width="60" height="15" uuid="ef3179bf-0644-42ff-b9a0-80bf63383233">
+									<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+								</reportElement>
+								<textFieldExpression><![CDATA["Total"]]></textFieldExpression>
+							</textField>
+						</jr:tableFooter>
+						<jr:columnHeader style="Table_CH" height="15">
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement style="Table_CH_header" x="0" y="0" width="60" height="15" uuid="87888135-15db-4e4c-bd79-3f4643f2b3a1"/>
+								<textFieldExpression><![CDATA["Arbitration Adjustment Type"]]></textFieldExpression>
+							</textField>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="15">
+							<textField isStretchWithOverflow="true" pattern="" isBlankWhenNull="true">
+								<reportElement style="Table_DH_text" x="0" y="0" width="60" height="15" uuid="63227b32-a02b-4aef-ac32-5181effa8f36"/>
+								<textFieldExpression><![CDATA[$F{ARB_ADJ_TYPE}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="50" uuid="e15f6cad-308f-4d51-92eb-247ad4715e93">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<jr:tableFooter style="Table_TF" height="15">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						</jr:tableFooter>
+						<jr:columnHeader style="Table_CH" height="15">
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement style="Table_CH_header" x="0" y="0" width="50" height="15" uuid="7e414229-16bc-434d-918f-3bcfdf197de6">
+									<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+								</reportElement>
+								<textFieldExpression><![CDATA["Recon Charges"]]></textFieldExpression>
+							</textField>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="15">
+							<textField isStretchWithOverflow="true" pattern="$#,##0.00;($#,##0.00) " isBlankWhenNull="true">
+								<reportElement style="Table_DH_num" x="0" y="0" width="50" height="15" uuid="85c2b5ae-dba0-43ea-b3e7-c9e1de2ff925"/>
+								<textFieldExpression><![CDATA[$F{RECON_CHARGES}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="60" uuid="e3daea4d-7706-49b0-995a-c8e7ecd3f0bf">
+						<jr:tableFooter style="Table_TF" height="15">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						</jr:tableFooter>
+						<jr:columnHeader style="Table_CH" height="15">
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement style="Table_CH_header" x="0" y="0" width="60" height="15" uuid="a2c763e1-afdf-4fd2-a0d9-6565786ca8fd"/>
+								<textFieldExpression><![CDATA["Responsible Party"]]></textFieldExpression>
+							</textField>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="15">
+							<textField isStretchWithOverflow="true" pattern="" isBlankWhenNull="true">
+								<reportElement style="Table_DH_text" x="0" y="0" width="60" height="15" uuid="de723db2-f817-4ca2-8657-b34990d95c11"/>
+								<textFieldExpression><![CDATA[$F{RESPOSIBLE_PARTY}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="40" uuid="f3fa3f09-7180-4f19-beea-9b9492b7096b">
+						<jr:tableFooter style="Table_TF" height="15"/>
+						<jr:columnHeader style="Table_CH" height="15">
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement style="Table_CH_header" x="0" y="0" width="40" height="15" uuid="e277f371-959e-4efe-bb1a-0e99b7d52505">
+									<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+								</reportElement>
+								<textFieldExpression><![CDATA["Invoice Number"]]></textFieldExpression>
+							</textField>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="15">
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement style="Table_DH_text" x="0" y="0" width="40" height="15" uuid="da76959b-78a7-4475-b7f5-5ad60f82749d"/>
+								<textFieldExpression><![CDATA[$F{INVOICE_NUMBER}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="60" uuid="f5b56433-58ac-4836-847e-7b2490c19f70">
+						<jr:tableFooter style="Table_TF" height="15">
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						</jr:tableFooter>
+						<jr:columnHeader style="Table_CH" height="15">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement style="Table_CH_header" x="0" y="0" width="60" height="15" uuid="52a65d0a-f9a6-44c9-9405-e936f52030d3">
+									<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+								</reportElement>
+								<textFieldExpression><![CDATA["Original Transaction Type"]]></textFieldExpression>
+							</textField>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="15">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<textField isStretchWithOverflow="true" pattern="$#,##0.00;($#,##0.00) " isBlankWhenNull="true">
+								<reportElement style="Table_DH_text" x="0" y="0" width="60" height="15" uuid="1aae09e9-4510-4dcf-adf7-df70747b59aa">
+									<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+								</reportElement>
+								<textFieldExpression><![CDATA[$F{ORIGINAL_TRANSACTION_TYPE}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="70" uuid="bd8eead7-273c-4147-8559-0ace601fce12">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<jr:tableFooter style="Table_TF" height="15">
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<textField isStretchWithOverflow="true" pattern="$#,##0.00;($#,##0.00) " isBlankWhenNull="true">
+								<reportElement style="Table_CH_num" x="0" y="0" width="70" height="15" uuid="85b5e525-8a7b-4133-a55c-af80f26bdbca"/>
+								<textFieldExpression><![CDATA[$V{Total_original_Amount}]]></textFieldExpression>
+							</textField>
+						</jr:tableFooter>
+						<jr:columnHeader style="Table_CH" height="15">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement style="Table_CH_header" x="0" y="0" width="70" height="15" uuid="b93a3c80-0e12-4d08-930a-5652442aaff4">
+									<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+								</reportElement>
+								<textFieldExpression><![CDATA["Original Amount"]]></textFieldExpression>
+							</textField>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="15">
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<textField isStretchWithOverflow="true" pattern="$#,##0.00;($#,##0.00) " isBlankWhenNull="true">
+								<reportElement style="Table_DH_num" x="0" y="0" width="70" height="15" uuid="bd4df795-4fc2-42a2-9929-e6a08df45591"/>
+								<textFieldExpression><![CDATA[$F{ORIGINAL_AMOUNT}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="70" uuid="37473cf2-c710-421a-9006-1feea62f8015">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<jr:tableFooter style="Table_TF" height="15">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<textField isStretchWithOverflow="true" pattern="$#,##0.00;($#,##0.00) " isBlankWhenNull="true">
+								<reportElement style="Table_CH_num" x="0" y="0" width="70" height="15" uuid="59b38792-e71c-4913-bc01-087bc7c8e571">
+									<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+								</reportElement>
+								<textFieldExpression><![CDATA[$V{Total_remaining_Amount}]]></textFieldExpression>
+							</textField>
+						</jr:tableFooter>
+						<jr:columnHeader style="Table_CH" height="15">
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement style="Table_CH_header" x="0" y="0" width="70" height="15" uuid="e892b6b2-ecf5-4825-a275-5c5ced32a421"/>
+								<textFieldExpression><![CDATA["Remaining Amount"]]></textFieldExpression>
+							</textField>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="15">
+							<textField isStretchWithOverflow="true" pattern="$#,##0.00;($#,##0.00) " isBlankWhenNull="true">
+								<reportElement style="Table_DH_num" x="0" y="0" width="70" height="15" uuid="a833cd4d-4cc7-40bd-9559-fd8c107d3c7a"/>
+								<textFieldExpression><![CDATA[$F{REMAINING_AMOUNT}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="50" uuid="60192d8d-4861-404c-9001-0ad09a87c845">
+						<jr:tableFooter style="Table_TF" height="15">
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						</jr:tableFooter>
+						<jr:columnHeader style="Table_CH" height="15">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement style="Table_CH_header" x="0" y="0" width="50" height="15" uuid="353545ed-8820-412f-9dc5-80fc810b3ac9"/>
+								<textFieldExpression><![CDATA["Original Invoice Payment Status"]]></textFieldExpression>
+							</textField>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="15">
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<textField isStretchWithOverflow="true" pattern="" isBlankWhenNull="true">
+								<reportElement style="Table_DH_text" x="0" y="0" width="50" height="15" uuid="9c99d47a-2977-48ed-ac8d-578e1c96399a"/>
+								<textFieldExpression><![CDATA[$F{ORIG_INV_PAYMENT_STATUS}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="50" uuid="bb06ce7e-a08e-46b1-a2db-f61755b9d7d0">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<jr:tableFooter style="Table_TF" height="15">
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						</jr:tableFooter>
+						<jr:columnHeader style="Table_CH" height="15">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement style="Table_CH_header" x="0" y="0" width="50" height="15" uuid="1f3872d7-9307-4b68-9693-1eceb87c6782">
+									<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+								</reportElement>
+								<textFieldExpression><![CDATA["Consignment ID"]]></textFieldExpression>
+							</textField>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="15">
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<textField isStretchWithOverflow="true" pattern="" isBlankWhenNull="true">
+								<reportElement style="Table_DH_text" x="0" y="0" width="50" height="15" uuid="1de065ef-4242-4e4a-ac2f-7d9670a35ac3"/>
+								<textFieldExpression><![CDATA[$F{CONSIGNMENT_ID}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="50" uuid="70569746-69b6-4bcb-b8ac-380442f1bf3b">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<jr:tableFooter style="Table_TF" height="15">
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						</jr:tableFooter>
+						<jr:columnHeader style="Table_CH" height="15">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement style="Table_CH_header" x="0" y="0" width="50" height="15" uuid="889a81fd-11c5-4ec4-a317-6a266ad8ef89">
+									<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+								</reportElement>
+								<textFieldExpression><![CDATA["Arb Transaction Number"]]></textFieldExpression>
+							</textField>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="15">
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<textField isStretchWithOverflow="true" pattern="M/d/yy" isBlankWhenNull="true">
+								<reportElement style="Table_DH_text" x="0" y="0" width="50" height="15" uuid="51e5257f-22cd-428f-ae3e-42ded1e6fb7d"/>
+								<textFieldExpression><![CDATA[$F{ARBITRATION_TRANSACTION_NUMBER}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="50" uuid="57845bfe-cbcb-44fb-947b-4dc8aa8901bd">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+						<jr:tableFooter style="Table_TF" height="15">
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						</jr:tableFooter>
+						<jr:columnHeader style="Table_CH" height="15">
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement style="Table_CH_header" x="0" y="0" width="50" height="15" uuid="de199045-b5b9-4fdd-b0a9-a7ffb984ca29"/>
+								<textFieldExpression><![CDATA["Arb Transaction Type"]]></textFieldExpression>
+							</textField>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="15">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<textField isStretchWithOverflow="true" pattern="" isBlankWhenNull="true">
+								<reportElement style="Table_DH_text" x="0" y="0" width="50" height="15" uuid="a9c2c47a-6a3f-4583-9fc3-446a60f93d5c"/>
+								<textFieldExpression><![CDATA[$F{ARBITRATION_TRANSACTION_TYPE}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="70" uuid="cd1d7727-098c-4010-a194-65fa6ffcfab5">
+						<jr:tableFooter style="Table_TF" height="15">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<textField isStretchWithOverflow="true" pattern="$#,##0.00;($#,##0.00) " isBlankWhenNull="true">
+								<reportElement style="Table_CH_num" x="0" y="0" width="70" height="15" uuid="a77805b7-4119-4f31-9ed9-4b0036d7fa8e"/>
+								<textFieldExpression><![CDATA[$V{Total_adj_orig_Amount}]]></textFieldExpression>
+							</textField>
+						</jr:tableFooter>
+						<jr:columnHeader style="Table_CH" height="15">
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement style="Table_CH_header" x="0" y="0" width="70" height="15" uuid="5f23c253-9b4e-485c-a454-29851cc86e8b">
+									<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+								</reportElement>
+								<textFieldExpression><![CDATA["Adjustment Original Amount"]]></textFieldExpression>
+							</textField>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="15">
+							<textField isStretchWithOverflow="true" pattern="$#,##0.00;($#,##0.00) " isBlankWhenNull="true">
+								<reportElement style="Table_DH_num" x="0" y="0" width="70" height="15" uuid="739700b1-ad24-4f85-9e81-6715ce37b451">
+									<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+								</reportElement>
+								<textFieldExpression><![CDATA[$F{ADJ_ORIGINAL_AMOUNT}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="70" uuid="a99ec65e-501a-4d8e-b981-6c1ed9239ef0">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<jr:tableFooter style="Table_TF" height="15">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<textField isStretchWithOverflow="true" pattern="$#,##0.00;($#,##0.00) " isBlankWhenNull="true">
+								<reportElement style="Table_CH_num" x="0" y="0" width="70" height="15" uuid="56b3718a-8b4c-4c44-86fe-30f2536bcf4b"/>
+								<textFieldExpression><![CDATA[$V{Total_adj_remai_Amount}]]></textFieldExpression>
+							</textField>
+						</jr:tableFooter>
+						<jr:columnHeader style="Table_CH" height="15">
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement style="Table_CH_header" x="0" y="0" width="70" height="15" uuid="b87647a9-2320-4cce-ad40-e3aca3d72af5">
+									<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+								</reportElement>
+								<textFieldExpression><![CDATA["Adjustment Remaining Amount"]]></textFieldExpression>
+							</textField>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="15">
+							<textField isStretchWithOverflow="true" pattern="$#,##0.00;($#,##0.00) " isBlankWhenNull="true">
+								<reportElement style="Table_DH_num" x="0" y="0" width="70" height="15" uuid="a33f96d3-2249-4580-b33e-8ec0bfec32bc">
+									<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+								</reportElement>
+								<textFieldExpression><![CDATA[$F{ADJ_REMAINING_AMOUNT}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="40" uuid="7df6cfe5-48c4-4b88-a948-34420673c273">
+						<jr:tableFooter style="Table_TF" height="15"/>
+						<jr:columnHeader style="Table_CH" height="15">
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement style="Table_CH_header" x="0" y="0" width="40" height="15" uuid="406eeadd-1a27-48f2-a019-46f13a7fdbca">
+									<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+								</reportElement>
+								<textFieldExpression><![CDATA["Payment Preference"]]></textFieldExpression>
+							</textField>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="15">
+							<textField isStretchWithOverflow="true" pattern="" isBlankWhenNull="true">
+								<reportElement style="Table_DH_text" x="0" y="0" width="40" height="15" uuid="670d6d88-46c3-4dce-a4cf-0b9d90971629">
+									<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+								</reportElement>
+								<textFieldExpression><![CDATA[$F{PAYMENT_PREFERENCE}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="40" uuid="fd2cb367-e1ec-4a56-bf54-88f6144c0271">
+						<jr:tableFooter style="Table_TF" height="15"/>
+						<jr:columnHeader style="Table_CH" height="15">
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement style="Table_CH_header" x="0" y="0" width="40" height="15" uuid="8d18803e-135c-4e67-a3f3-4a1e6c0f68d8">
+									<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+								</reportElement>
+								<textFieldExpression><![CDATA["Buyer/Seller"]]></textFieldExpression>
+							</textField>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="15">
+							<textField isStretchWithOverflow="true" pattern="" isBlankWhenNull="true">
+								<reportElement style="Table_DH_text" x="0" y="0" width="40" height="15" uuid="4d4b4f06-9d30-47af-a29e-3126ec41666b">
+									<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+								</reportElement>
+								<textFieldExpression><![CDATA[$F{BUYER_SELLER}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="40" uuid="003344c6-535c-4401-b7fe-ae6a85688ec5">
+						<jr:tableFooter style="Table_TF" height="15"/>
+						<jr:columnHeader style="Table_CH" height="15">
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement style="Table_CH_header" x="0" y="0" width="40" height="15" uuid="6e6ae3bf-5a32-4130-a60c-506fcbdb353d">
+									<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+								</reportElement>
+								<textFieldExpression><![CDATA["Title Status"]]></textFieldExpression>
+							</textField>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="15">
+							<textField isStretchWithOverflow="true" pattern="" isBlankWhenNull="true">
+								<reportElement style="Table_DH_text" x="0" y="0" width="40" height="15" uuid="59c38803-18be-4e20-8e15-808c7251b8dd">
+									<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+								</reportElement>
+								<textFieldExpression><![CDATA[$F{TITLE_STATUS}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+		<band height="20">
+			<printWhenExpression><![CDATA[$V{no_data_variable} == null]]></printWhenExpression>
+			<textField evaluationTime="Report">
+				<reportElement style="no_data" positionType="FixRelativeToBottom" x="0" y="0" width="47" height="20" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="0444ee67-3be8-4d8b-8cfe-13e0ea4d198f">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<printWhenExpression><![CDATA[$V{no_data_variable} == null]]></printWhenExpression>
+				</reportElement>
+				<textFieldExpression><![CDATA["!TRCND!"]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="15" splitType="Stretch">
+			<textField>
+				<reportElement style="pg_footer_rights_reserved" x="0" y="0" width="420" height="15" uuid="aff4813c-94e6-4544-a062-dfe1a919fdbd">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textFieldExpression><![CDATA["© Manheim. All rights reserved."]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="pg_footer_page_num" x="1145" y="0" width="120" height="15" uuid="1be1c8fb-c345-4953-be82-58cd8483b0c8"/>
+				<textFieldExpression><![CDATA["Page " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement style="pg_footer_rights_reserved" x="1265" y="0" width="35" height="15" uuid="db9dbe70-0b09-46cb-8be3-fbb6c5f6cc92">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[" of " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="105">
+			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.HorizontalRowLayout"/>
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<frame>
+				<reportElement x="0" y="0" width="1300" height="105" isRemoveLineWhenBlank="true" uuid="0623e3ed-1a44-40aa-849e-cc0c79c681ff">
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+				</reportElement>
+				<textField>
+					<reportElement style="summary_filter_header" x="0" y="0" width="1300" height="30" uuid="522e7398-9ce4-45d9-a0a3-9372c9581589">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<textFieldExpression><![CDATA["Report Filters"]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="summary_filter" positionType="Float" x="0" y="60" width="1300" height="15" uuid="36566856-d265-44b4-84c0-5f01681ed213">
+						<printWhenExpression><![CDATA[$P{Account_Number_MSQ_display} != null]]></printWhenExpression>
+					</reportElement>
+					<textFieldExpression><![CDATA["Account Number: " + $P{Account_Number_MSQ_display}.replace("[", "").replace("]","")]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" evaluationTime="Master" isBlankWhenNull="true">
+					<reportElement style="summary_filter" positionType="Float" x="0" y="30" width="1300" height="15" uuid="355c8405-5174-4216-a77c-dfbaa2dc4bd4">
+						<printWhenExpression><![CDATA[$P{Arbitration_Start_Date}!= null && $P{Arbitration_End_Date} != null]]></printWhenExpression>
+					</reportElement>
+					<textFieldExpression><![CDATA["Arbitration Start Date:  " + $P{Arbitration_Start_Date}.toString().replace("[", "").toString().replace("]","") + "	Arbitration End Date:  " + $P{Arbitration_End_Date}.toString().replace("[", "").toString().replace("]","")]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="summary_filter" positionType="Float" x="0" y="75" width="1300" height="15" isRemoveLineWhenBlank="true" uuid="302fec6b-2503-48be-85fd-63e77edb3959">
+						<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<printWhenExpression><![CDATA[!$P{Location}.isEmpty()]]></printWhenExpression>
+					</reportElement>
+					<textFieldExpression><![CDATA["Location: " +$P{Location}.toString().replace("[", "").toString().replace("]","")]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="summary_filter" positionType="Float" x="0" y="45" width="1300" height="15" isRemoveLineWhenBlank="true" uuid="6c4bd4d8-a69a-43d3-8994-ae746053b037">
+						<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<printWhenExpression><![CDATA[!$P{Arbitration_Adjustment_Type}.isEmpty()]]></printWhenExpression>
+					</reportElement>
+					<textFieldExpression><![CDATA["Arbitration Adjustment Type: " +$P{Arbitration_Adjustment_Type}.toString().replace("[", "").toString().replace("]","")]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="summary_filter" positionType="Float" x="0" y="90" width="1300" height="15" isRemoveLineWhenBlank="true" uuid="80600a5f-d7d8-477a-bf83-1ac28bf1a758">
+						<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<printWhenExpression><![CDATA[!$P{Arbitration_Disposition}.isEmpty()]]></printWhenExpression>
+					</reportElement>
+					<textFieldExpression><![CDATA["Arbitration Disposition: " +$P{Arbitration_Disposition}.toString().replace("[", "").toString().replace("]","")]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</summary>
+	<noData>
+		<band height="25">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<staticText>
+				<reportElement style="no_data" x="601" y="0" width="100" height="25" uuid="59ead02e-9beb-4410-acd4-2ceea24a3441">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<text><![CDATA[|NODATA||]]></text>
+			</staticText>
+		</band>
+	</noData>
+</jasperReport>

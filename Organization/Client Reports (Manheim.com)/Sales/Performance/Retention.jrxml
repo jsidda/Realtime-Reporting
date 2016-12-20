@@ -1,0 +1,1465 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.1.0.final using JasperReports Library version 6.1.0  -->
+<!-- 2016-12-20T14:41:46 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Retention" language="groovy" pageWidth="840" pageHeight="600" orientation="Landscape" whenNoDataType="NoDataSection" columnWidth="800" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" isSummaryWithPageHeaderAndFooter="true" uuid="37dd4019-8b8a-4b2c-ae26-588a8f1d133d">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="ODS (DEV)"/>
+	<property name="ireport.jasperserver.url" value="https://jaspersoft.dev.manheim.com/jasperserver-pro/"/>
+	<property name="ireport.jasperserver.user" value="jasperadmin"/>
+	<property name="ireport.jasperserver.report.resource" value="/Client_Reports_Manheim.com/Sales/Performance/Retention_files/main_jrxml"/>
+	<property name="ireport.jasperserver.reportUnit" value="/Client_Reports_Manheim.com/Sales/Performance/Retention"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<property name="net.sf.jasperreports.export.html.exclude.origin.band.pageFooter" value="pageFooter"/>
+	<property name="net.sf.jasperreports.export.html.exclude.origin.band.summary" value="summary"/>
+	<property name="net.sf.jasperreports.export.csv.exclude.origin.band.pageHeader" value="pageHeader"/>
+	<property name="net.sf.jasperreports.export.csv.exclude.origin.band.pageFooter" value="pageFooter"/>
+	<property name="net.sf.jasperreports.export.csv.exclude.origin.band.Summary" value="summary"/>
+	<property name="net.sf.jasperreports.export.xls.exclude.origin.band.pageHeader" value="pageHeader"/>
+	<property name="net.sf.jasperreports.export.xls.exclude.origin.band.pageFooter" value="pageFooter"/>
+	<property name="net.sf.jasperreports.export.xls.exclude.origin.band.summary" value="summary"/>
+	<property name="net.sf.jasperreports.export.html.remove.empty.space.between.rows" value="true"/>
+	<property name="net.sf.jasperreports.export.html.exclude.key.excludehtml"/>
+	<property name="net.sf.jasperreports.export.csv.exclude.key.excludecsv"/>
+	<style name="Table_CH" mode="Opaque" backcolor="#DDDDDD" hTextAlign="Center" vTextAlign="Middle" fontName="SansSerif" fontSize="9" isBold="true">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#DDDDDD"/>
+			<leftPen lineWidth="0.5" lineColor="#DDDDDD"/>
+			<bottomPen lineWidth="0.5" lineColor="#DDDDDD"/>
+			<rightPen lineWidth="0.5" lineColor="#DDDDDD"/>
+		</box>
+	</style>
+	<style name="Table_TD" mode="Opaque" backcolor="#FFFFFF" vTextAlign="Middle" fontName="SansSerif" fontSize="9">
+		<pen lineColor="#DDDDDD"/>
+		<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0">
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+			<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+			<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+			<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+		</box>
+	</style>
+	<style name="Table_CF" mode="Opaque" backcolor="#F3F3F3" vTextAlign="Middle" fontName="SansSerif" fontSize="9" isBold="true">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.1" lineStyle="Solid" lineColor="#DDDDDD"/>
+			<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#DDDDDD"/>
+			<bottomPen lineWidth="0.1" lineStyle="Solid" lineColor="#DDDDDD"/>
+			<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#DDDDDD"/>
+		</box>
+	</style>
+	<style name="Table_TF" mode="Opaque" backcolor="#E0EFFF" vTextAlign="Middle" fontName="SansSerif" fontSize="9" isBold="true">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+			<leftPen lineWidth="0.0"/>
+			<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+			<rightPen lineWidth="0.0"/>
+		</box>
+	</style>
+	<subDataset name="Dataset1" uuid="4f7f9b91-19be-4554-8c08-b2bc949e347b">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="ODS (DEV)"/>
+		<parameter name="Start_Date" class="java.sql.Date">
+			<parameterDescription><![CDATA[]]></parameterDescription>
+		</parameter>
+		<parameter name="End_Date" class="java.sql.Date">
+			<parameterDescription><![CDATA[]]></parameterDescription>
+		</parameter>
+		<parameter name="Market" class="java.util.Collection"/>
+		<parameter name="Location" class="java.util.Collection">
+			<parameterDescription><![CDATA[]]></parameterDescription>
+		</parameter>
+		<parameter name="Group_Code_MSQ" class="java.util.Collection">
+			<parameterDescription><![CDATA[]]></parameterDescription>
+		</parameter>
+		<parameter name="Seller_Security_Filter" class="java.lang.String" isForPrompting="false"/>
+		<queryString language="SQL">
+			<![CDATA[/***** Retention - ODS *****/
+SELECT 
+  CUST.DEALER_NUMBER AS ACCOUNT_NUM, 
+  SP.SERVICE_PROVIDER_NAME AS OPERATING_LOCATION, 
+  NVL(NULLIF(II.DECODE_YEAR,0),II.YEAR) AS MODEL_YEAR, 
+  NVL(NULLIF(II.DECODE_MAKE,'NULL'), II.MAKE) AS MAKE,  
+  NVL(NULLIF(II.DECODE_MODEL,'NULL'), II.MODEL) AS MODEL, 
+  NULLIF(II.DECODE_TRIM,'NULL') AS TRIM, 
+  EI.BODY_TYPE_PRIMARY AS BODY, 
+  EI.ENGINE_TYPE AS ENGINE,
+  II.VIN AS VIN,
+  II.VIN_LAST_EIGHT AS VIN_LAST8,
+  TRUNC(O.END_DATE) AS TRANSACTION_DATE, 
+  LPAD(O.LEGACY_SALE_LANE,2,0)||'-'||LPAD(O.LEGACY_SALE_RUN,4,0) AS ENTRY_NUM, 
+  II.ODOMETER_READING_AMOUNT AS ODOMETER,
+  TIMES_OFF.RUNS AS TIMES_OFFERED,
+  SL_I.SALE_PRICE_AMOUNT AS FINAL_PURCHASE_PRICE, 
+  O.FLOOR_PRICE AS FLOOR_PRICE, 
+  CASE WHEN O.FLOOR_PRICE > 0 THEN SL_I.SALE_PRICE_AMOUNT ELSE NULL END AS PURCHASE_PRICE_FLOOR,
+  PR.NATIONAL_MMR_AT_SALE AS NATIONAL_MMR_PRICE, 
+  CASE WHEN PR.NATIONAL_MMR_AT_SALE > 0 THEN SL_I.SALE_PRICE_AMOUNT ELSE NULL END AS PURCHASE_PRICE_NATIONAL_MMR,
+  PR.REGIONAL_MMR_AT_SALE AS REGIONAL_MMR_PRICE, 
+  CASE WHEN PR.REGIONAL_MMR_AT_SALE > 0 THEN SL_I.SALE_PRICE_AMOUNT ELSE NULL END AS PURCHASE_PRICE_REGIONAL_MMR,
+  PV.SBLK AS BLACK_BOOK_PRICE, 
+  CASE WHEN PV.SBLK > 0 THEN SL_I.SALE_PRICE_AMOUNT ELSE NULL END AS PURCHASE_PRICE_BLACK_BOOK, 
+  PV.SNADA AS NADA_PRICE, 
+  CASE WHEN PV.SNADA > 0 THEN SL_I.SALE_PRICE_AMOUNT ELSE NULL END AS PURCHASE_PRICE_NADA
+FROM ODSADM.CUSTOMER CUST
+  JOIN ODSADM.SELLER_OFFERING O
+    ON CUST.CUSTOMER_ID = O.AUCTION_SELLER_ID
+    AND O.SELLER_OFFERING_STATUS_CODE = 'OSL'
+  JOIN ODSADM.SERVICE_PROVIDER SP
+    ON O.SERVICE_PROVIDER_ID = SP.SERVICE_PROVIDER_ID
+    AND TRUNC(SP.EBIZ_CONVERTED_DATE) <= TRUNC(O.END_DATE)
+  JOIN ODSADM.SERVICE_ORDER SL
+    ON O.SERVICE_ORDER_ID = SL.SERVICE_ORDER_ID
+    AND SL.SERVICE_ORDER_STATUS_CODE IN ('AC', 'CM', 'PAU')
+  JOIN ODSADM.INVENTORY_ITEM II
+    ON SL.INVENTORY_ITEM_ID = II.INVENTORY_ITEM_ID
+    AND NVL(II.SOURCE_SYSTEM_NAME,'OK') <> 'TRA'
+  JOIN ODSADM.PURCHASE PR
+    ON O.SELLER_OFFERING_ID = PR.SELLER_OFFERING_ID
+  JOIN ODSADM.EXTENDED_INVENTORY EI
+    ON II.INVENTORY_ITEM_ID = EI.INVENTORY_ITEM_ID
+  JOIN ODSADM.INVOICE SL_I
+    ON SL.SERVICE_ORDER_ID = SL_I.SERVICE_ORDER_ID
+  JOIN (SELECT SL.SERVICE_ORDER_ID, COUNT(O.SELLER_OFFERING_ID) AS RUNS
+        FROM ODSADM.SELLER_OFFERING O
+        JOIN ODSADM.SERVICE_ORDER SL
+          ON O.SERVICE_ORDER_ID = SL.SERVICE_ORDER_ID
+          AND SL.SERVICE_ORDER_STATUS_CODE IN ('AC', 'CM', 'PAU')
+          AND O.SELLER_OFFERING_STATUS_CODE NOT IN ('RJ','OCL')
+        GROUP BY SL.SERVICE_ORDER_ID
+    ) TIMES_OFF
+    ON SL.SERVICE_ORDER_ID = TIMES_OFF.SERVICE_ORDER_ID
+  JOIN XODSADM.DIM_AUCTION AUC
+    ON SP.SERVICE_PROVIDER_ID = AUC.ODS_SERVICE_PROVIDER_ID
+  LEFT JOIN XODSADM.PFVEHICLE PV
+    ON II.SBLU = PV.SBLU
+    AND SP.SERVICE_PROVIDER_CODE = PV.SAUCI
+    AND II.WORK_ORDER_NUMBER = PV.SWO#
+WHERE
+  TRUNC(O.END_DATE) BETWEEN $P{Start_Date} AND $P{End_Date}
+  AND $P!{Seller_Security_Filter} -- GENERATED SQL IN REPORT BASED ON TYPE OF USER
+  AND $X{IN, AUC.CUR_OPS_MKT_ID, Market}
+  AND $X{IN, SP.SERVICE_PROVIDER_CODE, Location}
+ORDER BY ACCOUNT_NUM, OPERATING_LOCATION, TRANSACTION_DATE, ENTRY_NUM]]>
+		</queryString>
+		<field name="ACCOUNT_NUM" class="java.lang.String"/>
+		<field name="OPERATING_LOCATION" class="java.lang.String"/>
+		<field name="MODEL_YEAR" class="java.lang.String"/>
+		<field name="MAKE" class="java.lang.String"/>
+		<field name="MODEL" class="java.lang.String"/>
+		<field name="TRIM" class="java.lang.String"/>
+		<field name="BODY" class="java.lang.String"/>
+		<field name="ENGINE" class="java.lang.String"/>
+		<field name="VIN" class="java.lang.String"/>
+		<field name="VIN_LAST8" class="java.lang.String"/>
+		<field name="TRANSACTION_DATE" class="java.sql.Timestamp"/>
+		<field name="ENTRY_NUM" class="java.lang.String"/>
+		<field name="ODOMETER" class="java.math.BigDecimal"/>
+		<field name="TIMES_OFFERED" class="java.math.BigDecimal"/>
+		<field name="FINAL_PURCHASE_PRICE" class="java.math.BigDecimal"/>
+		<field name="FLOOR_PRICE" class="java.math.BigDecimal"/>
+		<field name="PURCHASE_PRICE_FLOOR" class="java.math.BigDecimal"/>
+		<field name="NATIONAL_MMR_PRICE" class="java.math.BigDecimal"/>
+		<field name="PURCHASE_PRICE_NATIONAL_MMR" class="java.math.BigDecimal"/>
+		<field name="REGIONAL_MMR_PRICE" class="java.math.BigDecimal"/>
+		<field name="PURCHASE_PRICE_REGIONAL_MMR" class="java.math.BigDecimal"/>
+		<field name="BLACK_BOOK_PRICE" class="java.math.BigDecimal"/>
+		<field name="PURCHASE_PRICE_BLACK_BOOK" class="java.math.BigDecimal"/>
+		<field name="NADA_PRICE" class="java.math.BigDecimal"/>
+		<field name="PURCHASE_PRICE_NADA" class="java.math.BigDecimal"/>
+		<variable name="V_VIN_COUNT_REPORT" class="java.lang.Integer" calculation="Count">
+			<variableExpression><![CDATA[$F{VIN}]]></variableExpression>
+		</variable>
+		<variable name="V_ODOMETER_AVG_REPORT" class="java.math.BigDecimal" calculation="Average">
+			<variableExpression><![CDATA[$F{ODOMETER}]]></variableExpression>
+		</variable>
+		<variable name="V_TIMES_OFFERED_AVG_REPORT" class="java.math.BigDecimal" calculation="Average">
+			<variableExpression><![CDATA[$F{TIMES_OFFERED}]]></variableExpression>
+		</variable>
+		<variable name="V_FINAL_PURCHASE_PRICE_AVG_REPORT" class="java.math.BigDecimal" calculation="Average">
+			<variableExpression><![CDATA[$F{FINAL_PURCHASE_PRICE}]]></variableExpression>
+		</variable>
+		<variable name="V_FLOOR_PRICE_AVG_REPORT" class="java.math.BigDecimal" calculation="Average">
+			<variableExpression><![CDATA[$F{FLOOR_PRICE}]]></variableExpression>
+		</variable>
+		<variable name="V_PCT_FLOOR" class="java.math.BigDecimal">
+			<variableExpression><![CDATA[$F{FLOOR_PRICE} == 0 ? null :  
+$F{PURCHASE_PRICE_FLOOR}/$F{FLOOR_PRICE}]]></variableExpression>
+		</variable>
+		<variable name="V_PURCHASE_PRICE_WITH_FLOOR_SUM_REPORT" class="java.math.BigDecimal" calculation="Sum">
+			<variableExpression><![CDATA[$F{PURCHASE_PRICE_FLOOR}]]></variableExpression>
+		</variable>
+		<variable name="V_FLOOR_PRICE_SUM_REPORT" class="java.math.BigDecimal" calculation="Sum">
+			<variableExpression><![CDATA[$F{FLOOR_PRICE}]]></variableExpression>
+		</variable>
+		<variable name="V_PCT_FLOOR_REPORT" class="java.math.BigDecimal">
+			<variableExpression><![CDATA[$V{V_FLOOR_PRICE_SUM_REPORT}> 0 ?
+$V{V_PURCHASE_PRICE_WITH_FLOOR_SUM_REPORT}.divide( $V{V_FLOOR_PRICE_SUM_REPORT},3, RoundingMode.HALF_UP )
+:0]]></variableExpression>
+		</variable>
+		<variable name="V_PCT_NATIONAL_MMR" class="java.math.BigDecimal">
+			<variableExpression><![CDATA[$F{NATIONAL_MMR_PRICE} == 0 ? null :  $F{PURCHASE_PRICE_NATIONAL_MMR}/$F{NATIONAL_MMR_PRICE}]]></variableExpression>
+		</variable>
+		<variable name="V_PURCHASE_PRICE_WITH_NATIONAL_MMR_SUM_REPORT" class="java.math.BigDecimal" calculation="Sum">
+			<variableExpression><![CDATA[$F{PURCHASE_PRICE_NATIONAL_MMR}]]></variableExpression>
+			<initialValueExpression><![CDATA[new java.math.BigDecimal(0.0)]]></initialValueExpression>
+		</variable>
+		<variable name="V_NATIONAL_MMR_PRICE_SUM_REPORT" class="java.math.BigDecimal" calculation="Sum">
+			<variableExpression><![CDATA[$F{NATIONAL_MMR_PRICE}]]></variableExpression>
+			<initialValueExpression><![CDATA[new java.math.BigDecimal(0.0)]]></initialValueExpression>
+		</variable>
+		<variable name="V_PCT_NATIONAL_MMR_REPORT" class="java.math.BigDecimal">
+			<variableExpression><![CDATA[$V{V_NATIONAL_MMR_PRICE_SUM_REPORT}> 0 ?
+$V{V_PURCHASE_PRICE_WITH_NATIONAL_MMR_SUM_REPORT}.divide( $V{V_NATIONAL_MMR_PRICE_SUM_REPORT},3, RoundingMode.HALF_UP )
+:0]]></variableExpression>
+		</variable>
+		<variable name="V_PCT_REGIONAL_MMR" class="java.math.BigDecimal">
+			<variableExpression><![CDATA[$F{REGIONAL_MMR_PRICE} == 0 ? null :  $F{PURCHASE_PRICE_REGIONAL_MMR}/$F{REGIONAL_MMR_PRICE}]]></variableExpression>
+		</variable>
+		<variable name="V_PURCHASE_PRICE_WITH_REGIONAL_MMR_SUM_REPORT" class="java.math.BigDecimal" calculation="Sum">
+			<variableExpression><![CDATA[$F{PURCHASE_PRICE_REGIONAL_MMR}]]></variableExpression>
+			<initialValueExpression><![CDATA[new java.math.BigDecimal(0.0)]]></initialValueExpression>
+		</variable>
+		<variable name="V_REGIONAL_MMR_PRICE_SUM_REPORT" class="java.math.BigDecimal" calculation="Sum">
+			<variableExpression><![CDATA[$F{REGIONAL_MMR_PRICE}]]></variableExpression>
+			<initialValueExpression><![CDATA[new java.math.BigDecimal(0.0)]]></initialValueExpression>
+		</variable>
+		<variable name="V_PCT_REGIONAL_MMR_REPORT" class="java.math.BigDecimal">
+			<variableExpression><![CDATA[$V{V_REGIONAL_MMR_PRICE_SUM_REPORT}> 0 ?
+$V{V_PURCHASE_PRICE_WITH_REGIONAL_MMR_SUM_REPORT}.divide( $V{V_REGIONAL_MMR_PRICE_SUM_REPORT},3, RoundingMode.HALF_UP )
+:0]]></variableExpression>
+		</variable>
+		<variable name="V_PCT_NADA" class="java.math.BigDecimal">
+			<variableExpression><![CDATA[$F{NADA_PRICE} == 0 ? null :  
+$F{PURCHASE_PRICE_NADA}/$F{NADA_PRICE}]]></variableExpression>
+		</variable>
+		<variable name="V_PURCHASE_PRICE_WITH_NADA_SUM_REPORT" class="java.math.BigDecimal" calculation="Sum">
+			<variableExpression><![CDATA[$F{PURCHASE_PRICE_NADA}]]></variableExpression>
+			<initialValueExpression><![CDATA[new java.math.BigDecimal(0.0)]]></initialValueExpression>
+		</variable>
+		<variable name="V_NADA_PRICE_SUM_REPORT" class="java.math.BigDecimal" calculation="Sum">
+			<variableExpression><![CDATA[$F{NADA_PRICE}]]></variableExpression>
+			<initialValueExpression><![CDATA[new java.math.BigDecimal(0.0)]]></initialValueExpression>
+		</variable>
+		<variable name="V_PCT_NADA_REPORT" class="java.math.BigDecimal">
+			<variableExpression><![CDATA[$V{V_NADA_PRICE_SUM_REPORT}> 0 ?
+$V{V_PURCHASE_PRICE_WITH_NADA_SUM_REPORT}.divide( $V{V_NADA_PRICE_SUM_REPORT},3, RoundingMode.HALF_UP )
+:0]]></variableExpression>
+		</variable>
+		<variable name="V_PCT_BLACKBOOK" class="java.math.BigDecimal">
+			<variableExpression><![CDATA[$F{BLACK_BOOK_PRICE} == 0 ? null :   $F{PURCHASE_PRICE_BLACK_BOOK}/$F{BLACK_BOOK_PRICE}]]></variableExpression>
+		</variable>
+		<variable name="V_PURCHASE_PRICE_WITH_BLACKBOOK_SUM_REPORT" class="java.math.BigDecimal" calculation="Sum">
+			<variableExpression><![CDATA[$F{PURCHASE_PRICE_BLACK_BOOK}]]></variableExpression>
+			<initialValueExpression><![CDATA[new java.math.BigDecimal(0.0)]]></initialValueExpression>
+		</variable>
+		<variable name="V_BLACKBOOK_PRICE_SUM_REPORT" class="java.math.BigDecimal" calculation="Sum">
+			<variableExpression><![CDATA[$F{BLACK_BOOK_PRICE}]]></variableExpression>
+			<initialValueExpression><![CDATA[new java.math.BigDecimal(0.0)]]></initialValueExpression>
+		</variable>
+		<variable name="V_PCT_BLACKBOOK_REPORT" class="java.math.BigDecimal">
+			<variableExpression><![CDATA[$V{V_BLACKBOOK_PRICE_SUM_REPORT}> 0 ?
+$V{V_PURCHASE_PRICE_WITH_BLACKBOOK_SUM_REPORT}.divide( $V{V_BLACKBOOK_PRICE_SUM_REPORT},3, RoundingMode.HALF_UP )
+:0]]></variableExpression>
+		</variable>
+	</subDataset>
+	<parameter name="Start_Date" class="java.sql.Date">
+		<parameterDescription><![CDATA[]]></parameterDescription>
+		<defaultValueExpression><![CDATA[new Date(System.currentTimeMillis() - 5 * 3600 * 1000)]]></defaultValueExpression>
+	</parameter>
+	<parameter name="End_Date" class="java.sql.Date">
+		<parameterDescription><![CDATA[]]></parameterDescription>
+		<defaultValueExpression><![CDATA[new Date(System.currentTimeMillis() - 5 * 3600 * 1000)]]></defaultValueExpression>
+	</parameter>
+	<parameter name="Market" class="java.util.Collection"/>
+	<parameter name="LoggedInUserAttribute_ha" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="Location" class="java.util.Collection">
+		<parameterDescription><![CDATA[]]></parameterDescription>
+		<defaultValueExpression><![CDATA[$P{LoggedInUserAttribute_ha}=="mii" ?  null : Arrays.asList($P{LoggedInUserAttribute_ha})]]></defaultValueExpression>
+	</parameter>
+	<parameter name="Group_Code_MSQ" class="java.util.Collection">
+		<parameterDescription><![CDATA[]]></parameterDescription>
+	</parameter>
+	<parameter name="Account_Number_MSQ" class="java.lang.String">
+		<parameterDescription><![CDATA[]]></parameterDescription>
+	</parameter>
+	<parameter name="Account_Number_MSQ_filters" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="LoggedInUsername" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="LoggedInUserAttribute_Type" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="LoggedInUserAttribute_100M" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="Account_Number_Parsed" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA[$P{Account_Number_MSQ} != null && !$P{Account_Number_MSQ}.isEmpty()
+?
+"'" + $P{Account_Number_MSQ}.replace(",","','").replace("[", "").replace("]","").replace(" ","") + "'"
+:
+"'N/A'"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="Seller_Security_Filter" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA[$P{LoggedInUserAttribute_Type}=="'E'" ? "CUST.DEALER_NUMBER IN (" + $P{Account_Number_Parsed} + ")" : "CUST.DEALER_NUMBER || 'A' IN (" + $P{Account_Number_Parsed} + ")"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="Market_display" class="java.lang.String"/>
+	<parameter name="Location_display" class="java.lang.String"/>
+	<parameter name="Group_Code_MSQ_display" class="java.lang.String">
+		<parameterDescription><![CDATA[]]></parameterDescription>
+	</parameter>
+	<parameter name="Account_Number_MSQ_display" class="java.lang.String"/>
+	<parameter name="Group_Code_MSQ_filters" class="java.lang.String">
+		<parameterDescription><![CDATA[]]></parameterDescription>
+	</parameter>
+	<queryString>
+		<![CDATA[select 1 from Dual]]>
+	</queryString>
+	<variable name="V_VIN_COUNT_REPORT" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="60" splitType="Stretch">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<textField>
+				<reportElement key="excludecsv" x="0" y="-20" width="800" height="80" forecolor="#FFFFFF" uuid="76040cc7-1a58-46d1-9328-e33c204fee58">
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textFieldExpression><![CDATA["!STPH!"]]></textFieldExpression>
+			</textField>
+			<frame>
+				<reportElement key="excludehtml" x="0" y="0" width="800" height="60" uuid="127ba404-e72c-40af-bbab-948d9b0bdacf">
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textField>
+					<reportElement positionType="FixRelativeToBottom" x="0" y="30" width="210" height="30" forecolor="#000000" uuid="65c035aa-c71a-4d45-92ff-72dbf9c8ec80">
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					</reportElement>
+					<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="12" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{JASPER_REPORT}.getName()]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Auto" pattern="">
+					<reportElement key="" mode="Transparent" x="210" y="30" width="590" height="30" forecolor="#000000" uuid="6c62c42b-7ec9-46d4-abc2-f3c0c36afaab">
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+						<font fontName="SansSerif" size="8" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{LoggedInUsername} + "  |  " + DATEFORMAT(new Date(System.currentTimeMillis() - 5 * 3600 * 1000),"EEEEE dd, MMMM yyyy h:mm a") + " EST"]]></textFieldExpression>
+				</textField>
+				<image>
+					<reportElement x="0" y="0" width="210" height="30" uuid="d1adbd49-2e4e-4581-95cb-8392c4187c52">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<imageExpression><![CDATA["repo:/Images/header_printable_bg.jpg"]]></imageExpression>
+				</image>
+			</frame>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="1" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<componentElement>
+				<reportElement x="0" y="0" width="800" height="1" uuid="63bbe434-a2fe-4cc0-95ea-9c7e7d0a455b">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+				</reportElement>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" whenNoDataType="AllSectionsNoDetail">
+					<datasetRun subDataset="Dataset1" uuid="de7eec02-484f-4e04-9e59-bc8a967cf8d9">
+						<datasetParameter name="Start_Date">
+							<datasetParameterExpression><![CDATA[$P{Start_Date}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="End_Date">
+							<datasetParameterExpression><![CDATA[$P{End_Date}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="Market">
+							<datasetParameterExpression><![CDATA[$P{Market}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="Location">
+							<datasetParameterExpression><![CDATA[$P{Location}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="Group_Code_MSQ">
+							<datasetParameterExpression><![CDATA[$P{Group_Code_MSQ}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="Seller_Security_Filter">
+							<datasetParameterExpression><![CDATA[$P{Seller_Security_Filter}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+						<returnValue fromVariable="V_VIN_COUNT_REPORT" toVariable="V_VIN_COUNT_REPORT"/>
+					</datasetRun>
+					<jr:column width="50" uuid="ee7163da-08d8-4907-ac5d-739027c6fa64">
+						<property name="local_mesure_unitwidth" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+						<jr:tableFooter style="Table_TF" height="15">
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<box>
+								<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+								<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+								<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+								<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+							</box>
+						</jr:tableFooter>
+						<jr:columnHeader style="Table_CH" height="15">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<box>
+								<topPen lineColor="#DDDDDD"/>
+								<leftPen lineColor="#DDDDDD"/>
+								<bottomPen lineColor="#DDDDDD"/>
+								<rightPen lineColor="#DDDDDD"/>
+							</box>
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement style="Table_CH" x="0" y="0" width="50" height="15" uuid="d7445e65-970d-46e0-aae7-40b0fbec3efd"/>
+								<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+								<textElement verticalAlignment="Middle">
+									<font fontName="SansSerif" size="8" isBold="true"/>
+								</textElement>
+								<textFieldExpression><![CDATA["Acct #"]]></textFieldExpression>
+							</textField>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="15">
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement style="Table_TD" mode="Transparent" x="0" y="0" width="50" height="15" forecolor="#000000" backcolor="#FFFFFF" uuid="28661c48-c9d4-44d7-8508-84477c43cd45">
+									<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+								</reportElement>
+								<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+									<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Top" rotation="None" markup="none">
+									<font fontName="SansSerif" size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{ACCOUNT_NUM}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="60" uuid="49f6ec34-b4eb-4c79-a9a6-f60e981b81e0">
+						<property name="local_mesure_unitwidth" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<jr:tableFooter style="Table_TF" height="15">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<box>
+								<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+								<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+								<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+								<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+							</box>
+						</jr:tableFooter>
+						<jr:columnHeader style="Table_CH" height="15">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement style="Table_CH" x="0" y="0" width="60" height="15" uuid="f6ca2d88-6e19-4d80-87cd-287c55f70768"/>
+								<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+								<textElement verticalAlignment="Middle">
+									<font fontName="SansSerif" size="8" isBold="true"/>
+								</textElement>
+								<textFieldExpression><![CDATA["Location"]]></textFieldExpression>
+							</textField>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="15">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement style="Table_TD" mode="Transparent" x="0" y="0" width="60" height="15" forecolor="#000000" backcolor="#FFFFFF" uuid="906241f5-1d2e-4798-b113-b1e7718d2747">
+									<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+								</reportElement>
+								<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+									<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Top" rotation="None" markup="none">
+									<font fontName="SansSerif" size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{OPERATING_LOCATION}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="50" uuid="8d5207ae-7052-4dca-b881-352ebff143e3">
+						<property name="local_mesure_unitwidth" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<jr:tableFooter style="Table_TF" height="15">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<box>
+								<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+								<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+								<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+								<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+							</box>
+						</jr:tableFooter>
+						<jr:columnHeader style="Table_CH" height="15">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement style="Table_CH" x="0" y="0" width="50" height="15" uuid="4aaa7abf-df7f-42fd-9ff7-11280749437f"/>
+								<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+								<textElement verticalAlignment="Middle">
+									<font fontName="SansSerif" size="8" isBold="true"/>
+								</textElement>
+								<textFieldExpression><![CDATA["Txn Dt"]]></textFieldExpression>
+							</textField>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="15">
+							<textField isStretchWithOverflow="true" pattern="M/d/yy" isBlankWhenNull="true">
+								<reportElement style="Table_TD" x="0" y="0" width="50" height="15" uuid="87bdb643-b15d-4c26-a1ea-bd4bd7ac67a2"/>
+								<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+									<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Top">
+									<font fontName="SansSerif" size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{TRANSACTION_DATE}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="50" uuid="beb869a3-c18c-4f89-9164-d97c7c4692a3">
+						<property name="local_mesure_unitwidth" value="pixel"/>
+						<jr:tableFooter style="Table_TF" height="15">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<box>
+								<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+								<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+								<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+								<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+							</box>
+						</jr:tableFooter>
+						<jr:columnHeader style="Table_CH" height="15">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement style="Table_CH" x="0" y="0" width="50" height="15" uuid="e375475e-9c78-4eac-bd0d-ec6162656c66"/>
+								<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+								<textElement verticalAlignment="Middle">
+									<font fontName="SansSerif" size="8" isBold="true"/>
+								</textElement>
+								<textFieldExpression><![CDATA["Entry #"]]></textFieldExpression>
+							</textField>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="15">
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement style="Table_TD" x="0" y="0" width="50" height="15" uuid="b298f0fd-cce8-4562-b549-b215f37baf21">
+									<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+								</reportElement>
+								<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+									<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Top">
+									<font fontName="SansSerif" size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{ENTRY_NUM}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="35" uuid="da09b5b0-52f0-41df-8874-43cf333a3652">
+						<property name="local_mesure_unitwidth" value="pixel"/>
+						<jr:tableFooter style="Table_TF" height="15">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<box>
+								<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+								<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+								<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+								<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+							</box>
+						</jr:tableFooter>
+						<jr:columnHeader style="Table_CH" height="15">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement style="Table_CH" x="0" y="0" width="35" height="15" uuid="4652d6bb-09b6-41a1-a94f-d935a4eaa13f"/>
+								<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+								<textElement verticalAlignment="Middle">
+									<font fontName="SansSerif" size="8" isBold="true"/>
+								</textElement>
+								<textFieldExpression><![CDATA["Year"]]></textFieldExpression>
+							</textField>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="15">
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement style="Table_TD" x="0" y="0" width="35" height="15" uuid="5490394a-2ef9-41f6-b85f-cd28900cd754"/>
+								<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+									<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Top">
+									<font fontName="SansSerif" size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{MODEL_YEAR}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="60" uuid="0ff72b00-e16a-4db1-a460-4b1b6248aec3">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<jr:tableFooter style="Table_TF" height="15">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<box>
+								<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+								<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+								<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+								<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+							</box>
+						</jr:tableFooter>
+						<jr:columnHeader style="Table_CH" height="15">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement style="Table_CH" x="0" y="0" width="60" height="15" uuid="71a43e8e-d90f-4903-834f-9756dadb320b"/>
+								<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+								<textElement verticalAlignment="Middle">
+									<font fontName="SansSerif" size="8" isBold="true"/>
+								</textElement>
+								<textFieldExpression><![CDATA["Make"]]></textFieldExpression>
+							</textField>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="15">
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement style="Table_TD" x="0" y="0" width="60" height="15" uuid="3d64d7b2-6cb0-4784-b98e-f138de778c67"/>
+								<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+									<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Top">
+									<font fontName="SansSerif" size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{MAKE}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="59" uuid="b20b83da-5c26-41fa-9abf-4bb2b5988061">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<jr:tableFooter style="Table_TF" height="15">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<box>
+								<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+								<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+								<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+								<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+							</box>
+						</jr:tableFooter>
+						<jr:columnHeader style="Table_CH" height="15">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement style="Table_CH" x="0" y="0" width="59" height="15" uuid="f511ecdf-e5ef-4713-bffa-0023d91b3867"/>
+								<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+								<textElement verticalAlignment="Middle">
+									<font fontName="SansSerif" size="8" isBold="true"/>
+								</textElement>
+								<textFieldExpression><![CDATA["Model"]]></textFieldExpression>
+							</textField>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="15">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement style="Table_TD" x="0" y="0" width="59" height="15" uuid="4732ac8a-785f-4bab-a7dc-c588a144a4de"/>
+								<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+									<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Top">
+									<font fontName="SansSerif" size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{MODEL}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="55" uuid="f5b43504-1f07-4869-ba4f-933e4e5c69a9">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<jr:tableFooter style="Table_TF" height="15">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<box>
+								<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+								<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+								<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+								<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+							</box>
+						</jr:tableFooter>
+						<jr:columnHeader style="Table_CH" height="15">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement style="Table_CH" x="0" y="0" width="55" height="15" uuid="d136d178-dcbf-4625-b76c-2fc1c8c3f4ef"/>
+								<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+								<textElement verticalAlignment="Middle">
+									<font fontName="SansSerif" size="8" isBold="true"/>
+								</textElement>
+								<textFieldExpression><![CDATA["Trim"]]></textFieldExpression>
+							</textField>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="15">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement style="Table_TD" x="0" y="0" width="55" height="15" uuid="91ccf4db-5442-4052-935e-bb73cb3367aa"/>
+								<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+									<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Top">
+									<font fontName="SansSerif" size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{TRIM}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="60" uuid="b3899095-c2c9-40ab-a90e-f21493f2998c">
+						<printWhenExpression><![CDATA[FALSE()]]></printWhenExpression>
+						<jr:tableFooter style="Table_TF" height="15">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<box>
+								<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+								<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+								<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+								<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+							</box>
+						</jr:tableFooter>
+						<jr:columnHeader style="Table_CH" height="15">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement style="Table_CH" x="0" y="0" width="60" height="15" uuid="36982153-cf38-47b3-91eb-bd0f1d6356c7"/>
+								<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+								<textElement verticalAlignment="Middle">
+									<font fontName="SansSerif" size="8" isBold="true"/>
+								</textElement>
+								<textFieldExpression><![CDATA["Body"]]></textFieldExpression>
+							</textField>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="15">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement style="Table_TD" x="0" y="0" width="60" height="15" uuid="71427ddd-5429-403f-8990-e0a38a950bc5"/>
+								<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+									<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Top">
+									<font fontName="SansSerif" size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{BODY}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="60" uuid="1b2b92d5-9c4a-4d68-813d-c9f16f13b83e">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<jr:tableFooter style="Table_TF" height="15">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<box>
+								<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+								<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+								<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+								<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+							</box>
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement style="Table_TF" x="0" y="0" width="60" height="15" uuid="f60b8ef7-ae1a-4d7f-b086-f8de095c2659">
+									<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+								</reportElement>
+								<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+									<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								</box>
+								<textElement textAlignment="Center">
+									<font fontName="SansSerif" size="8" isBold="true"/>
+								</textElement>
+								<textFieldExpression><![CDATA['Total']]></textFieldExpression>
+							</textField>
+						</jr:tableFooter>
+						<jr:columnHeader style="Table_CH" height="15">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement style="Table_CH" x="0" y="0" width="60" height="15" uuid="867594e9-5c12-42ee-8f50-bd7fee385ae8"/>
+								<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+								<textElement verticalAlignment="Middle">
+									<font fontName="SansSerif" size="8" isBold="true"/>
+								</textElement>
+								<textFieldExpression><![CDATA["Engine"]]></textFieldExpression>
+							</textField>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="15">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement style="Table_TD" x="0" y="0" width="60" height="15" uuid="852f0c56-d510-4511-8167-35afde2b9709"/>
+								<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+									<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Top">
+									<font fontName="SansSerif" size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{ENGINE}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="60" uuid="287be84a-7b8b-4c78-aa37-d490c48eb2e5">
+						<property name="local_mesure_unitwidth" value="pixel"/>
+						<jr:tableFooter style="Table_TF" height="15">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<box>
+								<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+								<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+								<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+								<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+							</box>
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement style="Table_TF" x="0" y="0" width="60" height="15" uuid="e7cfb7ab-272c-498a-9ee2-5941e7efd3d5"/>
+								<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+									<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								</box>
+								<textElement textAlignment="Center">
+									<font fontName="SansSerif" size="8" isBold="true"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$V{V_VIN_COUNT_REPORT}]]></textFieldExpression>
+							</textField>
+						</jr:tableFooter>
+						<jr:columnHeader style="Table_CH" height="15">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement style="Table_CH" x="0" y="0" width="60" height="15" uuid="da8bd301-75df-4d6a-94e9-ba7d310cf142"/>
+								<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+								<textElement verticalAlignment="Middle">
+									<font fontName="SansSerif" size="8" isBold="true"/>
+								</textElement>
+								<textFieldExpression><![CDATA["VIN (L8)"]]></textFieldExpression>
+							</textField>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="15">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement style="Table_TD" x="0" y="0" width="60" height="15" uuid="92a62779-057b-451c-8b77-c05c603cbc41"/>
+								<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+									<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Top">
+									<font fontName="SansSerif" size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{VIN_LAST8}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="45" uuid="21786860-804f-43c0-8cb1-03cad3bc3c03">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<jr:tableFooter style="Table_TF" height="15">
+							<box>
+								<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+								<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+								<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+								<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+							</box>
+							<textField isStretchWithOverflow="true" pattern="#,###;(-#,###)" isBlankWhenNull="true">
+								<reportElement style="Table_TF" mode="Transparent" x="0" y="0" width="45" height="15" forecolor="#000000" backcolor="#FFFFFF" uuid="7c5b76ff-329e-4305-955f-f773d5bf53e3"/>
+								<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+									<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								</box>
+								<textElement textAlignment="Right" rotation="None" markup="none">
+									<font fontName="SansSerif" size="8" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$V{V_ODOMETER_AVG_REPORT}]]></textFieldExpression>
+							</textField>
+						</jr:tableFooter>
+						<jr:columnHeader style="Table_CH" height="15">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement style="Table_CH" x="0" y="0" width="45" height="15" uuid="b3166f7e-692c-4ce6-9eae-45a15e10953f"/>
+								<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+								<textElement verticalAlignment="Middle">
+									<font fontName="SansSerif" size="8" isBold="true"/>
+								</textElement>
+								<textFieldExpression><![CDATA["Odom"]]></textFieldExpression>
+							</textField>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="15">
+							<textField isStretchWithOverflow="true" pattern="#,###.###;(-#,###.###)" isBlankWhenNull="true">
+								<reportElement style="Table_TD" x="0" y="0" width="45" height="15" uuid="60b788d7-9100-40f3-8cb4-cffa01aee5be"/>
+								<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+									<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								</box>
+								<textElement textAlignment="Right" verticalAlignment="Top">
+									<font fontName="SansSerif" size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{ODOMETER}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="40" uuid="aa5833f5-be07-4c58-a71c-2a4f18cb938a">
+						<property name="local_mesure_unitwidth" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<jr:tableFooter style="Table_TF" height="15">
+							<box>
+								<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+								<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+								<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+								<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+							</box>
+							<textField isStretchWithOverflow="true" pattern="##.#" isBlankWhenNull="true">
+								<reportElement style="Table_TF" x="0" y="0" width="40" height="15" uuid="be5eaa99-a87f-47eb-8bba-5782e044c667"/>
+								<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+									<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								</box>
+								<textElement textAlignment="Right">
+									<font fontName="SansSerif" size="8" isBold="true"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$V{V_TIMES_OFFERED_AVG_REPORT}]]></textFieldExpression>
+							</textField>
+						</jr:tableFooter>
+						<jr:columnHeader style="Table_CH" height="15">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement style="Table_CH" x="0" y="0" width="40" height="15" uuid="7483ecd2-2b55-4b92-a2ba-f10ca9e479da"/>
+								<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+								<textElement verticalAlignment="Middle">
+									<font fontName="SansSerif" size="8" isBold="true"/>
+								</textElement>
+								<textFieldExpression><![CDATA["Times Offd"]]></textFieldExpression>
+							</textField>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="15">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement style="Table_TD" x="0" y="0" width="40" height="15" uuid="add39545-54f2-44ea-a5b3-ea4b9d33b733">
+									<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+								</reportElement>
+								<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+									<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								</box>
+								<textElement textAlignment="Right" verticalAlignment="Top">
+									<font fontName="SansSerif" size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{TIMES_OFFERED}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="50" uuid="9be343e3-7e39-48ad-8140-e5156121ff37">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<jr:tableFooter style="Table_TF" height="15">
+							<box>
+								<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+								<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+								<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+								<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+							</box>
+							<textField isStretchWithOverflow="true" pattern="#,##0;(-#,##0)" isBlankWhenNull="true">
+								<reportElement style="Table_TF" mode="Transparent" x="0" y="0" width="50" height="15" forecolor="#000000" backcolor="#FFFFFF" uuid="c0ad70d7-c62a-43b4-b701-054e205f366d"/>
+								<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+									<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								</box>
+								<textElement textAlignment="Right" rotation="None" markup="none">
+									<font fontName="SansSerif" size="8" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$V{V_FINAL_PURCHASE_PRICE_AVG_REPORT}]]></textFieldExpression>
+							</textField>
+						</jr:tableFooter>
+						<jr:columnHeader style="Table_CH" height="15">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement style="Table_CH" x="0" y="0" width="50" height="15" uuid="7eb629c6-f6a9-4f33-8be2-012b512f6e2d"/>
+								<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+								<textElement verticalAlignment="Middle">
+									<font fontName="SansSerif" size="8" isBold="true"/>
+								</textElement>
+								<textFieldExpression><![CDATA["Purch Pr"]]></textFieldExpression>
+							</textField>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="15">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<textField isStretchWithOverflow="true" pattern="#,##0;(-#,##0)" isBlankWhenNull="true">
+								<reportElement style="Table_TD" x="0" y="0" width="50" height="15" uuid="f1fa4c14-eef6-4244-9b57-67729c87084e"/>
+								<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+									<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								</box>
+								<textElement textAlignment="Right" verticalAlignment="Top">
+									<font fontName="SansSerif" size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{FINAL_PURCHASE_PRICE}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="42" uuid="12dfc0f3-5aa7-4ca2-a7ec-14b3bb0aa830">
+						<property name="local_mesure_unitwidth" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<jr:tableFooter style="Table_TF" height="15">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<box>
+								<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+								<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+								<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+								<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+							</box>
+							<textField isStretchWithOverflow="true" pattern="#,##0.0%" isBlankWhenNull="true">
+								<reportElement style="Table_TF" mode="Transparent" x="0" y="0" width="42" height="15" forecolor="#000000" backcolor="#FFFFFF" uuid="7c0d6216-897b-40e4-9438-e74b28c52c75"/>
+								<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+									<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								</box>
+								<textElement textAlignment="Right" rotation="None" markup="none">
+									<font fontName="SansSerif" size="8" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$V{V_FLOOR_PRICE_SUM_REPORT}> 0 ?
+$V{V_PURCHASE_PRICE_WITH_FLOOR_SUM_REPORT}.divide( $V{V_FLOOR_PRICE_SUM_REPORT},3, RoundingMode.HALF_UP )
+:0]]></textFieldExpression>
+							</textField>
+						</jr:tableFooter>
+						<jr:columnHeader style="Table_CH" height="15">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement style="Table_CH" x="0" y="0" width="42" height="15" uuid="bf28a18d-305d-489b-b0b0-0fe5fd977059"/>
+								<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+								<textElement verticalAlignment="Middle">
+									<font fontName="SansSerif" size="8" isBold="true"/>
+								</textElement>
+								<textFieldExpression><![CDATA["% Flr"]]></textFieldExpression>
+							</textField>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="15">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<textField isStretchWithOverflow="true" pattern="#,##0.0%" isBlankWhenNull="true">
+								<reportElement style="Table_TD" x="0" y="0" width="42" height="15" uuid="fb28ac24-f2d6-4400-892c-c99890471131">
+									<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+								</reportElement>
+								<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+									<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								</box>
+								<textElement textAlignment="Right" verticalAlignment="Top">
+									<font fontName="SansSerif" size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$V{V_PCT_FLOOR}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="42" uuid="069419bc-0a6e-4e4f-bd5c-19de5898b0fc">
+						<property name="local_mesure_unitwidth" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+						<jr:tableFooter style="Table_TF" height="15">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<box>
+								<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+								<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+								<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+								<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+							</box>
+							<textField isStretchWithOverflow="true" pattern="#,##0.0%" isBlankWhenNull="true">
+								<reportElement style="Table_TF" mode="Transparent" x="0" y="0" width="42" height="15" forecolor="#000000" backcolor="#FFFFFF" uuid="c8948ad3-bf81-4842-9add-4b28c196ea05"/>
+								<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+									<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								</box>
+								<textElement textAlignment="Right" rotation="None" markup="none">
+									<font fontName="SansSerif" size="8" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$V{V_PCT_NATIONAL_MMR_REPORT}]]></textFieldExpression>
+							</textField>
+						</jr:tableFooter>
+						<jr:columnHeader style="Table_CH" height="15">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement style="Table_CH" x="0" y="0" width="42" height="15" uuid="b0ec864d-220c-4ed0-bdc6-95b5b8df675e"/>
+								<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+								<textElement verticalAlignment="Middle">
+									<font fontName="SansSerif" size="8" isBold="true"/>
+								</textElement>
+								<textFieldExpression><![CDATA["% Natl MMR"]]></textFieldExpression>
+							</textField>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="15">
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<textField isStretchWithOverflow="true" pattern="#,##0.0%" isBlankWhenNull="true">
+								<reportElement style="Table_TD" x="0" y="0" width="42" height="15" uuid="0ebb594a-389a-4161-8912-086495ce5cec"/>
+								<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+									<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								</box>
+								<textElement textAlignment="Right" verticalAlignment="Top">
+									<font fontName="SansSerif" size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$V{V_PCT_NATIONAL_MMR}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="42" uuid="5236dad6-bbfb-4620-936c-e248ad388485">
+						<property name="local_mesure_unitwidth" value="pixel"/>
+						<jr:tableFooter style="Table_TF" height="15">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<box>
+								<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+								<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+								<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+								<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+							</box>
+							<textField isStretchWithOverflow="true" pattern="#,##0.0%" isBlankWhenNull="true">
+								<reportElement style="Table_TF" mode="Transparent" x="0" y="0" width="42" height="15" forecolor="#000000" backcolor="#FFFFFF" uuid="b169bf9d-2f3c-48dc-87f0-cda766a05eda">
+									<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+								</reportElement>
+								<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+									<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								</box>
+								<textElement textAlignment="Right" rotation="None" markup="none">
+									<font fontName="SansSerif" size="8" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$V{V_PCT_REGIONAL_MMR_REPORT}]]></textFieldExpression>
+							</textField>
+						</jr:tableFooter>
+						<jr:columnHeader style="Table_CH" height="15">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement style="Table_CH" x="0" y="0" width="42" height="15" uuid="39ca5723-116c-44d6-8fc4-fede4b4c4895"/>
+								<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+								<textElement verticalAlignment="Middle">
+									<font fontName="SansSerif" size="8" isBold="true"/>
+								</textElement>
+								<textFieldExpression><![CDATA["% Reg MMR"]]></textFieldExpression>
+							</textField>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="15">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<textField isStretchWithOverflow="true" pattern="#,##0.0%" isBlankWhenNull="true">
+								<reportElement style="Table_TD" x="0" y="0" width="42" height="15" uuid="a7ddf5ba-4d03-464d-838c-b0eba136efdb"/>
+								<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+									<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								</box>
+								<textElement textAlignment="Right" verticalAlignment="Top">
+									<font fontName="SansSerif" size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$V{V_PCT_REGIONAL_MMR}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="42" uuid="df889cf7-c9a5-41db-813f-8246390a264c">
+						<property name="local_mesure_unitwidth" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<printWhenExpression><![CDATA[FALSE()]]></printWhenExpression>
+						<jr:tableFooter style="Table_TF" height="15">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<box>
+								<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+								<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+								<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+								<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+							</box>
+							<textField isStretchWithOverflow="true" pattern="#,##0.0%" isBlankWhenNull="true">
+								<reportElement style="Table_TF" mode="Transparent" x="0" y="0" width="42" height="15" forecolor="#000000" backcolor="#FFFFFF" uuid="46b3b24d-7bcc-4fb4-bba5-acd74f1c6260"/>
+								<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+									<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								</box>
+								<textElement textAlignment="Right" rotation="None" markup="none">
+									<font fontName="SansSerif" size="8" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$V{V_PCT_NADA_REPORT}]]></textFieldExpression>
+							</textField>
+						</jr:tableFooter>
+						<jr:columnHeader style="Table_CH" height="15">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement style="Table_CH" x="0" y="0" width="42" height="15" uuid="bf4e53ca-1220-4828-8b38-fbeed719a616"/>
+								<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+								<textElement verticalAlignment="Middle">
+									<font fontName="SansSerif" size="8" isBold="true"/>
+								</textElement>
+								<textFieldExpression><![CDATA["% NADA"]]></textFieldExpression>
+							</textField>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="15">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<textField isStretchWithOverflow="true" pattern="#,##0.0%" isBlankWhenNull="true">
+								<reportElement style="Table_TD" x="0" y="0" width="42" height="15" uuid="bd9eaa12-8c8d-4b71-ad89-3d92bb5932ef"/>
+								<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+									<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								</box>
+								<textElement textAlignment="Right" verticalAlignment="Top">
+									<font fontName="SansSerif" size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$V{V_PCT_NADA}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="42" uuid="18d0c9c2-8f9d-43d2-aef9-7ee307db4271">
+						<property name="local_mesure_unitwidth" value="pixel"/>
+						<printWhenExpression><![CDATA[FALSE()]]></printWhenExpression>
+						<jr:tableFooter style="Table_TF" height="15">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<box>
+								<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+								<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+								<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+								<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+							</box>
+							<textField isStretchWithOverflow="true" pattern="#,##0.0%" isBlankWhenNull="true">
+								<reportElement style="Table_TF" x="0" y="0" width="42" height="15" uuid="a7adcf19-1b34-48bc-b36d-e4151e98746b"/>
+								<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+									<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								</box>
+								<textElement textAlignment="Right">
+									<font fontName="SansSerif" size="8" isBold="true"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$V{V_PCT_BLACKBOOK_REPORT}]]></textFieldExpression>
+							</textField>
+						</jr:tableFooter>
+						<jr:columnHeader style="Table_CH" height="15">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement style="Table_CH" x="0" y="0" width="42" height="15" uuid="48c54396-d287-4471-84fd-6ebd7f914c85"/>
+								<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+								<textElement verticalAlignment="Middle">
+									<font fontName="SansSerif" size="8" isBold="true"/>
+								</textElement>
+								<textFieldExpression><![CDATA["% BB"]]></textFieldExpression>
+							</textField>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="15">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<textField isStretchWithOverflow="true" pattern="#,##0.0%" isBlankWhenNull="true">
+								<reportElement style="Table_TD" mode="Transparent" x="0" y="0" width="42" height="15" forecolor="#000000" backcolor="#FFFFFF" uuid="c925ce80-fbdd-4a98-a8dc-55557f0f3c4c"/>
+								<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+									<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								</box>
+								<textElement textAlignment="Right" verticalAlignment="Top" rotation="None" markup="none">
+									<font fontName="SansSerif" size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$V{V_PCT_BLACKBOOK}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+		<band height="20">
+			<printWhenExpression><![CDATA[$V{V_VIN_COUNT_REPORT} == null]]></printWhenExpression>
+			<textField evaluationTime="Report">
+				<reportElement positionType="FixRelativeToBottom" x="0" y="0" width="50" height="20" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="ab3036f8-2e31-4af1-801e-30582e622fc2">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<printWhenExpression><![CDATA[$V{V_VIN_COUNT_REPORT} == null]]></printWhenExpression>
+				</reportElement>
+				<textFieldExpression><![CDATA["!TRCND!"]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="15" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="210" height="15" uuid="aff4813c-94e6-4544-a062-dfe1a919fdbd">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+				<textElement textAlignment="Left" verticalAlignment="Bottom">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA["© Manheim. All rights reserved."]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="645" y="0" width="120" height="15" uuid="1be1c8fb-c345-4953-be82-58cd8483b0c8"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="765" y="0" width="35" height="15" uuid="db9dbe70-0b09-46cb-8be3-fbb6c5f6cc92">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+				<textElement textAlignment="Left" verticalAlignment="Bottom">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" of " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="120">
+			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.HorizontalRowLayout"/>
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<frame>
+				<reportElement x="0" y="0" width="800" height="120" isRemoveLineWhenBlank="true" uuid="0623e3ed-1a44-40aa-849e-cc0c79c681ff">
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+				</reportElement>
+				<textField>
+					<reportElement x="0" y="0" width="800" height="30" uuid="522e7398-9ce4-45d9-a0a3-9372c9581589">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Report Filters"]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement positionType="Float" x="0" y="90" width="800" height="15" isRemoveLineWhenBlank="true" uuid="7de416d7-60c5-4e53-9ffc-423eae06fd56">
+						<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+						<printWhenExpression><![CDATA[!$P{Account_Number_MSQ}.isEmpty()]]></printWhenExpression>
+					</reportElement>
+					<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+					<textElement>
+						<font fontName="SansSerif" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Account Number: " + $P{Account_Number_MSQ_display}.replace("[", "").replace("]","")]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement positionType="Float" x="0" y="75" width="800" height="15" isRemoveLineWhenBlank="true" uuid="208f67f1-8c1b-4234-b14f-ff16d0a2b614">
+						<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+						<printWhenExpression><![CDATA[!$P{Group_Code_MSQ}.isEmpty()]]></printWhenExpression>
+					</reportElement>
+					<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+					<textElement>
+						<font fontName="SansSerif" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Group Code: " + $P{Group_Code_MSQ_display}.replace("[", "").replace("]","")]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement positionType="Float" x="0" y="30" width="800" height="15" isRemoveLineWhenBlank="true" uuid="36566856-d265-44b4-84c0-5f01681ed213">
+						<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+					<textElement>
+						<font fontName="SansSerif" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Start Date:  " + $P{Start_Date}.toString().replace("[", "").toString().replace("]","") + "	End Date:  " + $P{End_Date}.toString().replace("[", "").toString().replace("]","")]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement positionType="Float" x="0" y="45" width="800" height="15" isRemoveLineWhenBlank="true" uuid="2db1e860-caf2-4966-8fdd-cb33e2ca176f">
+						<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<printWhenExpression><![CDATA[!$P{Market}.isEmpty()]]></printWhenExpression>
+					</reportElement>
+					<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+					<textElement>
+						<font fontName="SansSerif" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Market: " + $P{Market_display}.replace("[", "").replace("]","")]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement positionType="Float" x="0" y="60" width="800" height="15" isRemoveLineWhenBlank="true" uuid="91febcb8-bc2b-4091-967e-3ae5619d5f70">
+						<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<printWhenExpression><![CDATA[!$P{Location}.isEmpty()]]></printWhenExpression>
+					</reportElement>
+					<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+					<textElement>
+						<font fontName="SansSerif" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Location: " + $P{Location_display}.replace("[", "").replace("]","")]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement positionType="Float" x="0" y="105" width="800" height="15" isRemoveLineWhenBlank="true" uuid="827d1cda-ce86-4334-a3a3-860ba9c310e5">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+					<textElement>
+						<font fontName="SansSerif" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Report Path: " + $P{JASPER_REPORT}.getProperty("ireport.jasperserver.report.resource").substring(1,$P{JASPER_REPORT}.getProperty("ireport.jasperserver.report.resource").length()).replace("_files/main_jrxml","").replace("___"," - ").replace("_"," ")]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</summary>
+	<noData>
+		<band height="30">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<staticText>
+				<reportElement x="0" y="0" width="800" height="30" isRemoveLineWhenBlank="true" uuid="59ead02e-9beb-4410-acd4-2ceea24a3441"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="12"/>
+				</textElement>
+				<text><![CDATA[|NODATA||]]></text>
+			</staticText>
+		</band>
+	</noData>
+</jasperReport>

@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.1.0.final using JasperReports Library version 6.1.0  -->
+<!-- 2016-12-20T15:54:10 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Terms and Conditions" language="groovy" pageWidth="840" pageHeight="600" orientation="Landscape" whenNoDataType="NoDataSection" columnWidth="800" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" isSummaryWithPageHeaderAndFooter="true" uuid="1edd9acd-b811-4adf-8c1d-0bec91cc38b5">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="EBIZ-silo5"/>
+	<property name="ireport.jasperserver.url" value="https://jaspersoft.dev.manheim.com/jasperserver-pro/"/>
+	<property name="ireport.jasperserver.user" value="jasperadmin"/>
+	<property name="ireport.jasperserver.report.resource" value="/Operational_Reports/E_SIG_Terms_and_Conditions_files/main_jrxml"/>
+	<property name="ireport.jasperserver.reportUnit" value="/Operational_Reports/E_SIG_Terms_and_Conditions"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<property name="net.sf.jasperreports.export.html.exclude.origin.band.1" value="summary"/>
+	<property name="net.sf.jasperreports.export.html.exclude.origin.band.3" value="pageFooter"/>
+	<property name="net.sf.jasperreports.export.html.remove.empty.space.between.rows" value="true"/>
+	<property name="net.sf.jasperreports.export.csv.exclude.origin.band.pageHeader" value="pageHeader"/>
+	<property name="net.sf.jasperreports.export.csv.exclude.origin.band.pageFooter" value="pageFooter"/>
+	<property name="net.sf.jasperreports.export.csv.exclude.origin.band.Summary" value="summary"/>
+	<property name="net.sf.jasperreports.export.xls.exclude.origin.band.pageHeader" value="pageHeader"/>
+	<property name="net.sf.jasperreports.export.xls.exclude.origin.band.pageFooter" value="pageFooter"/>
+	<property name="net.sf.jasperreports.export.xls.exclude.origin.band.summary" value="summary"/>
+	<property name="net.sf.jasperreports.export.html.exclude.key.excludehtml"/>
+	<property name="net.sf.jasperreports.export.csv.exclude.key.excludecsv"/>
+	<style name="Table_CH" mode="Opaque" backcolor="#DDDDDD" hTextAlign="Center" vTextAlign="Middle" fontName="SansSerif" fontSize="9" isBold="true">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#DDDDDD"/>
+			<leftPen lineWidth="0.5" lineColor="#DDDDDD"/>
+			<bottomPen lineWidth="0.5" lineColor="#DDDDDD"/>
+			<rightPen lineWidth="0.5" lineColor="#DDDDDD"/>
+		</box>
+	</style>
+	<style name="Table_TD" mode="Transparent" vTextAlign="Middle" fontName="SansSerif" fontSize="9">
+		<pen lineColor="#DDDDDD"/>
+		<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0">
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+			<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+			<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+			<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+		</box>
+	</style>
+	<style name="Table_CF" mode="Opaque" backcolor="#F3F3F3" vTextAlign="Middle" fontName="SansSerif" fontSize="9" isBold="true">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.1" lineStyle="Solid" lineColor="#DDDDDD"/>
+			<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#DDDDDD"/>
+			<bottomPen lineWidth="0.1" lineStyle="Solid" lineColor="#DDDDDD"/>
+			<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#DDDDDD"/>
+		</box>
+	</style>
+	<style name="Table_TF" mode="Opaque" backcolor="#E0EFFF" vTextAlign="Middle" fontName="SansSerif" fontSize="9" isBold="true">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+			<leftPen lineWidth="0.0"/>
+			<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+			<rightPen lineWidth="0.0"/>
+		</box>
+	</style>
+	<style name="current_version" mode="Transparent" backcolor="#061296" hTextAlign="Center" isBlankWhenNull="true" fontSize="8">
+		<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{MAXX}=="1"]]></conditionExpression>
+			<style forecolor="#000000" backcolor="#FFFF99"/>
+		</conditionalStyle>
+	</style>
+	<style name="pg_header_report_name" hTextAlign="Left" vTextAlign="Bottom" isBlankWhenNull="true" fontSize="12" isBold="true">
+		<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+	</style>
+	<style name="pg_header_user_name" hTextAlign="Right" vTextAlign="Bottom" isBlankWhenNull="true" fontSize="10">
+		<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+	</style>
+	<style name="pg_footer_rights_reserved" hTextAlign="Left" vTextAlign="Middle" isBlankWhenNull="true" fontSize="8" isBold="false">
+		<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+	</style>
+	<style name="pg_footer_page_num" hTextAlign="Right" vTextAlign="Middle" isBlankWhenNull="true" fontSize="8" isBold="false">
+		<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+	</style>
+	<style name="summary_filter_header" hTextAlign="Center" vTextAlign="Middle" isBlankWhenNull="true" fontSize="10" isBold="true">
+		<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+	</style>
+	<style name="summary_filter" hTextAlign="Left" vTextAlign="Middle" isBlankWhenNull="true" fontSize="8" isBold="false">
+		<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+	</style>
+	<style name="no_data" hTextAlign="Center" vTextAlign="Middle" isBlankWhenNull="true" fontSize="12"/>
+	<style name="Table_CH_header" hTextAlign="Center" vTextAlign="Middle" isBlankWhenNull="true" fontSize="8" isBold="true">
+		<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+	</style>
+	<style name="Table_DH_text" hTextAlign="Center" vTextAlign="Middle" isBlankWhenNull="true" fontSize="8" isBold="false">
+		<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+	</style>
+	<style name="Table_DH_num" hTextAlign="Right" vTextAlign="Middle" isBlankWhenNull="true" fontSize="8" isBold="false">
+		<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+	</style>
+	<style name="Table_CH_num" hTextAlign="Right" vTextAlign="Middle" isBlankWhenNull="true" fontSize="8" isBold="true">
+		<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+	</style>
+	<style name="Table_CH_header_left" hTextAlign="Left" vTextAlign="Middle" isBlankWhenNull="true" fontSize="8" isBold="true">
+		<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+	</style>
+	<subDataset name="tandc" uuid="4457e52c-5e70-43aa-8f6b-f8a45fc95844">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="ODS DEV"/>
+		<parameter name="Account_Number_MSQ" class="java.lang.String"/>
+		<parameter name="Account_Name_MSQ" class="java.lang.String"/>
+		<parameter name="Representative_ID_MSQ" class="java.lang.String"/>
+		<parameter name="Representative_Name_MSQ" class="java.lang.String"/>
+		<parameter name="Account_Name_SQL" class="java.lang.String">
+			<defaultValueExpression><![CDATA[$P{Account_Name_MSQ}!= "" ? "and lower(cust.CUSTOMER_NAME) like lower('%" + $P{Account_Name_MSQ}.replace("'","%")+"%')": ""]]></defaultValueExpression>
+		</parameter>
+		<parameter name="Representative_Name_SQL" class="java.lang.String">
+			<defaultValueExpression><![CDATA[$P{Representative_Name_MSQ}!= "" ? "and lower(cr.full_name) like lower('%" + $P{Representative_Name_MSQ}.replace("'","%")+"%')": ""]]></defaultValueExpression>
+		</parameter>
+		<queryString>
+			<![CDATA[select a.* from(
+select distinct rtr.rep_number
+, cr.FULL_NAME
+, rtr.DEALER_NUMBER as account_number
+, cust.CUSTOMER_NAME as account_name
+, rtr.ACTIVE_STATUS
+, nvl(esig.TERMS_OF_SALE_VERSION_NBR, 'n/a') as TERMS_OF_SALE_VERSION_NBR
+, esig.DATE_ACCEPTED as DATE_ACCEPTED
+, case when min(esig.DATE_ACCEPTED) over (PARTITION by rtr.rep_number,rtr.dealer_number, esig.terms_of_sale_version_nbr) = esig.date_accepted  then 1 WHEN esig.date_accepted is null then 1 else 0 end as minn
+, esig1.GLOBAL_TERMS_OF_SALE_VERSION
+, case when ((max(trunc(esig.DATE_ACCEPTED, 'MI')) over(PARTITION by rtr.rep_number, rtr.dealer_number) = trunc(esig.DATE_ACCEPTED, 'MI')) and rtr.active_status = 1 and esig.terms_of_sale_version_nbr <> esig.global_terms_of_sale_version) or esig.TERMS_OF_SALE_VERSION_NBR is null then '1' else '0' end as maxx
+, esig.source
+from XODSADM.RTR_USER_REP_ACCOUNT_ROLE rtr
+left join XODSADM.ESIG_TERMS esig on ((esig.USER_NAME = rtr.USERNAME and lower(esig.source) <> 'kiosk') or (esig.USER_NAME = rtr.REP_NUMBER and lower(esig.source) = 'kiosk')) and rtr.DEALER_NUMBER = esig.TERMS_OF_SALE_ACCOUNT 
+left join odsadm.customer_rep cr on cr.rep_number = rtr.REP_NUMBER 
+left join odsadm.customer cust on rtr.ODS_CUSTOMER_ID = cust.CUSTOMER_ID 
+,  (select esig.GLOBAL_TERMS_OF_SALE_VERSION from XODSADM.ESIG_TERMS esig where rownum = 1) esig1
+where rtr.REP_NUMBER is not null 
+and rtr.dealer_number like '5%'
+and rtr.rep_number = nvl($P{Representative_ID_MSQ}, rtr.rep_number)
+$P!{Representative_Name_SQL}
+and rtr.dealer_number = nvl($P{Account_Number_MSQ}, rtr.dealer_number)
+$P!{Account_Name_SQL}
+order by rtr.rep_number, rtr.DEALER_NUMBER, Date_accepted desc) a
+where a.minn = '1']]>
+		</queryString>
+		<field name="REP_NUMBER" class="java.lang.String"/>
+		<field name="FULL_NAME" class="java.lang.String"/>
+		<field name="ACCOUNT_NUMBER" class="java.lang.String"/>
+		<field name="ACCOUNT_NAME" class="java.lang.String"/>
+		<field name="ACTIVE_STATUS" class="java.math.BigDecimal"/>
+		<field name="TERMS_OF_SALE_VERSION_NBR" class="java.lang.String"/>
+		<field name="DATE_ACCEPTED" class="java.sql.Timestamp"/>
+		<field name="MINN" class="java.math.BigDecimal"/>
+		<field name="GLOBAL_TERMS_OF_SALE_VERSION" class="java.lang.String"/>
+		<field name="MAXX" class="java.lang.String"/>
+		<field name="SOURCE" class="java.lang.String"/>
+		<variable name="no_data_variable" class="java.lang.String">
+			<variableExpression><![CDATA[$F{ACCOUNT_NUMBER}]]></variableExpression>
+		</variable>
+		<group name="REP_NUMBER">
+			<groupExpression><![CDATA[$F{REP_NUMBER}]]></groupExpression>
+		</group>
+		<group name="ACCOUNT_NUMBER">
+			<groupExpression><![CDATA[$F{ACCOUNT_NUMBER}]]></groupExpression>
+		</group>
+	</subDataset>
+	<parameter name="LoggedInUser" class="com.jaspersoft.jasperserver.api.metadata.user.domain.User" isForPrompting="false"/>
+	<parameter name="LoggedInUsername" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="slFactory" class="com.jaspersoft.commons.semantic.datasource.SemanticLayerFactory" isForPrompting="false"/>
+	<parameter name="slSchema" class="com.jaspersoft.commons.semantic.Schema" isForPrompting="false"/>
+	<parameter name="Account_Number_MSQ" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="Account_Name_MSQ" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="Representative_ID_MSQ" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="Representative_Name_MSQ" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select 1 from dual]]>
+	</queryString>
+	<field name="1" class="java.math.BigDecimal"/>
+	<variable name="no_data_variable" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="60" splitType="Stretch">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<textField>
+				<reportElement key="excludecsv" x="0" y="-20" width="50" height="80" forecolor="#FFFFFF" uuid="e5853597-c12b-4878-905f-97b75b33f0fe">
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textFieldExpression><![CDATA["!STPH!"]]></textFieldExpression>
+			</textField>
+			<frame>
+				<reportElement key="excludehtml" x="0" y="0" width="800" height="60" uuid="fcb8ac34-15d2-4707-9b11-cde7eca3cae1">
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textField>
+					<reportElement style="pg_header_report_name" positionType="FixRelativeToBottom" x="0" y="30" width="400" height="30" forecolor="#000000" uuid="65c035aa-c71a-4d45-92ff-72dbf9c8ec80"/>
+					<textFieldExpression><![CDATA[$P{JASPER_REPORT}.getName()]]></textFieldExpression>
+				</textField>
+				<textField pattern="EEEEE dd, MMMMM yyyy">
+					<reportElement key="" style="pg_header_user_name" mode="Transparent" x="400" y="30" width="400" height="30" forecolor="#000000" uuid="6c62c42b-7ec9-46d4-abc2-f3c0c36afaab"/>
+					<textFieldExpression><![CDATA[$P{LoggedInUsername} + "  |  " + DATEFORMAT(new Date(System.currentTimeMillis() - 5 *3600 * 1000),"EEEEE dd, MMMM yyyy h:mm a") + " EST"]]></textFieldExpression>
+				</textField>
+				<image>
+					<reportElement x="0" y="0" width="800" height="30" uuid="53bdf7d4-4e26-4c36-bdf7-8e0bf8a2b6cc">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<imageExpression><![CDATA["repo:/Images/header_printable_bg.jpg"]]></imageExpression>
+				</image>
+			</frame>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="30">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<componentElement>
+				<reportElement x="0" y="0" width="800" height="30" uuid="98ebd1dd-ebbf-48e5-a2c2-10a7e8fcec33">
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" whenNoDataType="AllSectionsNoDetail">
+					<datasetRun subDataset="tandc" uuid="389d14bb-0fcd-4c83-99cd-8147a7adddf2">
+						<datasetParameter name="Account_Name_MSQ">
+							<datasetParameterExpression><![CDATA[$P{Account_Name_MSQ}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="Account_Number_MSQ">
+							<datasetParameterExpression><![CDATA[$P{Account_Number_MSQ}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="Representative_Name_MSQ">
+							<datasetParameterExpression><![CDATA[$P{Representative_Name_MSQ}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="Representative_ID_MSQ">
+							<datasetParameterExpression><![CDATA[$P{Representative_ID_MSQ}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+						<returnValue fromVariable="no_data_variable" toVariable="no_data_variable"/>
+					</datasetRun>
+					<jr:column width="100" uuid="bbaf204e-9c8a-48a0-a1f0-c77c9350aef3">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+						<jr:columnHeader style="Table_CH" height="15">
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement style="Table_CH_header" stretchType="RelativeToTallestObject" x="0" y="0" width="100" height="15" uuid="faa2a49d-ca16-4fb0-87a4-264ee3fa1a98"/>
+								<textFieldExpression><![CDATA["Representative ID"]]></textFieldExpression>
+							</textField>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="15">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement style="current_version" mode="Transparent" x="0" y="0" width="100" height="15" uuid="0e6226c6-96d9-4519-b652-3922180d36e0"/>
+								<textFieldExpression><![CDATA[$F{REP_NUMBER}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="100" uuid="f8c29b4f-740d-42a6-b4d0-43166dad1715">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<jr:columnHeader style="Table_CH" height="15">
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement style="Table_CH_header" stretchType="RelativeToTallestObject" x="0" y="0" width="100" height="15" uuid="fcf92377-2d19-4516-bc57-dc83071e59e0"/>
+								<textFieldExpression><![CDATA["Representative Name"]]></textFieldExpression>
+							</textField>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="15">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement style="current_version" stretchType="RelativeToTallestObject" mode="Transparent" x="0" y="0" width="100" height="15" uuid="009ba56d-c43c-45d7-9172-eec9a439a3ac"/>
+								<textFieldExpression><![CDATA[$F{FULL_NAME}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="100" uuid="9ea55d9c-0dae-40b4-8259-d8243fda1015">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<jr:columnHeader style="Table_CH" height="15">
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement style="Table_CH_header" stretchType="RelativeToTallestObject" x="0" y="0" width="100" height="15" uuid="f41de6c1-3394-4569-9444-41161f63af59"/>
+								<textFieldExpression><![CDATA["Account #"]]></textFieldExpression>
+							</textField>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="15">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement style="current_version" mode="Transparent" x="0" y="0" width="100" height="15" uuid="f59dfacb-c583-4e46-9450-ae636350da61">
+									<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+								</reportElement>
+								<textFieldExpression><![CDATA[$F{ACCOUNT_NUMBER}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="100" uuid="d88ffa48-c337-44c1-a5ee-172c544c3698">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<jr:columnHeader style="Table_CH" height="15">
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement style="Table_CH_header" stretchType="RelativeToTallestObject" x="0" y="0" width="100" height="15" uuid="620ef35d-c993-4f31-97eb-8a6b4ed9f93c">
+									<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+								</reportElement>
+								<textFieldExpression><![CDATA["Account Name"]]></textFieldExpression>
+							</textField>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="15">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement style="current_version" mode="Transparent" x="0" y="0" width="100" height="15" uuid="49e976d6-e071-4b37-8ec2-af4cb4f05845">
+									<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+								</reportElement>
+								<textFieldExpression><![CDATA[$F{ACCOUNT_NAME}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="80" uuid="d908dbfb-55bf-46f7-8ddc-86b7a04f4239">
+						<jr:columnHeader style="Table_CH" height="15">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement style="Table_CH_header" stretchType="RelativeToTallestObject" x="0" y="0" width="80" height="15" uuid="c04d29e3-39fc-4535-b3f7-256238f63ec7"/>
+								<textFieldExpression><![CDATA["Dealer Representative Status"]]></textFieldExpression>
+							</textField>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="15">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement style="current_version" mode="Transparent" x="0" y="0" width="80" height="15" uuid="02a51c57-4ee8-4914-aa19-02536a5d200a"/>
+								<textFieldExpression><![CDATA[$F{ACTIVE_STATUS}==1?"Active":"Inactive"]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="80" uuid="a736422a-19f4-4ae3-9ffb-5cde62de18e8">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<jr:columnHeader style="Table_CH" height="15">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement style="Table_CH_header" stretchType="RelativeToTallestObject" x="0" y="0" width="80" height="15" uuid="bfd0e7cd-5a55-4f95-84ad-d6f057274029"/>
+								<textFieldExpression><![CDATA["Accepted Version of T&C"]]></textFieldExpression>
+							</textField>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="15">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement style="current_version" mode="Transparent" x="0" y="0" width="80" height="15" uuid="df8f64fc-f0e4-48ab-b1fa-7a042cbdf280"/>
+								<textFieldExpression><![CDATA[$F{TERMS_OF_SALE_VERSION_NBR}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="80" uuid="33a500d1-0fdf-4ae7-8160-ab2703fa2d9d">
+						<jr:columnHeader style="Table_CH" height="15">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement style="Table_CH_header" stretchType="RelativeToTallestObject" x="0" y="0" width="80" height="15" uuid="b7552e74-7780-44a7-b143-f2e650f4acbd"/>
+								<textFieldExpression><![CDATA["Date Accepted"]]></textFieldExpression>
+							</textField>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="15">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<textField isStretchWithOverflow="true" pattern="MMM d, yyyy h:mm:ss a" isBlankWhenNull="true">
+								<reportElement style="current_version" mode="Transparent" x="0" y="0" width="80" height="15" uuid="d77ce17a-b3ca-44fe-9e36-568873c7ab57"/>
+								<textFieldExpression><![CDATA[$F{DATE_ACCEPTED}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="80" uuid="37428109-616f-43db-8b76-8dcbfd5a4ef4">
+						<jr:columnHeader style="Table_CH" height="15">
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement style="Table_CH_header" stretchType="RelativeToTallestObject" x="0" y="0" width="80" height="15" uuid="5fbccdf1-779c-4817-bd9e-f698d3791ca3"/>
+								<textFieldExpression><![CDATA["Current T&C Version"]]></textFieldExpression>
+							</textField>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="15">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement style="current_version" mode="Transparent" x="0" y="0" width="80" height="15" uuid="3499476d-3aaf-4ba5-9574-7bbe6b283372"/>
+								<textFieldExpression><![CDATA[$F{GLOBAL_TERMS_OF_SALE_VERSION}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="80" uuid="1697aab7-753b-4fea-9829-13d40ab561f2">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<jr:columnHeader style="Table_CH" height="15">
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<textField>
+								<reportElement style="Table_CH_header" x="0" y="0" width="80" height="15" uuid="b241d10d-4316-479b-b785-b0a29bf31a20"/>
+								<textFieldExpression><![CDATA["Source"]]></textFieldExpression>
+							</textField>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="15">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement style="current_version" mode="Transparent" x="0" y="0" width="80" height="15" uuid="3b8674ba-3d9c-4a95-aef7-bd6d42043ec9"/>
+								<textFieldExpression><![CDATA[$F{SOURCE}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+		<band height="20">
+			<textField evaluationTime="Report">
+				<reportElement style="no_data" positionType="FixRelativeToBottom" x="0" y="0" width="47" height="20" forecolor="#FFFFFF" uuid="603bf00f-6853-4b2a-8e5a-54785ca1eacf">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<printWhenExpression><![CDATA[$V{no_data_variable} == null]]></printWhenExpression>
+				</reportElement>
+				<textFieldExpression><![CDATA["!TRCND!"]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="30" splitType="Stretch">
+			<textField>
+				<reportElement style="pg_footer_rights_reserved" x="0" y="15" width="230" height="15" uuid="aff4813c-94e6-4544-a062-dfe1a919fdbd">
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+				</reportElement>
+				<textFieldExpression><![CDATA["© Manheim. All rights reserved."]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="pg_footer_page_num" x="640" y="15" width="100" height="15" uuid="1be1c8fb-c345-4953-be82-58cd8483b0c8"/>
+				<textFieldExpression><![CDATA["Page  " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement style="pg_footer_rights_reserved" x="740" y="15" width="60" height="15" uuid="db9dbe70-0b09-46cb-8be3-fbb6c5f6cc92"/>
+				<textFieldExpression><![CDATA[" of  " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="pg_footer_page_num" x="329" y="0" width="471" height="15" uuid="882d1835-dabf-4c80-a253-a3ea64cc8baf"/>
+				<textFieldExpression><![CDATA["*Highlighted accounts are active accounts that have not yet accepted the current T&Cs"]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="90" splitType="Stretch">
+			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.HorizontalRowLayout"/>
+			<frame>
+				<reportElement x="0" y="0" width="800" height="90" isRemoveLineWhenBlank="true" uuid="0623e3ed-1a44-40aa-849e-cc0c79c681ff">
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+				</reportElement>
+				<textField>
+					<reportElement style="summary_filter_header" x="0" y="0" width="800" height="30" uuid="522e7398-9ce4-45d9-a0a3-9372c9581589">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<textFieldExpression><![CDATA["Report Filters"]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="summary_filter" positionType="Float" x="0" y="60" width="800" height="15" isRemoveLineWhenBlank="true" uuid="46dfa3d1-05b8-47fd-82d4-fcdf301d66a2">
+						<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+						<printWhenExpression><![CDATA[$P{Account_Name_MSQ}!=""]]></printWhenExpression>
+					</reportElement>
+					<textFieldExpression><![CDATA["Account Name: " + $P{Account_Name_MSQ}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="summary_filter" positionType="Float" x="0" y="75" width="800" height="15" isRemoveLineWhenBlank="true" uuid="7de416d7-60c5-4e53-9ffc-423eae06fd56">
+						<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+						<printWhenExpression><![CDATA[$P{Account_Number_MSQ} != ""]]></printWhenExpression>
+					</reportElement>
+					<textFieldExpression><![CDATA["Account Number: " + $P{Account_Number_MSQ}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="summary_filter" positionType="Float" x="0" y="30" width="800" height="15" isRemoveLineWhenBlank="true" uuid="208f67f1-8c1b-4234-b14f-ff16d0a2b614">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+						<printWhenExpression><![CDATA[$P{Representative_ID_MSQ}!= ""]]></printWhenExpression>
+					</reportElement>
+					<textFieldExpression><![CDATA["Representative ID: " + $P{Representative_ID_MSQ}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="summary_filter" positionType="Float" x="0" y="45" width="800" height="15" uuid="c108e5dd-a398-4367-8d2c-0b8e7847aea6">
+						<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<printWhenExpression><![CDATA[$P{Representative_Name_MSQ}!=""]]></printWhenExpression>
+					</reportElement>
+					<textFieldExpression><![CDATA["Representative Name: " + $P{Representative_Name_MSQ}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</summary>
+	<noData>
+		<band height="20">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<staticText>
+				<reportElement style="no_data" x="350" y="0" width="100" height="20" uuid="59ead02e-9beb-4410-acd4-2ceea24a3441">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<text><![CDATA[|NODATA||]]></text>
+			</staticText>
+		</band>
+	</noData>
+</jasperReport>

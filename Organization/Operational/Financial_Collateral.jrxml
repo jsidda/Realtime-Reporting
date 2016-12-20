@@ -1,0 +1,788 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.1.0.final using JasperReports Library version 6.1.0  -->
+<!-- 2016-12-20T15:53:36 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Collateral - Financial" language="groovy" pageWidth="840" pageHeight="600" orientation="Landscape" whenNoDataType="NoDataSection" columnWidth="800" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" isSummaryWithPageHeaderAndFooter="true" uuid="44a72d3d-078e-4076-9a7b-c0418b7b0482">
+	<property name="ireport.jasperserver.url" value="https://jaspersoft.dev.manheim.com/jasperserver-pro/"/>
+	<property name="ireport.jasperserver.user" value="jasperadmin"/>
+	<property name="ireport.jasperserver.report.resource" value="/Operational_Reports/Collateral_Financial_files/main_jrxml"/>
+	<property name="ireport.jasperserver.reportUnit" value="/Operational_Reports/Collateral_Financial"/>
+	<property name="net.sf.jasperreports.export.html.exclude.origin.band.1" value="summary"/>
+	<property name="net.sf.jasperreports.export.html.exclude.origin.band.3" value="pageFooter"/>
+	<property name="net.sf.jasperreports.export.html.remove.empty.space.between.rows" value="true"/>
+	<property name="net.sf.jasperreports.export.csv.exclude.origin.band.pageHeader" value="pageHeader"/>
+	<property name="net.sf.jasperreports.export.csv.exclude.origin.band.pageFooter" value="pageFooter"/>
+	<property name="net.sf.jasperreports.export.csv.exclude.origin.band.Summary" value="summary"/>
+	<property name="net.sf.jasperreports.export.xls.exclude.origin.band.pageHeader" value="pageHeader"/>
+	<property name="net.sf.jasperreports.export.xls.exclude.origin.band.pageFooter" value="pageFooter"/>
+	<property name="net.sf.jasperreports.export.xls.exclude.origin.band.summary" value="summary"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="EBIZ-silo5"/>
+	<property name="net.sf.jasperreports.export.html.exclude.key.excludehtml"/>
+	<property name="net.sf.jasperreports.export.csv.exclude.key.excludecsv"/>
+	<style name="Table_CH" mode="Opaque" backcolor="#DDDDDD" hTextAlign="Center" vTextAlign="Middle" fontName="SansSerif" fontSize="9" isBold="true">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#DDDDDD"/>
+			<leftPen lineWidth="0.5" lineColor="#DDDDDD"/>
+			<bottomPen lineWidth="0.5" lineColor="#DDDDDD"/>
+			<rightPen lineWidth="0.5" lineColor="#DDDDDD"/>
+		</box>
+	</style>
+	<style name="Table_TD" mode="Opaque" backcolor="#FFFFFF" vTextAlign="Middle" fontName="SansSerif" fontSize="9">
+		<pen lineColor="#DDDDDD"/>
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+			<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+			<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+			<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+		</box>
+	</style>
+	<style name="Table_CF" mode="Opaque" backcolor="#F3F3F3" vTextAlign="Middle" fontName="SansSerif" fontSize="9" isBold="true">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.1" lineStyle="Solid" lineColor="#DDDDDD"/>
+			<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#DDDDDD"/>
+			<bottomPen lineWidth="0.1" lineStyle="Solid" lineColor="#DDDDDD"/>
+			<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#DDDDDD"/>
+		</box>
+	</style>
+	<style name="Table_TF" mode="Opaque" backcolor="#E0EFFF" hTextAlign="Center" vTextAlign="Middle" fontName="SansSerif" fontSize="9" isBold="true">
+		<box>
+			<pen lineWidth="0.1" lineColor="#000000"/>
+			<topPen lineWidth="0.1" lineStyle="Solid" lineColor="#DDDDDD"/>
+			<leftPen lineWidth="0.1" lineStyle="Solid" lineColor="#DDDDDD"/>
+			<bottomPen lineWidth="0.1" lineStyle="Solid" lineColor="#DDDDDD"/>
+			<rightPen lineWidth="0.1" lineStyle="Solid" lineColor="#DDDDDD"/>
+		</box>
+	</style>
+	<style name="Seller Invoices Hyperlink" mode="Opaque" forecolor="#030000" backcolor="#FFFFFF" hTextAlign="Right" vTextAlign="Middle" fontName="SansSerif" fontSize="8" isBold="true">
+		<pen lineColor="#DDDDDD"/>
+		<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{SELLER_INVOICES_ON_HOLD} != 0]]></conditionExpression>
+			<style forecolor="#0339FF" vTextAlign="Bottom" isUnderline="true"/>
+		</conditionalStyle>
+	</style>
+	<style name="Checks Not Cleared Hyperlink" mode="Opaque" forecolor="#030000" backcolor="#FFFFFF" hTextAlign="Right" vTextAlign="Bottom" fontName="SansSerif" fontSize="8" isBold="true">
+		<pen lineColor="#DDDDDD"/>
+		<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{CHECKS_NOT_CLEARED} != 0]]></conditionExpression>
+			<style forecolor="#0339FF" isUnderline="true"/>
+		</conditionalStyle>
+	</style>
+	<style name="Total Amount Due Hyperlink" mode="Opaque" forecolor="#030000" backcolor="#FFFFFF" hTextAlign="Right" vTextAlign="Bottom" fontName="SansSerif" fontSize="8" isBold="true">
+		<pen lineColor="#DDDDDD"/>
+		<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{TOTAL_AMOUNT_DUE} != 0]]></conditionExpression>
+			<style forecolor="#0339FF" isUnderline="true"/>
+		</conditionalStyle>
+	</style>
+	<style name="NSF Check Hyperlink" mode="Opaque" forecolor="#030000" backcolor="#FFFFFF" hTextAlign="Right" vTextAlign="Bottom" fontName="SansSerif" fontSize="8" isBold="true">
+		<pen lineColor="#DDDDDD"/>
+		<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{NSF_CHECK_COUNT} != 0]]></conditionExpression>
+			<style forecolor="#0339FF" isUnderline="true"/>
+		</conditionalStyle>
+	</style>
+	<style name="pg_header_report_name" hTextAlign="Left" vTextAlign="Middle" isBlankWhenNull="true" fontSize="12" isBold="true">
+		<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+	</style>
+	<style name="pg_header_user_name" hTextAlign="Right" vTextAlign="Middle" isBlankWhenNull="true" fontSize="10">
+		<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+	</style>
+	<style name="pg_footer_rights_reserved" hTextAlign="Left" vTextAlign="Middle" isBlankWhenNull="true" fontSize="8" isBold="false">
+		<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+	</style>
+	<style name="pg_footer_page_num" hTextAlign="Right" vTextAlign="Middle" isBlankWhenNull="true" fontSize="8" isBold="false">
+		<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+	</style>
+	<style name="summary_filter_header" hTextAlign="Center" vTextAlign="Middle" isBlankWhenNull="true" fontSize="10" isBold="true">
+		<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+	</style>
+	<style name="summary_filter" hTextAlign="Left" vTextAlign="Middle" isBlankWhenNull="true" fontSize="8" isBold="false">
+		<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+	</style>
+	<style name="no_data" hTextAlign="Center" vTextAlign="Middle" isBlankWhenNull="true" fontSize="10"/>
+	<style name="Table_CH_header" hTextAlign="Center" vTextAlign="Middle" isBlankWhenNull="true" fontSize="8" isBold="true">
+		<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+	</style>
+	<style name="Table_DH_text" hTextAlign="Center" vTextAlign="Middle" isBlankWhenNull="true" fontSize="8" isBold="false">
+		<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+	</style>
+	<style name="Table_DH_num" hTextAlign="Right" vTextAlign="Middle" isBlankWhenNull="true" fontSize="8" isBold="false">
+		<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+	</style>
+	<style name="Table_CH_num" hTextAlign="Right" vTextAlign="Middle" isBlankWhenNull="true" fontSize="8" isBold="true">
+		<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+	</style>
+	<style name="Table_CH_header_left" hTextAlign="Left" vTextAlign="Middle" isBlankWhenNull="true" fontSize="8" isBold="true">
+		<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+	</style>
+	<subDataset name="Financial Collateral" uuid="3a6892bb-9441-4f70-8229-e082e9e33805">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="EBIZ-silo5"/>
+		<parameter name="Account_Number_MSQ" class="java.util.Collection"/>
+		<parameter name="Invoice_Account_Type" class="java.lang.String" isForPrompting="false">
+			<defaultValueExpression><![CDATA["bill_to"]]></defaultValueExpression>
+		</parameter>
+		<parameter name="bill_to_left_sql" class="java.lang.String">
+			<defaultValueExpression><![CDATA[$P{Invoice_Account_Type}=="bill_to"?
+"left join AR.HZ_CUST_ACCOUNTS ca on ca.CUST_ACCOUNT_ID = cta.BILL_TO_CUSTOMER_ID":"left join AR.HZ_CUST_ACCOUNTS ca on ca.CUST_ACCOUNT_ID = cta.SOLD_TO_CUSTOMER_ID"]]></defaultValueExpression>
+		</parameter>
+		<parameter name="bill_to_sql" class="java.lang.String">
+			<defaultValueExpression><![CDATA[$P{Invoice_Account_Type}=="bill_to"?
+"join AR.HZ_CUST_ACCOUNTS ca on ca.CUST_ACCOUNT_ID = cta.BILL_TO_CUSTOMER_ID":"join AR.HZ_CUST_ACCOUNTS ca on ca.CUST_ACCOUNT_ID = cta.SOLD_TO_CUSTOMER_ID"]]></defaultValueExpression>
+		</parameter>
+		<parameter name="Invoice_Account_Type_display" class="java.lang.String" isForPrompting="false"/>
+		<queryString>
+			<![CDATA[select 
+ca.account_name as account_name
+, ca.account_number
+,ca.cust_account_id
+, nvl(shold.hold_amount,0) as Seller_Invoices_on_Hold
+, nvl(checks.Aged_Checks_Amount,0) as Checks_Not_Cleared
+, nvl(due.due,0) as Total_Amount_Due
+, nvl(nsf.NSF_Check_count,0) as NSF_Check_count
+from
+AR.HZ_CUST_ACCOUNTS ca
+
+left join (select 
+      ca.ACCOUNT_NAME as account_name
+      , ca.account_number as account_number
+      , sum(ipa.AMOUNT) as Aged_Checks_Amount
+      from ap.ap_checks_all aca
+      join ap.ap_invoice_payments_all ipa on aca.CHECK_ID = ipa.CHECK_ID
+      join AP.AP_INVOICES_ALL aia on ipa.INVOICE_ID = aia.INVOICE_ID
+      left join MANAR.man_ar_netting_details_tbl net on net.ap_invoice_id = aia.INVOICE_ID
+      left join AR.RA_CUSTOMER_TRX_ALL cta on net.cr_customer_trx_id = cta.CUSTOMER_TRX_ID
+
+	$P!{bill_to_left_sql}
+
+      left join ap.ap_suppliers s on aia.vendor_id = s.vendor_id
+      left join AR.Ar_PAYMENT_SCHEDULES_ALL ps on ps.customer_trx_id = cta.customer_trx_id
+      join (select distinct ca.CUST_ACCOUNT_ID
+        from ar.ra_customer_trx_all cta
+       
+       $P!{bill_to_sql}
+       
+        left join JTF.jtf_rs_salesreps jrs on jrs.salesrep_id = cta.primary_salesrep_id
+      left join JTF.JTF_RS_RESOURCE_EXTNS_tl rre on rre.RESOURCE_ID = jrs.RESOURCE_ID and (rre.language = 'US' or rre.language is null)
+        ) caa on ca.CUST_ACCOUNT_ID=caa.CUST_ACCOUNT_ID
+      where 
+      aca.CLEARED_DATE is null
+      and aca.STATUS_LOOKUP_CODE <> 'VOIDED' 
+      and aia.PAYMENT_METHOD_CODE like '%CHECK%'
+      and  ipa.AMOUNT > 0
+      group by ca.account_number
+      , ca.ACCOUNT_NAME
+) checks on checks.account_number = ca.account_number
+left JOIN
+    (select ca.account_name
+    , ca.account_number
+    , sum(ps.AMOUNT_DUE_REMAINING) as due
+    from AR.RA_CUSTOMER_TRX_ALL cta
+    join AR.AR_PAYMENT_SCHEDULES_ALL ps on ps.CUSTOMER_TRX_ID = cta.CUSTOMER_TRX_ID
+    
+     $P!{bill_to_sql}
+     
+    left join AR.ra_cust_trx_types_all ctta on cta.cust_trx_type_id = ctta.cust_trx_type_id and ctta.org_id = cta.org_id 
+    left join MANAR.man_om_consignments moc on MOC.CONSIGNMENT_ID = TO_NUMBER(REGEXP_REPLACE(CTA.ATTRIBUTE2, '[^0-9]+', ''))
+    left join ( select LOOKUP_CODE, Meaning, attribute1 as Buyer_Payment_Hold , Attribute6 as Seller_Payment_Hold from applsys.fnd_lookup_values
+      where lookup_type like 'MAN_PAYMENT_HOLD_EXTENSION' and LANGUAGE = 'US') AHold on ahold.meaning = moc.Arbitration_Status_code 
+    left join ( select LOOKUP_CODE, Meaning, attribute1 as Buyer_Payment_Hold, Attribute6 as Seller_Payment_Hold from applsys.fnd_lookup_values
+      where lookup_type like 'MAN_PAYMENT_HOLD_EXTENSION' and LANGUAGE = 'US') PHold on phold.meaning = moc.PSI_Status_code 
+    left join ( select LOOKUP_CODE, Meaning, attribute1 as Buyer_Payment_Hold, Attribute6 as Seller_Payment_Hold from applsys.fnd_lookup_values
+      where lookup_type like 'MAN_PAYMENT_HOLD_EXTENSION' and LANGUAGE = 'US') THold on thold.meaning = moc.Title_Status_code  
+   where ((lower(ctta.name) like '%buyer%' and ((ahold.Buyer_Payment_Hold is null or ahold.Buyer_Payment_Hold <> 'Y')  or (phold.Buyer_Payment_Hold is null or phold.Buyer_Payment_Hold <>'Y') or (thold.Buyer_Payment_Hold is null or thold.Buyer_Payment_Hold <> 'Y')))or
+   (lower(ctta.name) like '%seller%' and ((ahold.Seller_Payment_Hold is null or ahold.Seller_Payment_Hold <> 'Y') or (phold.Seller_Payment_Hold is null or phold.Seller_Payment_Hold <>'Y') or (thold.Seller_Payment_Hold is null or thold.Seller_Payment_Hold <> 'Y')))) or
+  (lower (ctta.name) not like '%buyer%' and lower (ctta.name) not like '%sell%')
+    group by ca.account_number ,ca.account_name) due
+  on ca.account_number = due.account_number
+left join
+    (select count(distinct(acra.RECEIPT_NUMBER)) as NSF_Check_count, ca.ACCOUNT_NUMBER
+    from AR.RA_CUSTOMER_TRX_ALL cta 
+    
+ $P!{bill_to_sql}
+ 
+    join AR.AR_PAYMENT_SCHEDULES_ALL ps on cta.CUSTOMER_TRX_ID = ps.CUSTOMER_TRX_ID 
+    left join AR.AR_RECEIVABLE_APPLICATIONS_ALL raa on ps.PAYMENT_SCHEDULE_ID = raa.APPLIED_PAYMENT_SCHEDULE_ID
+    left join AR.AR_CASH_RECEIPTS_ALL acra on raa.CASH_RECEIPT_ID = acra.CASH_RECEIPT_ID
+    where acra.status in ('REV', 'NSF', 'STOP','CC_CHARGEBACK_REV')
+    and ps.ACCTD_AMOUNT_DUE_REMAINING <>0
+    group by ca.account_number)nsf on nsf.ACCOUNT_NUMBER = ca.ACCOUNT_NUMBER
+left join
+    (select
+     ca.account_number
+    , sum(ps.AMOUNT_DUE_REMAINING) as hold_amount
+    from AR.RA_CUSTOMER_TRX_ALL cta
+    join AR.AR_PAYMENT_SCHEDULES_ALL ps on ps.CUSTOMER_TRX_ID = cta.CUSTOMER_TRX_ID
+
+ $P!{bill_to_sql}
+
+    left join AR.ra_cust_trx_types_all ctta on cta.cust_trx_type_id = ctta.cust_trx_type_id and ctta.org_id = cta.org_id 
+    left join MANAR.man_om_consignments moc on MOC.CONSIGNMENT_ID = TO_NUMBER(REGEXP_REPLACE(CTA.ATTRIBUTE2, '[^0-9]+', ''))
+    left join ( select LOOKUP_CODE, Meaning, attribute1 as Buyer_Payment_Hold , Attribute6 as Seller_Payment_Hold from applsys.fnd_lookup_values
+      where lookup_type like 'MAN_PAYMENT_HOLD_EXTENSION' and LANGUAGE = 'US') AHold on ahold.meaning = moc.Arbitration_Status_code 
+    left join ( select LOOKUP_CODE, Meaning, attribute1 as Buyer_Payment_Hold, Attribute6 as Seller_Payment_Hold from applsys.fnd_lookup_values
+      where lookup_type like 'MAN_PAYMENT_HOLD_EXTENSION' and LANGUAGE = 'US') PHold on phold.meaning = moc.PSI_Status_code 
+    left join ( select LOOKUP_CODE, Meaning, attribute1 as Buyer_Payment_Hold, Attribute6 as Seller_Payment_Hold from applsys.fnd_lookup_values
+      where lookup_type like 'MAN_PAYMENT_HOLD_EXTENSION' and LANGUAGE = 'US') THold on thold.meaning = moc.Title_Status_code  
+   where (lower(ctta.name) like '%seller%' and ((ahold.Seller_Payment_Hold = 'Y') or (phold.Seller_Payment_Hold ='Y') or (thold.Seller_Payment_Hold = 'Y')))
+    group by ca.account_number 
+    ) shold
+  on ca.account_number = shold.account_number
+  where  1=1 and $X{IN, ca.account_number, Account_Number_MSQ}
+  order by ltrim(upper(account_name))]]>
+		</queryString>
+		<field name="ACCOUNT_NAME" class="java.lang.String"/>
+		<field name="ACCOUNT_NUMBER" class="java.lang.String"/>
+		<field name="CUST_ACCOUNT_ID" class="java.math.BigDecimal"/>
+		<field name="SELLER_INVOICES_ON_HOLD" class="java.math.BigDecimal"/>
+		<field name="CHECKS_NOT_CLEARED" class="java.math.BigDecimal"/>
+		<field name="TOTAL_AMOUNT_DUE" class="java.math.BigDecimal"/>
+		<field name="NSF_CHECK_COUNT" class="java.math.BigDecimal"/>
+		<variable name="SELLER_INVOICES_ON_HOLD1" class="java.math.BigDecimal" calculation="Sum">
+			<variableExpression><![CDATA[$F{SELLER_INVOICES_ON_HOLD}]]></variableExpression>
+		</variable>
+		<variable name="CHECKS_NOT_CLEARED1" class="java.math.BigDecimal" calculation="Sum">
+			<variableExpression><![CDATA[$F{CHECKS_NOT_CLEARED}]]></variableExpression>
+		</variable>
+		<variable name="TOTAL_AMOUNT_DUE1" class="java.math.BigDecimal" calculation="Sum">
+			<variableExpression><![CDATA[$F{TOTAL_AMOUNT_DUE}]]></variableExpression>
+		</variable>
+		<variable name="NSF_CHECK_COUNT1" class="java.math.BigDecimal" calculation="Sum">
+			<variableExpression><![CDATA[$F{NSF_CHECK_COUNT}]]></variableExpression>
+		</variable>
+	</subDataset>
+	<parameter name="Account_Number_MSQ" class="java.util.Collection" nestedType="java.lang.String" isForPrompting="false">
+		<parameterDescription><![CDATA[]]></parameterDescription>
+	</parameter>
+	<parameter name="LoggedInUsername" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="Account_Number_MSQ_filters" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="Account_Number_MSQ_display" class="java.lang.String"/>
+	<parameter name="Invoice_Account_Type" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="Invoice_Account_Type_display" class="java.lang.String" isForPrompting="false"/>
+	<queryString language="SQL">
+		<![CDATA[select 1
+from dual]]>
+	</queryString>
+	<field name="1" class="java.math.BigDecimal"/>
+	<variable name="no_data_variable" class="java.math.BigDecimal"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="60" splitType="Stretch">
+			<textField>
+				<reportElement key="excludecsv" x="0" y="-20" width="800" height="80" forecolor="#FFFFFF" uuid="0deef454-5b56-4774-b786-a7c620854bee">
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textFieldExpression><![CDATA["!STPH!"]]></textFieldExpression>
+			</textField>
+			<frame>
+				<reportElement key="excludehtml" x="0" y="0" width="800" height="60" uuid="f8ae9a72-433d-4d7c-a119-968a2fd35d93">
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textField>
+					<reportElement style="pg_header_report_name" positionType="FixRelativeToBottom" x="0" y="30" width="320" height="30" forecolor="#000000" uuid="65c035aa-c71a-4d45-92ff-72dbf9c8ec80">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					</reportElement>
+					<textFieldExpression><![CDATA[$P{JASPER_REPORT}.getName()]]></textFieldExpression>
+				</textField>
+				<textField pattern="EEEEE dd, MMMMM yyyy">
+					<reportElement key="" style="pg_header_user_name" mode="Transparent" x="440" y="30" width="360" height="30" forecolor="#000000" uuid="6c62c42b-7ec9-46d4-abc2-f3c0c36afaab"/>
+					<textFieldExpression><![CDATA[$P{LoggedInUsername} + "  |  " + DATEFORMAT(TODAY(),"EEEEE dd, MMMM yyyy h:mm a z")]]></textFieldExpression>
+				</textField>
+				<image>
+					<reportElement x="0" y="0" width="320" height="30" uuid="53bdf7d4-4e26-4c36-bdf7-8e0bf8a2b6cc">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<imageExpression><![CDATA["repo:/Images/header_printable_bg.jpg"]]></imageExpression>
+				</image>
+			</frame>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="45" splitType="Stretch">
+			<componentElement>
+				<reportElement x="0" y="0" width="800" height="45" uuid="28d89158-4003-492f-a8ab-8a1c42019cef"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" whenNoDataType="AllSectionsNoDetail">
+					<datasetRun subDataset="Financial Collateral" uuid="496f8262-1d7d-4e9e-a7bf-2015dc0d587d">
+						<datasetParameter name="Account_Number_MSQ">
+							<datasetParameterExpression><![CDATA[$P{Account_Number_MSQ}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="Invoice_Account_Type">
+							<datasetParameterExpression><![CDATA[$P{Invoice_Account_Type}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="Invoice_Account_Type_display">
+							<datasetParameterExpression><![CDATA[$P{Invoice_Account_Type_display}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+						<returnValue fromVariable="TOTAL_AMOUNT_DUE1" toVariable="no_data_variable"/>
+					</datasetRun>
+					<jr:column width="130" uuid="f0a89fb5-f1c9-4e7f-a0fa-b55b0bf7c375">
+						<jr:tableFooter style="Table_TF" height="15">
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement style="Table_CH_header" x="0" y="0" width="130" height="15" uuid="35e8564d-92bf-4fea-ad10-47ec0fbd6382"/>
+								<textFieldExpression><![CDATA["Total"]]></textFieldExpression>
+							</textField>
+						</jr:tableFooter>
+						<jr:columnHeader style="Table_CH" height="15">
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement style="Table_CH_header" x="0" y="0" width="130" height="15" uuid="74b2cab8-8d12-45d2-bc9f-80c50c9cd7f5"/>
+								<textFieldExpression><![CDATA[$P{Invoice_Account_Type}=="bill_to"?"Bill To Account #":"Sold To Account #"]]></textFieldExpression>
+							</textField>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="15">
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement style="Table_DH_text" x="0" y="0" width="130" height="15" uuid="b3c6db8a-273b-4cf3-bf59-2381d9a12425"/>
+								<textFieldExpression><![CDATA[$F{ACCOUNT_NUMBER}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="190" uuid="0087b2b8-5a84-422d-9a0e-97c984ed4ed3">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+						<jr:tableFooter style="Table_TF" height="15">
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						</jr:tableFooter>
+						<jr:columnHeader style="Table_CH" height="15">
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement style="Table_CH_header" x="0" y="0" width="190" height="15" uuid="a6ead75d-3a3a-4aaa-95eb-a0763b1e9bfd"/>
+								<textFieldExpression><![CDATA[$P{Invoice_Account_Type}=="bill_to"?"Bill To Account Name":"Sold To Account Name"]]></textFieldExpression>
+							</textField>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="15">
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement style="Table_DH_text" x="0" y="0" width="190" height="15" uuid="3ac6f0a5-7407-455f-9ddd-f5193e172631"/>
+								<textFieldExpression><![CDATA[$F{ACCOUNT_NAME}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="120" uuid="5bcc9538-8717-441d-935a-88a3178d6f26">
+						<jr:tableFooter style="Table_TF" height="15">
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<textField isStretchWithOverflow="true" pattern="$#,##0.00;($#,##0.00) " isBlankWhenNull="true">
+								<reportElement style="Table_CH_num" x="0" y="0" width="120" height="15" uuid="523d3c55-01a7-4436-9e67-fec462854244"/>
+								<textFieldExpression><![CDATA[$V{SELLER_INVOICES_ON_HOLD1}]]></textFieldExpression>
+								<hyperlinkParameter name="_report">
+									<hyperlinkParameterExpression><![CDATA["/Financial/Invoices_On_Hold"]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+								<hyperlinkParameter name="Report_Name">
+									<hyperlinkParameterExpression><![CDATA["Invoices on Hold"]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+								<hyperlinkParameter name="Account_Number_MSQ">
+									<hyperlinkParameterExpression><![CDATA[$F{CUST_ACCOUNT_ID}.toString()]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+								<hyperlinkParameter name="CTTA_Name">
+									<hyperlinkParameterExpression><![CDATA["seller"]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+								<hyperlinkParameter name="Account_Number_MSQ_filters">
+									<hyperlinkParameterExpression><![CDATA[$F{CUST_ACCOUNT_ID}.toString()]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+								<hyperlinkParameter name="Account_Number_MSQ_display">
+									<hyperlinkParameterExpression><![CDATA[$F{ACCOUNT_NUMBER}+ " | " +$F{ACCOUNT_NAME}]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+								<hyperlinkParameter name="Invoice_Account_Type">
+									<hyperlinkParameterExpression><![CDATA[$P{Invoice_Account_Type}]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+								<hyperlinkParameter name="Invoice_Account_Type_label">
+									<hyperlinkParameterExpression><![CDATA["Invoice Account Type"]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+								<hyperlinkParameter name="Visible_Account">
+									<hyperlinkParameterExpression><![CDATA["both"]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+								<hyperlinkParameter name="Visible_Account_label">
+									<hyperlinkParameterExpression><![CDATA["Visible Account"]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+							</textField>
+						</jr:tableFooter>
+						<jr:columnHeader style="Table_CH" height="15">
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement style="Table_CH_header" x="0" y="0" width="120" height="15" uuid="e08959c0-0b4b-476c-b797-ba55317f9b3e"/>
+								<textFieldExpression><![CDATA["Seller Invoices on Hold"]]></textFieldExpression>
+							</textField>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="15">
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<textField isStretchWithOverflow="true" pattern="$#,##0.00;($#,##0.00) " isBlankWhenNull="true" hyperlinkType="ReportExecution">
+								<reportElement style="Seller Invoices Hyperlink" x="0" y="0" width="120" height="15" uuid="2dc265c7-ec0a-4c69-b852-d6ad62000633">
+									<printWhenExpression><![CDATA[$F{SELLER_INVOICES_ON_HOLD}!=0]]></printWhenExpression>
+								</reportElement>
+								<textFieldExpression><![CDATA[$F{SELLER_INVOICES_ON_HOLD}]]></textFieldExpression>
+								<hyperlinkParameter name="_report">
+									<hyperlinkParameterExpression><![CDATA["/Financial/Invoices/Invoices_On_Hold"]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+								<hyperlinkParameter name="Report_Name">
+									<hyperlinkParameterExpression><![CDATA["Invoices on Hold"]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+								<hyperlinkParameter name="Account_Number_MSQ">
+									<hyperlinkParameterExpression><![CDATA[$F{ACCOUNT_NUMBER}.toString()]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+								<hyperlinkParameter name="Account_Number_MSQ_filters">
+									<hyperlinkParameterExpression><![CDATA[$F{ACCOUNT_NUMBER}.toString()]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+								<hyperlinkParameter name="Account_Number_MSQ_display">
+									<hyperlinkParameterExpression><![CDATA[$F{ACCOUNT_NUMBER}+ " | " +$F{ACCOUNT_NAME}]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+								<hyperlinkParameter name="CTTA_Name">
+									<hyperlinkParameterExpression><![CDATA["CM"]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+								<hyperlinkParameter name="Account_Number_MSQ_label">
+									<hyperlinkParameterExpression><![CDATA["Account Number"]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+								<hyperlinkParameter name="Invoice_Account_Type">
+									<hyperlinkParameterExpression><![CDATA[$P{Invoice_Account_Type}]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+								<hyperlinkParameter name="Invoice_Account_Type_label">
+									<hyperlinkParameterExpression><![CDATA["Invoice Account Type"]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+								<hyperlinkParameter name="Visible_Account">
+									<hyperlinkParameterExpression><![CDATA["both"]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+								<hyperlinkParameter name="Visible_Account_label">
+									<hyperlinkParameterExpression><![CDATA["Visible Account"]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+								<hyperlinkParameter name="Invoice_Account_Type_display">
+									<hyperlinkParameterExpression><![CDATA[$P{Invoice_Account_Type_display}]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+								<hyperlinkParameter name="Visible_Account_display">
+									<hyperlinkParameterExpression><![CDATA["Both"]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+							</textField>
+							<textField isStretchWithOverflow="true" pattern="$#,##0.00;($#,##0.00) " isBlankWhenNull="true">
+								<reportElement style="Seller Invoices Hyperlink" mode="Opaque" x="0" y="0" width="120" height="15" uuid="5f9f792f-3b78-4cc1-8e3c-243e09e4990b">
+									<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+									<printWhenExpression><![CDATA[$F{SELLER_INVOICES_ON_HOLD}==0]]></printWhenExpression>
+								</reportElement>
+								<textFieldExpression><![CDATA[$F{SELLER_INVOICES_ON_HOLD}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="120" uuid="d1b9b391-f08f-4764-984d-f7477c09d11a">
+						<jr:tableFooter style="Table_TF" height="15">
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<textField isStretchWithOverflow="true" pattern="$#,##0.00;($#,##0.00) " isBlankWhenNull="true">
+								<reportElement style="Table_CH_num" x="0" y="0" width="120" height="15" uuid="e2bc9eda-cd6d-4338-9b20-245234a12bbe"/>
+								<textFieldExpression><![CDATA[$V{CHECKS_NOT_CLEARED1}]]></textFieldExpression>
+							</textField>
+						</jr:tableFooter>
+						<jr:columnHeader style="Table_CH" height="15">
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement style="Table_CH_header" x="0" y="0" width="120" height="15" uuid="0353b19b-978c-47b4-9356-aed7065bc6f3"/>
+								<textFieldExpression><![CDATA["Checks Not Cleared"]]></textFieldExpression>
+							</textField>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="15">
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<textField isStretchWithOverflow="true" pattern="$#,##0.00;($#,##0.00) " isBlankWhenNull="true" hyperlinkType="ReportExecution">
+								<reportElement style="Checks Not Cleared Hyperlink" x="0" y="0" width="120" height="15" uuid="8a2825c1-a841-446d-86f6-80a50ab3b776">
+									<printWhenExpression><![CDATA[$F{CHECKS_NOT_CLEARED}!=0]]></printWhenExpression>
+								</reportElement>
+								<textFieldExpression><![CDATA[$F{CHECKS_NOT_CLEARED}]]></textFieldExpression>
+								<hyperlinkParameter name="_report">
+									<hyperlinkParameterExpression><![CDATA["/Financial/Payments/AP_Aged_Checks"]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+								<hyperlinkParameter name="Report_Name">
+									<hyperlinkParameterExpression><![CDATA["AP Aged Checks"]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+								<hyperlinkParameter name="Account_Number_MSQ">
+									<hyperlinkParameterExpression><![CDATA[$F{ACCOUNT_NUMBER}.toString()]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+								<hyperlinkParameter name="Account_Number_MSQ_filters">
+									<hyperlinkParameterExpression><![CDATA[$F{ACCOUNT_NUMBER}.toString()]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+								<hyperlinkParameter name="Account_Number_MSQ_display">
+									<hyperlinkParameterExpression><![CDATA[$F{ACCOUNT_NUMBER}+ " | " +$F{ACCOUNT_NAME}]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+								<hyperlinkParameter name="Account_Number_MSQ_label">
+									<hyperlinkParameterExpression><![CDATA["Account Number"]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+								<hyperlinkParameter name="Location">
+									<hyperlinkParameterExpression><![CDATA[new ArrayList()]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+							</textField>
+							<textField isStretchWithOverflow="true" pattern="$#,##0.00;($#,##0.00) " isBlankWhenNull="true">
+								<reportElement style="Checks Not Cleared Hyperlink" x="0" y="0" width="120" height="15" uuid="064a1081-de85-43c3-9cbe-dd94cb2e7e14">
+									<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+									<printWhenExpression><![CDATA[$F{CHECKS_NOT_CLEARED}==0]]></printWhenExpression>
+								</reportElement>
+								<textFieldExpression><![CDATA[$F{CHECKS_NOT_CLEARED}]]></textFieldExpression>
+								<hyperlinkParameter name="_report">
+									<hyperlinkParameterExpression><![CDATA["/Financial/Payments/AP_Aged_Checks"]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+								<hyperlinkParameter name="Report_Name">
+									<hyperlinkParameterExpression><![CDATA["AP Aged Checks"]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+								<hyperlinkParameter name="Account_Number_MSQ">
+									<hyperlinkParameterExpression><![CDATA[$F{ACCOUNT_NUMBER}.toString()]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+								<hyperlinkParameter name="Account_Number_MSQ_filters">
+									<hyperlinkParameterExpression><![CDATA[$F{ACCOUNT_NUMBER}.toString()]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+								<hyperlinkParameter name="Account_Number_MSQ_display">
+									<hyperlinkParameterExpression><![CDATA[$F{ACCOUNT_NUMBER}+ " | " +$F{ACCOUNT_NAME}]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+								<hyperlinkParameter name="Account_Number_MSQ_label">
+									<hyperlinkParameterExpression><![CDATA["Account Number"]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+								<hyperlinkParameter name="Invoice_Account_Type">
+									<hyperlinkParameterExpression><![CDATA[$P{Invoice_Account_Type}]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+								<hyperlinkParameter name="Invoice_Account_Type_label">
+									<hyperlinkParameterExpression><![CDATA["Invoice Account Type"]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+								<hyperlinkParameter name="Visible_Account">
+									<hyperlinkParameterExpression><![CDATA["both"]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+								<hyperlinkParameter name="Visible_Account_label">
+									<hyperlinkParameterExpression><![CDATA["Visible Account"]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="120" uuid="9a434014-c663-4a8f-a811-70750468fdd2">
+						<jr:tableFooter style="Table_TF" height="15">
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<textField isStretchWithOverflow="true" pattern="$#,##0.00;($#,##0.00) " isBlankWhenNull="true">
+								<reportElement style="Table_CH_num" x="0" y="0" width="120" height="15" uuid="3a113544-9da1-41bb-b5b3-122fc1e358de">
+									<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+								</reportElement>
+								<textFieldExpression><![CDATA[$V{TOTAL_AMOUNT_DUE1}]]></textFieldExpression>
+							</textField>
+						</jr:tableFooter>
+						<jr:columnHeader style="Table_CH" height="15">
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement style="Table_CH_header" x="0" y="0" width="120" height="15" uuid="0f6657ed-8b05-4552-93de-b51c80b2f865"/>
+								<textFieldExpression><![CDATA["Total Amount Due"]]></textFieldExpression>
+							</textField>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="15">
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<textField isStretchWithOverflow="true" pattern="$#,##0.00;($#,##0.00) " isBlankWhenNull="true" hyperlinkType="ReportExecution">
+								<reportElement style="Total Amount Due Hyperlink" x="0" y="0" width="120" height="15" uuid="896500f6-dd6c-4572-95aa-759ca469155b">
+									<printWhenExpression><![CDATA[$F{TOTAL_AMOUNT_DUE}!=0]]></printWhenExpression>
+								</reportElement>
+								<textFieldExpression><![CDATA[$F{TOTAL_AMOUNT_DUE}]]></textFieldExpression>
+								<hyperlinkParameter name="_report">
+									<hyperlinkParameterExpression><![CDATA["/Financial/Invoices/Consolidated_Invoice"]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+								<hyperlinkParameter name="Report_Name">
+									<hyperlinkParameterExpression><![CDATA["Consolidated Invoice"]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+								<hyperlinkParameter name="Account_Number_MSQ">
+									<hyperlinkParameterExpression><![CDATA[$F{ACCOUNT_NUMBER}.toString()]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+								<hyperlinkParameter name="Payment_Status">
+									<hyperlinkParameterExpression><![CDATA["Unpaid"]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+								<hyperlinkParameter name="Account_Number_MSQ_filters">
+									<hyperlinkParameterExpression><![CDATA[$F{ACCOUNT_NUMBER}.toString()]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+								<hyperlinkParameter name="Account_Number_MSQ_display">
+									<hyperlinkParameterExpression><![CDATA[$F{ACCOUNT_NUMBER}+ " | " +$F{ACCOUNT_NAME}]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+								<hyperlinkParameter name="Account_Number_MSQ_label">
+									<hyperlinkParameterExpression><![CDATA["Account Number"]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+								<hyperlinkParameter name="Invoice_Account_Type">
+									<hyperlinkParameterExpression><![CDATA[$P{Invoice_Account_Type}]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+								<hyperlinkParameter name="Invoice_Account_Type_label">
+									<hyperlinkParameterExpression><![CDATA["Invoice Account Type"]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+								<hyperlinkParameter name="Visible_Account">
+									<hyperlinkParameterExpression><![CDATA["both"]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+								<hyperlinkParameter name="Visible_Account_label">
+									<hyperlinkParameterExpression><![CDATA["Visible Account"]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+								<hyperlinkParameter name="Invoice_Account_Type_display">
+									<hyperlinkParameterExpression><![CDATA[$P{Invoice_Account_Type_display}]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+								<hyperlinkParameter name="Visible_Account_display">
+									<hyperlinkParameterExpression><![CDATA["Both"]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+							</textField>
+							<textField isStretchWithOverflow="true" pattern="$#,##0.00;($#,##0.00) " isBlankWhenNull="true">
+								<reportElement style="Total Amount Due Hyperlink" x="0" y="0" width="120" height="15" uuid="59f48bdd-d204-493a-96f9-965087d8eff5">
+									<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+									<printWhenExpression><![CDATA[$F{TOTAL_AMOUNT_DUE}==0]]></printWhenExpression>
+								</reportElement>
+								<textFieldExpression><![CDATA[$F{TOTAL_AMOUNT_DUE}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="120" uuid="b3bda3fd-aaf4-414a-b15f-ee7cd233e313">
+						<jr:tableFooter style="Table_TF" height="15">
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement style="Table_CH_num" x="0" y="0" width="120" height="15" uuid="fd53e051-8fb5-4768-9154-6fdb3597a3b8"/>
+								<textFieldExpression><![CDATA[$V{NSF_CHECK_COUNT1}]]></textFieldExpression>
+							</textField>
+						</jr:tableFooter>
+						<jr:columnHeader style="Table_CH" height="15">
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement style="Table_CH_header" x="0" y="0" width="120" height="15" uuid="f8e27012-5f52-493d-b432-ec534ad4d9b2"/>
+								<textFieldExpression><![CDATA["Reversed Payments"]]></textFieldExpression>
+							</textField>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="15">
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="ReportExecution">
+								<reportElement style="NSF Check Hyperlink" x="0" y="0" width="120" height="15" uuid="662958ee-b819-4c4f-94bb-40a07466fe30">
+									<printWhenExpression><![CDATA[$F{NSF_CHECK_COUNT}!=0]]></printWhenExpression>
+								</reportElement>
+								<textFieldExpression><![CDATA[$F{NSF_CHECK_COUNT}]]></textFieldExpression>
+								<hyperlinkParameter name="_report">
+									<hyperlinkParameterExpression><![CDATA["/Operational_Reports/Hidden/Reversed_Payments"]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+								<hyperlinkParameter name="Report_Name">
+									<hyperlinkParameterExpression><![CDATA["Reversed Payments"]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+								<hyperlinkParameter name="Account_Number_MSQ">
+									<hyperlinkParameterExpression><![CDATA[$F{ACCOUNT_NUMBER}.toString()]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+								<hyperlinkParameter name="Account_Number_MSQ_filters">
+									<hyperlinkParameterExpression><![CDATA[$F{ACCOUNT_NUMBER}.toString()]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+								<hyperlinkParameter name="Account_Number_MSQ_display">
+									<hyperlinkParameterExpression><![CDATA[$F{ACCOUNT_NUMBER}+" | "+$F{ACCOUNT_NAME}]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+								<hyperlinkParameter name="Account_Number_MSQ_label">
+									<hyperlinkParameterExpression><![CDATA["Account Number"]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+								<hyperlinkParameter name="Invoice_Account_Type">
+									<hyperlinkParameterExpression><![CDATA[$P{Invoice_Account_Type}]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+								<hyperlinkParameter name="Invoice_Account_Type_display">
+									<hyperlinkParameterExpression><![CDATA[$P{Invoice_Account_Type_display}]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+								<hyperlinkParameter name="Invoice_Account_Type_label">
+									<hyperlinkParameterExpression><![CDATA["Invoice Account Type"]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+								<hyperlinkParameter name="Visible_Account">
+									<hyperlinkParameterExpression><![CDATA["both"]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+								<hyperlinkParameter name="Visible_Account_Label">
+									<hyperlinkParameterExpression><![CDATA["Visible Account"]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+								<hyperlinkParameter name="Visible_Account_display">
+									<hyperlinkParameterExpression><![CDATA["Both"]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+							</textField>
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement style="NSF Check Hyperlink" x="0" y="0" width="120" height="15" uuid="be15b524-0b34-4d05-b7a5-51155b40e97b">
+									<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+									<printWhenExpression><![CDATA[$F{NSF_CHECK_COUNT}==0]]></printWhenExpression>
+								</reportElement>
+								<textFieldExpression><![CDATA[$F{NSF_CHECK_COUNT}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+		<band height="20">
+			<printWhenExpression><![CDATA[$V{no_data_variable} == null]]></printWhenExpression>
+			<textField evaluationTime="Report">
+				<reportElement key="" style="no_data" positionType="FixRelativeToBottom" x="0" y="0" width="47" height="20" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="88f7d6fa-e68e-4c9f-9dba-4e3586161fb0">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<printWhenExpression><![CDATA[$V{no_data_variable} == null]]></printWhenExpression>
+				</reportElement>
+				<textFieldExpression><![CDATA["!TRCND!"]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="15" splitType="Stretch">
+			<textField>
+				<reportElement style="pg_footer_rights_reserved" x="0" y="0" width="320" height="15" uuid="aff4813c-94e6-4544-a062-dfe1a919fdbd">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textFieldExpression><![CDATA["© Manheim. All rights reserved."]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="pg_footer_page_num" x="645" y="0" width="120" height="15" uuid="1be1c8fb-c345-4953-be82-58cd8483b0c8"/>
+				<textFieldExpression><![CDATA["Page " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement style="pg_footer_rights_reserved" x="765" y="0" width="35" height="15" uuid="db9dbe70-0b09-46cb-8be3-fbb6c5f6cc92"/>
+				<textFieldExpression><![CDATA[" of " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="60">
+			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.HorizontalRowLayout"/>
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<frame>
+				<reportElement x="0" y="0" width="800" height="60" isRemoveLineWhenBlank="true" uuid="0623e3ed-1a44-40aa-849e-cc0c79c681ff"/>
+				<textField>
+					<reportElement style="summary_filter_header" x="0" y="0" width="800" height="30" uuid="522e7398-9ce4-45d9-a0a3-9372c9581589">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<textFieldExpression><![CDATA["Report Filters"]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="summary_filter" positionType="Float" x="0" y="45" width="800" height="15" uuid="36566856-d265-44b4-84c0-5f01681ed213">
+						<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+						<printWhenExpression><![CDATA[$P{Account_Number_MSQ_display} != null]]></printWhenExpression>
+					</reportElement>
+					<textFieldExpression><![CDATA["Account:  " + $P{Account_Number_MSQ_display}.replace("[", "").replace("]","")]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="summary_filter" positionType="Float" x="0" y="30" width="800" height="15" isRemoveLineWhenBlank="true" uuid="a8ac085d-3a7c-461c-83f5-8840232cc5f6">
+						<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					</reportElement>
+					<textFieldExpression><![CDATA["Invoice Account Type: " +$P{Invoice_Account_Type_display}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</summary>
+	<noData>
+		<band height="20">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<staticText>
+				<reportElement style="no_data" x="350" y="0" width="100" height="20" uuid="59ead02e-9beb-4410-acd4-2ceea24a3441">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<text><![CDATA[|NODATA||]]></text>
+			</staticText>
+		</band>
+	</noData>
+</jasperReport>

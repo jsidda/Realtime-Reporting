@@ -1,0 +1,626 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.1.0.final using JasperReports Library version 6.1.0  -->
+<!-- 2016-12-20T15:55:37 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Collateral - Vehicle " language="groovy" pageWidth="840" pageHeight="600" orientation="Landscape" whenNoDataType="NoDataSection" columnWidth="800" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" isSummaryWithPageHeaderAndFooter="true" uuid="44a72d3d-078e-4076-9a7b-c0418b7b0482">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="ODS QA 2"/>
+	<property name="ireport.jasperserver.url" value="https://jaspersoft.dev.manheim.com/jasperserver-pro/"/>
+	<property name="ireport.jasperserver.user" value="jasperadmin"/>
+	<property name="ireport.jasperserver.report.resource" value="/Operational_Reports/Collateral_Vehicle_Inventory_files/main_jrxml"/>
+	<property name="ireport.jasperserver.reportUnit" value="/Operational_Reports/Collateral_Vehicle_Inventory"/>
+	<property name="net.sf.jasperreports.export.html.exclude.origin.band.1" value="summary"/>
+	<property name="net.sf.jasperreports.export.html.exclude.origin.band.3" value="pageFooter"/>
+	<property name="net.sf.jasperreports.export.html.remove.empty.space.between.rows" value="true"/>
+	<property name="net.sf.jasperreports.export.csv.exclude.origin.band.pageHeader" value="pageHeader"/>
+	<property name="net.sf.jasperreports.export.csv.exclude.origin.band.pageFooter" value="pageFooter"/>
+	<property name="net.sf.jasperreports.export.csv.exclude.origin.band.Summary" value="summary"/>
+	<property name="net.sf.jasperreports.export.xls.exclude.origin.band.pageHeader" value="pageHeader"/>
+	<property name="net.sf.jasperreports.export.xls.exclude.origin.band.pageFooter" value="pageFooter"/>
+	<property name="net.sf.jasperreports.export.xls.exclude.origin.band.summary" value="summary"/>
+	<property name="net.sf.jasperreports.export.html.exclude.key.excludehtml"/>
+	<property name="net.sf.jasperreports.export.csv.exclude.key.excludecsv"/>
+	<style name="Table_CH" mode="Opaque" backcolor="#DDDDDD" hTextAlign="Center" vTextAlign="Middle" fontName="SansSerif" fontSize="9" isBold="true">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#DDDDDD"/>
+			<leftPen lineWidth="0.5" lineColor="#DDDDDD"/>
+			<bottomPen lineWidth="0.5" lineColor="#DDDDDD"/>
+			<rightPen lineWidth="0.5" lineColor="#DDDDDD"/>
+		</box>
+	</style>
+	<style name="Table_TD" mode="Opaque" backcolor="#FFFFFF" vTextAlign="Middle" fontName="SansSerif" fontSize="9">
+		<pen lineColor="#DDDDDD"/>
+		<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0">
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+			<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+			<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+			<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+		</box>
+	</style>
+	<style name="Table_CF" mode="Opaque" backcolor="#F3F3F3" vTextAlign="Middle" fontName="SansSerif" fontSize="9" isBold="true">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.1" lineStyle="Solid" lineColor="#DDDDDD"/>
+			<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#DDDDDD"/>
+			<bottomPen lineWidth="0.1" lineStyle="Solid" lineColor="#DDDDDD"/>
+			<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#DDDDDD"/>
+		</box>
+	</style>
+	<style name="Table_TF" mode="Opaque" backcolor="#E0EFFF" vTextAlign="Middle" fontName="SansSerif" fontSize="9" isBold="true">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+			<leftPen lineWidth="0.0"/>
+			<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+			<rightPen lineWidth="0.0"/>
+		</box>
+	</style>
+	<style name="Seller Inventory" style="Table_TD" mode="Opaque" forecolor="#030000" backcolor="#FFFFFF" hTextAlign="Right" vTextAlign="Middle" fontName="SansSerif" fontSize="8">
+		<pen lineColor="#DDDDDD"/>
+		<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0">
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+			<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+			<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+			<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{SELLER_INVENTORY} != 0]]></conditionExpression>
+			<style forecolor="#0339FF" isUnderline="true"/>
+		</conditionalStyle>
+	</style>
+	<style name="Buyer Inventory" style="Table_TD" mode="Opaque" forecolor="#030000" backcolor="#FFFFFF" hTextAlign="Right" vTextAlign="Middle" fontName="SansSerif" fontSize="8">
+		<pen lineColor="#DDDDDD"/>
+		<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0">
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+			<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+			<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+			<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{BUYER_INVENTORY} != 0]]></conditionExpression>
+			<style forecolor="#0339FF" isUnderline="true"/>
+		</conditionalStyle>
+	</style>
+	<style name="WIP" style="Table_TD" mode="Opaque" forecolor="#030000" backcolor="#FFFFFF" hTextAlign="Right" vTextAlign="Middle" fontName="SansSerif" fontSize="8">
+		<pen lineColor="#DDDDDD"/>
+		<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0">
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+			<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+			<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+			<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#DDDDDD"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{WIP_COUNT} != 0]]></conditionExpression>
+			<style forecolor="#0339FF" isUnderline="true"/>
+		</conditionalStyle>
+	</style>
+	<style name="pg_header_report_name" hTextAlign="Left" vTextAlign="Middle" isBlankWhenNull="true" fontSize="12" isBold="true">
+		<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+	</style>
+	<style name="pg_header_user_name" hTextAlign="Right" vTextAlign="Middle" isBlankWhenNull="true" fontSize="10">
+		<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+	</style>
+	<style name="pg_footer_rights_reserved" hTextAlign="Left" vTextAlign="Middle" isBlankWhenNull="true" fontSize="8" isBold="false">
+		<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+	</style>
+	<style name="pg_footer_page_num" hTextAlign="Right" vTextAlign="Middle" isBlankWhenNull="true" fontSize="8" isBold="false">
+		<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+	</style>
+	<style name="summary_filter_header" hTextAlign="Center" vTextAlign="Middle" isBlankWhenNull="true" fontSize="10" isBold="true">
+		<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+	</style>
+	<style name="summary_filter" hTextAlign="Left" vTextAlign="Middle" isBlankWhenNull="true" fontSize="8" isBold="false">
+		<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+	</style>
+	<style name="no_data" hTextAlign="Center" vTextAlign="Middle" isBlankWhenNull="true" fontSize="12"/>
+	<style name="Table_CH_header" hTextAlign="Center" vTextAlign="Middle" isBlankWhenNull="true" fontSize="8" isBold="true">
+		<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+	</style>
+	<style name="Table_DH_text" hTextAlign="Center" vTextAlign="Middle" isBlankWhenNull="true" fontSize="8" isBold="false">
+		<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+	</style>
+	<style name="Table_DH_num" hTextAlign="Right" vTextAlign="Middle" isBlankWhenNull="true" fontSize="8" isBold="false">
+		<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+	</style>
+	<style name="Table_CH_num" hTextAlign="Right" vTextAlign="Middle" isBlankWhenNull="true" fontSize="8" isBold="true">
+		<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+	</style>
+	<style name="Table_CH_header_left" hTextAlign="Left" vTextAlign="Middle" isBlankWhenNull="true" fontSize="8" isBold="true">
+		<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+	</style>
+	<subDataset name="vehicle inventory" uuid="c404957b-46d3-4372-93d7-763a00731a3d">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="ODS QA 2"/>
+		<parameter name="Account_Number_MSQ" class="java.util.Collection"/>
+		<queryString>
+			<![CDATA[select c.DEALER_NUMBER, c.CUSTOMER_NAME, nvl(a.buyer_inventory,0) as buyer_inventory, nvl(b.seller_inventory,0) as seller_inventory, nvl(d.wip_count,0) as wip_count
+from ODSADM.CUSTOMER c
+left join (--buyer inventory
+        SELECT c.customer_id, count(distinct(ii.vin)) as buyer_inventory
+          
+        FROM odsadm.customer c
+        LEFT JOIN odsadm.SERVICE_ORDER BR
+          ON c.customer_id                  =br.alternate_customer_id
+          AND BR.SERVICE_ORDER_TYPE_CODE    = 'BR'
+          AND BR.SERVICE_ORDER_STATUS_CODE IN ('AC','CM', 'PAU')
+        JOIN odsadm.INVENTORY_ITEM II
+          ON BR.INVENTORY_ITEM_ID = II.INVENTORY_ITEM_ID
+        --left join odsadm.lot_location ll on ll.inventory_item_id = ii.inventory_item_id
+        left join odsadm.arbitration arb on arb.service_order_id = br.service_order_id   
+        JOIN odsadm.service_provider sp
+          ON ii.auction_code                               = sp.service_provider_code
+        WHERE 1=1 --sp.SERVICE_PROVIDER_CODE                   = 'MISS'
+        AND sp.MANHEIM_PROVIDER_INDICATOR                = 'Y'
+        AND C.DEALER_NUMBER                              = '5294246'
+        --AND NVL(SL.STATUS_REASON_CODE,'OK')             <> 'TRANSPCLDL'
+        --AND NVL(BR.STATUS_REASON_CODE,'OK')             <> 'TRANSPCLDL'
+        AND II.SBLU                                      > 0
+        AND NVL(II.SOURCE_SYSTEM_NAME,'OK') NOT         IN ('TRA','ODS1820','ODS1290')
+        AND NVL(BR.INVENTORY_ITEM_STATUS_CODE,'OK') NOT IN ( 'ICO','LL')
+        AND NVL(arb.status_reason_code, 'OK') NOT IN ('ARBBW','ARBSW') 
+        --and BR.SERVICE_ORDER_ID = 34693802
+        group by C.CUSTOMER_ID) a on a.CUSTOMER_ID = c.CUSTOMER_ID
+left join (--seller inventory
+        SELECT count(distinct(ii.vin)) as seller_inventory, c.CUSTOMER_ID
+        FROM odsadm.customer c
+        JOIN odsadm.SERVICE_ORDER sl
+          ON c.customer_id                   =SL.ALTERNATE_CUSTOMER_ID
+          AND SL.SERVICE_ORDER_TYPE_CODE     = 'SL'
+          AND SL.SERVICE_ORDER_STATUS_CODE  IN ('AC', 'CM', 'PN', 'PAU')
+          AND SL.INVENTORY_ITEM_STATUS_CODE <> 'LL'
+        JOIN odsadm.INVENTORY_ITEM II
+          ON SL.INVENTORY_ITEM_ID = II.INVENTORY_ITEM_ID
+        LEFT JOIN odsadm.SERVICE_ORDER BR
+          ON II.INVENTORY_ITEM_ID           = BR.INVENTORY_ITEM_ID
+          AND BR.SERVICE_ORDER_TYPE_CODE    = 'BR'
+          AND BR.SERVICE_ORDER_STATUS_CODE IN ('AC','CM', 'PAU')
+        JOIN odsadm.service_provider sp
+          ON ii.auction_code                               = sp.service_provider_code
+        left join (
+            select O.SERVICE_ORDER_ID
+            , O.STATUS_REASON_DESCRIPTION, O.SELLER_OFFERING_ID, RANK() OVER (partition by O.SERVICE_ORDER_ID order by O.SELLER_OFFERING_ID desc) as rnk
+            from ODSADM.SELLER_OFFERING o
+            ) o on O.SERVICE_ORDER_ID = SL.SERVICE_ORDER_ID  and o.rnk = 1
+        left join odsadm.arbitration arb on arb.service_order_id = br.service_order_id   
+        
+        WHERE 1=1--sp.SERVICE_PROVIDER_CODE                   = 'MISS'
+        AND sp.MANHEIM_PROVIDER_INDICATOR                = 'Y'
+        --AND C.DEALER_NUMBER                              = '5294246'
+        AND NVL(SL.STATUS_REASON_CODE,'OK')             <> 'TRANSPCLDL'
+        AND (BR.SERVICE_ORDER_ID is null or ARB.AUCTION_INHERIT_IND <> 'Y')
+        --AND II.SBLU                                      > 0
+        --AND NVL(II.SOURCE_SYSTEM_NAME,'OK') NOT         IN ('TRA','ODS1820','ODS1290')
+        AND nvl(O.STATUS_REASON_DESCRIPTION,'OK') not in ('OABB','OSLD','SCRIPT') 
+        and (sl.SERVICE_ORDER_DATE > SP.EBIZ_CONVERTED_DATE or SP.EBIZ_CONVERTED_DATE > sysdate)
+            group by c.customer_id
+    ) b on b.CUSTOMER_ID = c.CUSTOMER_ID
+left join (select 
+    orc.DEALER_NUMBER as account_number
+    , sum(orc.DETAIL_AMOUNT) as wip_count
+    from ODSADM.V_OPEN_RECON_CHARGES orc
+    group by orc.dealer_number) d on d.account_number = c.DEALER_NUMBER
+ where 1=1
+ and $X{IN, c.DEALER_NUMBER, Account_Number_MSQ}
+order by  c.CUSTOMER_NAME]]>
+		</queryString>
+		<field name="DEALER_NUMBER" class="java.lang.String"/>
+		<field name="CUSTOMER_NAME" class="java.lang.String"/>
+		<field name="BUYER_INVENTORY" class="java.math.BigDecimal"/>
+		<field name="SELLER_INVENTORY" class="java.math.BigDecimal"/>
+		<field name="WIP_COUNT" class="java.math.BigDecimal"/>
+		<variable name="BUYER_INVENTORY1" class="java.math.BigDecimal" calculation="Sum">
+			<variableExpression><![CDATA[$F{BUYER_INVENTORY}]]></variableExpression>
+		</variable>
+		<variable name="SELLER_INVENTORY1" class="java.math.BigDecimal" calculation="Sum">
+			<variableExpression><![CDATA[$F{SELLER_INVENTORY}]]></variableExpression>
+		</variable>
+		<variable name="WIP_COUNT1" class="java.math.BigDecimal" calculation="Sum">
+			<variableExpression><![CDATA[$F{WIP_COUNT}]]></variableExpression>
+		</variable>
+	</subDataset>
+	<parameter name="Account_Number_MSQ" class="java.util.Collection" nestedType="java.lang.String" isForPrompting="false">
+		<parameterDescription><![CDATA[]]></parameterDescription>
+	</parameter>
+	<parameter name="LoggedInUsername" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="Account_Number_MSQ_filters" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="Account_Number_MSQ_display" class="java.lang.String"/>
+	<queryString language="SQL">
+		<![CDATA[select 1
+from dual]]>
+	</queryString>
+	<field name="1" class="java.math.BigDecimal"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="60" splitType="Stretch">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<textField>
+				<reportElement key="excludecsv" x="0" y="-20" width="800" height="80" forecolor="#FFFFFF" uuid="59c0686b-31d9-4d28-9710-57eec6dff2bf">
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textFieldExpression><![CDATA["!STPH!"]]></textFieldExpression>
+			</textField>
+			<frame>
+				<reportElement key="excludehtml" x="0" y="0" width="800" height="60" uuid="94768809-4bc4-4664-923a-4d681356e348">
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textField>
+					<reportElement style="pg_header_report_name" positionType="FixRelativeToBottom" x="0" y="30" width="410" height="30" forecolor="#000000" uuid="65c035aa-c71a-4d45-92ff-72dbf9c8ec80">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					</reportElement>
+					<textFieldExpression><![CDATA[$P{JASPER_REPORT}.getName()]]></textFieldExpression>
+				</textField>
+				<textField pattern="EEEEE dd, MMMMM yyyy">
+					<reportElement key="" style="pg_header_user_name" mode="Transparent" x="410" y="30" width="390" height="30" forecolor="#000000" uuid="6c62c42b-7ec9-46d4-abc2-f3c0c36afaab"/>
+					<textFieldExpression><![CDATA[$P{LoggedInUsername} + "  |  " + DATEFORMAT(new Date(System.currentTimeMillis() - 5 *3600 * 1000),"EEEEE dd, MMMM yyyy h:mm a") + " EST"]]></textFieldExpression>
+				</textField>
+				<image>
+					<reportElement x="0" y="0" width="800" height="30" uuid="53bdf7d4-4e26-4c36-bdf7-8e0bf8a2b6cc">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<imageExpression><![CDATA["repo:/Images/header_printable_bg.jpg"]]></imageExpression>
+				</image>
+			</frame>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="45" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<componentElement>
+				<reportElement x="0" y="0" width="800" height="45" uuid="0c3f4dd9-e71d-4701-87d2-e51778ef0cde">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" whenNoDataType="AllSectionsNoDetail">
+					<datasetRun subDataset="vehicle inventory" uuid="c0c6ccf0-7064-463e-8443-dddffbf52713">
+						<datasetParameter name="Account_Number_MSQ">
+							<datasetParameterExpression><![CDATA[$P{Account_Number_MSQ}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="150" uuid="65b78aa8-88d9-45e3-99f1-b6d209dd0bb9">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<jr:tableFooter style="Table_TF" height="15">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement style="Table_CH_header" x="0" y="0" width="150" height="15" uuid="26b1b9e5-b239-4f53-98b5-95dcf61036be"/>
+								<textFieldExpression><![CDATA["Total"]]></textFieldExpression>
+							</textField>
+						</jr:tableFooter>
+						<jr:columnHeader style="Table_CH" height="15">
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement style="Table_CH_header" x="0" y="0" width="150" height="15" uuid="0acddfce-c005-489f-987a-a16ac65e8da3"/>
+								<textFieldExpression><![CDATA["Account #"]]></textFieldExpression>
+							</textField>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="15">
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement style="Table_DH_text" x="0" y="0" width="150" height="15" uuid="2b15a15f-882c-4524-a5dd-4b6c8fc1edff"/>
+								<textFieldExpression><![CDATA[$F{DEALER_NUMBER}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="260" uuid="238c052d-9d1b-429e-84ce-6d2230cfbf03">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<jr:tableFooter style="Table_TF" height="15">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						</jr:tableFooter>
+						<jr:columnHeader style="Table_CH" height="15">
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement style="Table_CH_header" x="0" y="0" width="260" height="15" uuid="7248d60d-043b-43de-bc26-dd70c6102fa1"/>
+								<textFieldExpression><![CDATA["Account Name"]]></textFieldExpression>
+							</textField>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="15">
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement style="Table_DH_text" x="0" y="0" width="260" height="15" uuid="512b96cf-cbc5-4903-a9c6-72a92140bc7c"/>
+								<textFieldExpression><![CDATA[$F{CUSTOMER_NAME}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="130" uuid="c4699c07-a30a-4e9c-b66e-870273bde010">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+						<jr:tableFooter style="Table_TF" height="15">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<textField isStretchWithOverflow="true" pattern="#,##0.###" isBlankWhenNull="true">
+								<reportElement style="Table_CH_num" x="0" y="0" width="130" height="15" uuid="ae0af077-5b96-4540-a868-43055ce44ef7"/>
+								<textFieldExpression><![CDATA[$V{SELLER_INVENTORY1}]]></textFieldExpression>
+							</textField>
+						</jr:tableFooter>
+						<jr:columnHeader style="Table_CH" height="15">
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement style="Table_CH_header" x="0" y="0" width="130" height="15" uuid="4e9beb32-1611-4fdd-be0f-7e667dfbc58f"/>
+								<textFieldExpression><![CDATA["Seller Inventory"]]></textFieldExpression>
+							</textField>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="15">
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<textField isStretchWithOverflow="true" pattern="#,##0.###" isBlankWhenNull="true" hyperlinkType="ReportExecution">
+								<reportElement style="Seller Inventory" x="0" y="0" width="130" height="15" uuid="1461d6ee-472a-4aca-9898-0733535696aa">
+									<printWhenExpression><![CDATA[$F{SELLER_INVENTORY}!=0]]></printWhenExpression>
+								</reportElement>
+								<textFieldExpression><![CDATA[$F{SELLER_INVENTORY}]]></textFieldExpression>
+								<hyperlinkParameter name="_report">
+									<hyperlinkParameterExpression><![CDATA["/Operational_Reports/Hidden/Seller_Inventory"]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+								<hyperlinkParameter name="Report_Name">
+									<hyperlinkParameterExpression><![CDATA["Seller Inventory"]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+								<hyperlinkParameter name="Account_Number_MSQ">
+									<hyperlinkParameterExpression><![CDATA[$F{DEALER_NUMBER}.toString()]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+								<hyperlinkParameter name="Account_Number_MSQ_filters">
+									<hyperlinkParameterExpression><![CDATA[$F{DEALER_NUMBER}.toString()]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+								<hyperlinkParameter name="Account_Number_MSQ_display">
+									<hyperlinkParameterExpression><![CDATA[$F{DEALER_NUMBER}+" | "+$F{CUSTOMER_NAME}]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+								<hyperlinkParameter name="Account_Number_MSQ_label">
+									<hyperlinkParameterExpression><![CDATA["Account Number"]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+							</textField>
+							<textField isStretchWithOverflow="true" pattern="#,##0.###" isBlankWhenNull="true">
+								<reportElement style="Seller Inventory" x="0" y="0" width="130" height="15" uuid="400aa819-7a05-40d9-ac2f-da029cc22c48">
+									<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+									<printWhenExpression><![CDATA[$F{SELLER_INVENTORY}==0]]></printWhenExpression>
+								</reportElement>
+								<textFieldExpression><![CDATA[$F{SELLER_INVENTORY}]]></textFieldExpression>
+								<hyperlinkParameter name="_report">
+									<hyperlinkParameterExpression><![CDATA["/Operational_Reports/Hidden/Seller_Inventory"]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+								<hyperlinkParameter name="Report_Name">
+									<hyperlinkParameterExpression><![CDATA["Seller Inventory"]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+								<hyperlinkParameter name="Account_Number_MSQ">
+									<hyperlinkParameterExpression><![CDATA[$F{DEALER_NUMBER}.toString()]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+								<hyperlinkParameter name="Account_Number_MSQ_filters">
+									<hyperlinkParameterExpression><![CDATA[$F{DEALER_NUMBER}.toString()]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+								<hyperlinkParameter name="Account_Number_MSQ_display">
+									<hyperlinkParameterExpression><![CDATA[$F{DEALER_NUMBER}+" | "+$F{CUSTOMER_NAME}]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+								<hyperlinkParameter name="Account_Number_MSQ_label">
+									<hyperlinkParameterExpression><![CDATA["Account Number"]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="130" uuid="21ccbe7e-6740-4693-8603-c0379c499582">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<jr:tableFooter style="Table_TF" height="15">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<textField isStretchWithOverflow="true" pattern="#,##0.###" isBlankWhenNull="true">
+								<reportElement style="Table_CH_num" x="0" y="0" width="130" height="15" uuid="411c9e9d-5f60-4e58-ba10-73aa9f585b16">
+									<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+								</reportElement>
+								<textFieldExpression><![CDATA[$V{BUYER_INVENTORY1}]]></textFieldExpression>
+							</textField>
+						</jr:tableFooter>
+						<jr:columnHeader style="Table_CH" height="15">
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement style="Table_CH_header" x="0" y="0" width="130" height="15" uuid="248651a6-95ff-45a8-8887-5c3e012a2839"/>
+								<textFieldExpression><![CDATA["Unredeemed Purchased Vehicles"]]></textFieldExpression>
+							</textField>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="15">
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<textField isStretchWithOverflow="true" pattern="#,##0.###" isBlankWhenNull="true" hyperlinkType="ReportExecution">
+								<reportElement style="Buyer Inventory" x="0" y="0" width="130" height="15" uuid="4691d9c5-f6eb-445f-8fe3-1036e6eaf1d7">
+									<printWhenExpression><![CDATA[$F{BUYER_INVENTORY}!=0]]></printWhenExpression>
+								</reportElement>
+								<textFieldExpression><![CDATA[$F{BUYER_INVENTORY}]]></textFieldExpression>
+								<hyperlinkParameter name="_report">
+									<hyperlinkParameterExpression><![CDATA["/Operational_Reports/Hidden/Unredeemed_Purchased_Vehicles"]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+								<hyperlinkParameter name="Report_Name">
+									<hyperlinkParameterExpression><![CDATA["Unredeemed Purchased Vehicles"]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+								<hyperlinkParameter name="Account_Number_MSQ">
+									<hyperlinkParameterExpression><![CDATA[$F{DEALER_NUMBER}.toString()]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+								<hyperlinkParameter name="Account_Number_MSQ_filters">
+									<hyperlinkParameterExpression><![CDATA[$F{DEALER_NUMBER}.toString()]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+								<hyperlinkParameter name="Account_Number_MSQ_display">
+									<hyperlinkParameterExpression><![CDATA[$F{DEALER_NUMBER}+" | "+$F{CUSTOMER_NAME}]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+								<hyperlinkParameter name="Account_Number_MSQ_label">
+									<hyperlinkParameterExpression><![CDATA["Account Number"]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+							</textField>
+							<textField isStretchWithOverflow="true" pattern="#,##0.###" isBlankWhenNull="true">
+								<reportElement style="Buyer Inventory" x="0" y="0" width="130" height="15" uuid="2baa4f04-7f43-4d9c-958c-f391903fd4f1">
+									<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+									<printWhenExpression><![CDATA[$F{BUYER_INVENTORY}==0]]></printWhenExpression>
+								</reportElement>
+								<textFieldExpression><![CDATA[$F{BUYER_INVENTORY}]]></textFieldExpression>
+								<hyperlinkParameter name="_report">
+									<hyperlinkParameterExpression><![CDATA["/Operational_Reports/Hidden/Unredeemed_Purchased_Vehicles"]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+								<hyperlinkParameter name="Report_Name">
+									<hyperlinkParameterExpression><![CDATA["Unredeemed Purchased Vehicles"]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+								<hyperlinkParameter name="Account_Number_MSQ">
+									<hyperlinkParameterExpression><![CDATA[$F{DEALER_NUMBER}.toString()]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+								<hyperlinkParameter name="Account_Number_MSQ_filters">
+									<hyperlinkParameterExpression><![CDATA[$F{DEALER_NUMBER}.toString()]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+								<hyperlinkParameter name="Account_Number_MSQ_display">
+									<hyperlinkParameterExpression><![CDATA[$F{DEALER_NUMBER}+" | "+$F{CUSTOMER_NAME}]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+								<hyperlinkParameter name="Account_Number_MSQ_label">
+									<hyperlinkParameterExpression><![CDATA["Account Number"]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="130" uuid="34e81b2f-77b5-4a57-9cf8-035f6ad8c5f8">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<jr:tableFooter style="Table_TF" height="15">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<textField isStretchWithOverflow="true" pattern="$#,##0.00;($#,##0.00) " isBlankWhenNull="true">
+								<reportElement style="Table_CH_num" x="0" y="0" width="130" height="15" uuid="aca45cf2-b932-4f89-831f-21eb889d516b"/>
+								<textFieldExpression><![CDATA[$V{WIP_COUNT1}]]></textFieldExpression>
+							</textField>
+						</jr:tableFooter>
+						<jr:columnHeader style="Table_CH" height="15">
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement style="Table_CH_header" x="0" y="0" width="130" height="15" uuid="512be3ed-1070-4b30-bb15-2bf556fdc9c6"/>
+								<textFieldExpression><![CDATA["WIP Amount"]]></textFieldExpression>
+							</textField>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="15">
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<textField isStretchWithOverflow="true" pattern="$#,##0.00;($#,##0.00) " isBlankWhenNull="true" hyperlinkType="ReportExecution">
+								<reportElement style="WIP" x="0" y="0" width="130" height="15" uuid="44cb92a6-d4d8-4fad-91ec-08c26844fd2f">
+									<printWhenExpression><![CDATA[$F{WIP_COUNT}!=0]]></printWhenExpression>
+								</reportElement>
+								<textFieldExpression><![CDATA[$F{WIP_COUNT}]]></textFieldExpression>
+								<hyperlinkParameter name="_report">
+									<hyperlinkParameterExpression><![CDATA["/Financial/Invoices/Aged_WIP"]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+								<hyperlinkParameter name="Report_Name">
+									<hyperlinkParameterExpression><![CDATA["Aged WIP"]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+								<hyperlinkParameter name="Account_Number_MSQ">
+									<hyperlinkParameterExpression><![CDATA[$F{DEALER_NUMBER}.toString()]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+								<hyperlinkParameter name="Account_Number_MSQ_filters">
+									<hyperlinkParameterExpression><![CDATA[$F{DEALER_NUMBER}.toString()]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+								<hyperlinkParameter name="Account_Number_MSQ_display">
+									<hyperlinkParameterExpression><![CDATA[$F{DEALER_NUMBER}+" | "+$F{CUSTOMER_NAME}]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+								<hyperlinkParameter name="Account_Number_MSQ_label">
+									<hyperlinkParameterExpression><![CDATA["Account Number"]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+							</textField>
+							<textField isStretchWithOverflow="true" pattern="$#,##0.00;($#,##0.00) " isBlankWhenNull="true">
+								<reportElement style="WIP" x="0" y="0" width="130" height="15" uuid="858510f9-5d80-459e-a409-ffb7a6f24a13">
+									<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+									<printWhenExpression><![CDATA[$F{WIP_COUNT}==0]]></printWhenExpression>
+								</reportElement>
+								<textFieldExpression><![CDATA[$F{WIP_COUNT}]]></textFieldExpression>
+								<hyperlinkParameter name="_report">
+									<hyperlinkParameterExpression><![CDATA["/Financial/Invoices/Aged_WIP"]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+								<hyperlinkParameter name="Report_Name">
+									<hyperlinkParameterExpression><![CDATA["Aged Wip"]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+								<hyperlinkParameter name="Account_Number_MSQ">
+									<hyperlinkParameterExpression><![CDATA[$F{DEALER_NUMBER}.toString()]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+								<hyperlinkParameter name="Account_Number_MSQ_filters">
+									<hyperlinkParameterExpression><![CDATA[$F{DEALER_NUMBER}.toString()]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+								<hyperlinkParameter name="Account_Number_MSQ_display">
+									<hyperlinkParameterExpression><![CDATA[$F{DEALER_NUMBER}+" | "+$F{CUSTOMER_NAME}]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+								<hyperlinkParameter name="Account_Number_MSQ_label">
+									<hyperlinkParameterExpression><![CDATA["Account Number"]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="15" splitType="Stretch">
+			<textField>
+				<reportElement style="pg_footer_rights_reserved" x="0" y="0" width="410" height="15" uuid="aff4813c-94e6-4544-a062-dfe1a919fdbd">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textFieldExpression><![CDATA["© Manheim. All rights reserved."]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="pg_footer_page_num" x="540" y="0" width="225" height="15" uuid="1be1c8fb-c345-4953-be82-58cd8483b0c8"/>
+				<textFieldExpression><![CDATA["Page " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement style="pg_footer_rights_reserved" x="765" y="0" width="35" height="15" uuid="db9dbe70-0b09-46cb-8be3-fbb6c5f6cc92">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[" of " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="45">
+			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.HorizontalRowLayout"/>
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<frame>
+				<reportElement x="0" y="0" width="800" height="45" isRemoveLineWhenBlank="true" uuid="0623e3ed-1a44-40aa-849e-cc0c79c681ff">
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+				</reportElement>
+				<textField>
+					<reportElement style="summary_filter_header" x="0" y="0" width="800" height="30" uuid="522e7398-9ce4-45d9-a0a3-9372c9581589">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<textFieldExpression><![CDATA["Report Filters"]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="summary_filter" positionType="Float" x="0" y="30" width="800" height="15" uuid="36566856-d265-44b4-84c0-5f01681ed213">
+						<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+						<printWhenExpression><![CDATA[$P{Account_Number_MSQ_display} != null]]></printWhenExpression>
+					</reportElement>
+					<textFieldExpression><![CDATA["Account:  " + $P{Account_Number_MSQ_display}.replace("[", "").replace("]","")]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</summary>
+	<noData>
+		<band height="20">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<staticText>
+				<reportElement style="no_data" x="0" y="0" width="800" height="20" uuid="59ead02e-9beb-4410-acd4-2ceea24a3441">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<text><![CDATA[|NODATA||]]></text>
+			</staticText>
+		</band>
+	</noData>
+</jasperReport>
